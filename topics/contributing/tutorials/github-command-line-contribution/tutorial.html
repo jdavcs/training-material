@@ -11,7 +11,7 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-45719423-18' , 'auto');
+    ga('create', '' , 'auto');
     ga('send', 'pageview');
 </script>
         
@@ -143,6 +143,9 @@
                 </label>
                 <label data-value="rainbow" class="btn btn-secondary">
                     <input type="radio" name="options" id="rainbow" autocomplete="off"> Rainbow
+                </label>
+                <label data-value="halloween" class="btn btn-secondary">
+                    <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
                 </label>
             </div>
 
@@ -282,7 +285,7 @@
 
         <div class="contributors-line">By: 
 
-<a href="/training-material/hall-of-fame#cmonjeau" class="contributor-badge"><img src="https://avatars.githubusercontent.com/cmonjeau" alt="Cyril Monjeaud">Cyril Monjeaud</a>, <a href="/training-material/hall-of-fame#bebatut" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Bérénice Batut">Bérénice Batut</a>
+<a href="/training-material/hall-of-fame/cmonjeau/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/cmonjeau" alt="Cyril Monjeaud">Cyril Monjeaud</a>, <a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Bérénice Batut">Bérénice Batut</a>
 
 </div>
 
@@ -376,7 +379,7 @@
             </ul>
             
 
-            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Feb 28, 2020 </p>
+            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Dec 1, 2020 </p>
         </blockquote>
 
         <div class="container">
@@ -388,7 +391,7 @@
                 <div class="col-sm-10">
                     <h1 class="no_toc" id="introduction">Introduction</h1>
 
-<p>Most of the content is written in <a href="https://guides.github.com/features/mastering-markdown/">GitHub Flavored Markdown</a> with some metadata (or variables) found in <a href="http://yaml.org/">YAML</a> files. Everything is stored on a <a href="https://github.com">GitHub</a> repository: <a href="">https://github.com/<span class="notranslate">galaxy</span>project/training-material</a>.</p>
+<p>Most of the content is written in <a href="https://guides.github.com/features/mastering-markdown/">GitHub Flavored Markdown</a> with some metadata (or variables) found in <a href="http://yaml.org/">YAML</a> files. Everything is stored on a <a href="https://github.com">GitHub</a> repository: <a href="https://github.com/galaxyproject/training-material">https://github.com/<span class="notranslate">galaxy</span>project/training-material</a>.</p>
 
 <p>The process of development of new content is open and transparent, using git and following the <a href="https://guides.github.com/introduction/flow/">GitHub flow</a>:</p>
 
@@ -436,7 +439,7 @@
   <h3 id="hands_on-hands-on-fork-the-repository"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Fork the repository</h3>
 
   <ol>
-    <li>Go on the GitHub repository: <a href="">https://github.com/<span class="notranslate">galaxy</span>project/training-material</a></li>
+    <li>Go on the GitHub repository: <a href="https://github.com/galaxyproject/training-material">https://github.com/<span class="notranslate">galaxy</span>project/training-material</a></li>
     <li>
       <p>Click on <strong>Fork</strong> (top-right corner of the page)</p>
 
@@ -464,9 +467,9 @@
     <li>Get the URL of your fork. You can find this on the main page of your fork under the green button:
       <ol>
         <li>
-          <p>Click on <strong>Clone or download</strong> (right)</p>
+          <p>Click on <strong>Code</strong> (right)</p>
 
-          <p><img src="../../images/PR_github_url.png" alt="Get fork URL" /></p>
+          <p><img src="../../images/clone_code_button.png" alt="Get fork URL" /></p>
         </li>
         <li>
           <p>Copy the URL</p>
@@ -718,7 +721,7 @@ $ git commit -m "Add ..."
 
 <h1 id="check-the-automatic-tests">Check the automatic tests</h1>
 
-<p>When a pull request is opened, some automated tests are automatically launched on <a href="http://travis-ci.org/">Travis</a> to be sure that the changes do not break the website, the URL are valid, etc.</p>
+<p>When a pull request is opened, some automated tests are automatically launched on <a href="http://travis-ci.com/">Travis</a> to be sure that the changes do not break the website, the URL are valid, etc.</p>
 
 <p>On the bottom of your pull request, you can see the status of the tests:</p>
 
@@ -735,7 +738,7 @@ $ git commit -m "Add ..."
 
     <p><img src="../../images/PR_test_red.png" alt="Failed tests" /></p>
 
-    <p>When it is red, you can investigate why by clicking on <strong>Details</strong>. You will be redirected on <a href="http://travis-ci.org/">Travis</a> where you can see the logs of the tests. Get in touch with us on <a href="https://gitter.im/Galaxy-Training-Network/Lobby">Gitter</a> if you need help to understand the issue.</p>
+    <p>When it is red, you can investigate why by clicking on <strong>Details</strong>. You will be redirected on <a href="http://travis-ci.com/">Travis</a> where you can see the logs of the tests. Get in touch with us on <a href="https://gitter.im/Galaxy-Training-Network/Lobby">Gitter</a> if you need help to understand the issue.</p>
   </li>
   <li>
     <p>Green (with tick)</p>
@@ -845,6 +848,39 @@ $ git commit -m "Add ..."
 
                     
 
+                    <h1>Feedback</h1>
+                    <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
+
+                    <div id="feedback-button">
+                        <img src="/training-material/shared/images/feedback.png" title="Click to activate" alt="Click here to load Google feedback frame" />
+                    </div>
+                    <div id="feedback-form">
+                    </div>
+                    <script type="text/javascript">
+                        (function (window, document) {
+                            function onDocumentReady(fn) {
+                                if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+                                    fn();
+                                } else {
+                                    document.addEventListener('DOMContentLoaded', fn);
+                                }
+                            }
+
+                            onDocumentReady(function () {
+                                $("#feedback-button").click(function(evt){
+                                    var e = $(evt.target)
+                                    e.hide();
+
+                                    $("#feedback-form").html(`
+                                        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Contributing with GitHub via command-line (Contributing to the Galaxy Training Material)">Loading...</iframe>
+                                    `)
+                                })
+                            });
+                        })(window, document);
+                    </script>
+
+
+
                     <h1>Citing this Tutorial</h1>
                     <p>
                         <ol>
@@ -866,8 +902,8 @@ $ git commit -m "Add ..."
     author = "Cyril Monjeaud and Bérénice Batut",
     title = "Contributing with GitHub via command-line (Galaxy Training Materials)",
     year = "2020",
-    month = "02",
-    day = "28"
+    month = "12",
+    day = "01"
     url = "\url{/training-material/topics/contributing/tutorials/github-command-line-contribution/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
@@ -912,6 +948,14 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
                 
                     
             <li><a href="/training-material/topics/contributing/slides/introduction.html">Overview of the Galaxy Training Material</a></li>
+                    
+                
+            
+                
+                    
+                        
+            <li><a href="/training-material/topics/contributing/tutorials/slides-with-video/tutorial.html">Adding auto-generated video to your slides</a></li>
+                        
                     
                 
             
@@ -1000,18 +1044,6 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
         
 
         
-
-        <hr>
-        <br>
-
-        <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
-        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Contributing with GitHub via command-line (Contributing to the Galaxy Training Material)">Loading...
-        </iframe>
-
-        <blockquote class="feedback">
-            <h3><i class="far fa-comments" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
-            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=Contributing with GitHub via command-line (Contributing to the Galaxy Training Material)">Feedback Form</a>.</p>
-        </blockquote>
     </section>
 </div>
 
@@ -1055,4 +1087,17 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
     }});
     </script>
     
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
 </html>

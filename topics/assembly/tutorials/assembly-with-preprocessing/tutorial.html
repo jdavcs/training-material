@@ -11,7 +11,7 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-45719423-18' , 'auto');
+    ga('create', '' , 'auto');
     ga('send', 'pageview');
 </script>
         
@@ -143,6 +143,9 @@
                 </label>
                 <label data-value="rainbow" class="btn btn-secondary">
                     <input type="radio" name="options" id="rainbow" autocomplete="off"> Rainbow
+                </label>
+                <label data-value="halloween" class="btn btn-secondary">
+                    <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
                 </label>
             </div>
 
@@ -342,9 +345,9 @@
     },
     {
       "@type": "Course",
-      "url": "https://training.galaxyproject.org//training-material/topics/galaxy-data-manipulation/tutorials/collections/tutorial.html",
-      "name": "Collections: Using dataset collection",
-      "description": "Hands-on for 'Collections: Using dataset collection' tutorial",
+      "url": "https://training.galaxyproject.org//training-material/topics/galaxy-interface/tutorials/collections/tutorial.html",
+      "name": "Using dataset collections",
+      "description": "Hands-on for 'Using dataset collections' tutorial",
       "learningResourceType": "hands-on tutorial",
       "interactivityType": "expositive",
       "provider": {
@@ -388,7 +391,7 @@
 
         <div class="contributors-line">By: 
 
-<a href="/training-material/hall-of-fame#wm75" class="contributor-badge"><img src="https://avatars.githubusercontent.com/wm75" alt="Wolfgang Maier">Wolfgang Maier</a>
+<a href="/training-material/hall-of-fame/wm75/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/wm75" alt="Wolfgang Maier">Wolfgang Maier</a>
 
 </div>
 
@@ -542,7 +545,7 @@
     
         
         
-        <a href="/training-material/topics/galaxy-data-manipulation">Data Manipulation</a>
+        <a href="/training-material/topics/galaxy-interface">User Interface and Data Manipulation</a>
         
             <ul>
                 
@@ -552,21 +555,39 @@
                         
                     
                         
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
                             
-                            <li> Collections: Using dataset collection:
+                            <li> Using dataset collections:
                             
                             
                                 
-                                     <a href="/training-material/topics/galaxy-data-manipulation/tutorials/collections/tutorial.html"><i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span> hands-on</a>
+                                     <a href="/training-material/topics/galaxy-interface/tutorials/collections/tutorial.html"><i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span> hands-on</a>
                                 
                             
                             </li>
-                        
-                    
-                        
-                    
-                        
-                    
                         
                     
                         
@@ -679,6 +700,14 @@
         
     
         
+        <a class="dropdown-item" href="https://africa.usegalaxy.eu/" title="Galaxy Africa">
+            Galaxy Africa
+        </a>
+        
+    
+        
+    
+        
     
         
     
@@ -751,14 +780,10 @@
         
     
         
-        <a class="dropdown-item" href="https://usegalaxy.org" title="UseGalaxy.org (Main)">
-            UseGalaxy.org (Main)
-        </a>
-        
     
         
-        <a class="dropdown-item" href="https://usegalaxy.org.au" title="UseGalaxy.org.au">
-            UseGalaxy.org.au
+        <a class="dropdown-item" href="https://usegalaxy.org" title="UseGalaxy.org (Main)">
+            UseGalaxy.org (Main)
         </a>
         
     
@@ -775,7 +800,7 @@
             </ul>
             
 
-            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Apr 21, 2020 </p>
+            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Dec 1, 2020 </p>
         </blockquote>
 
         <div class="container">
@@ -887,7 +912,7 @@ and we will not explain those features in much detail.</p>
 
       <p>If, after this first taste, you are interested in a thorough introduction
 we recommend the advanced tutorial
-<a href="../../../galaxy-data-manipulation/tutorials/upload-rules/tutorial.html">Collections: Rule Based Uploader</a>.</p>
+<a href="../../../galaxy-interface/tutorials/upload-rules/tutorial.html">Collections: Rule Based Uploader</a>.</p>
     </blockquote>
 
     <p>Use this method if the direct download from the NCBI SRA does not work, or
@@ -2059,6 +2084,39 @@ of incorporation of sequencing errors into the final assembly.</p>
 
                     
 
+                    <h1>Feedback</h1>
+                    <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
+
+                    <div id="feedback-button">
+                        <img src="/training-material/shared/images/feedback.png" title="Click to activate" alt="Click here to load Google feedback frame" />
+                    </div>
+                    <div id="feedback-form">
+                    </div>
+                    <script type="text/javascript">
+                        (function (window, document) {
+                            function onDocumentReady(fn) {
+                                if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+                                    fn();
+                                } else {
+                                    document.addEventListener('DOMContentLoaded', fn);
+                                }
+                            }
+
+                            onDocumentReady(function () {
+                                $("#feedback-button").click(function(evt){
+                                    var e = $(evt.target)
+                                    e.hide();
+
+                                    $("#feedback-form").html(`
+                                        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Unicycler assembly of SARS-CoV-2 genome with preprocessing to remove human genome reads (Assembly)">Loading...</iframe>
+                                    `)
+                                })
+                            });
+                        })(window, document);
+                    </script>
+
+
+
                     <h1>Citing this Tutorial</h1>
                     <p>
                         <ol>
@@ -2080,8 +2138,8 @@ of incorporation of sequencing errors into the final assembly.</p>
     author = "Wolfgang Maier",
     title = "Unicycler assembly of SARS-CoV-2 genome with preprocessing to remove human genome reads (Galaxy Training Materials)",
     year = "2020",
-    month = "04",
-    day = "21"
+    month = "12",
+    day = "01"
     url = "\url{/training-material/topics/assembly/tutorials/assembly-with-preprocessing/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
@@ -2119,18 +2177,6 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
         
 
         
-
-        <hr>
-        <br>
-
-        <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
-        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Unicycler assembly of SARS-CoV-2 genome with preprocessing to remove human genome reads (Assembly)">Loading...
-        </iframe>
-
-        <blockquote class="feedback">
-            <h3><i class="far fa-comments" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
-            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=Unicycler assembly of SARS-CoV-2 genome with preprocessing to remove human genome reads (Assembly)">Feedback Form</a>.</p>
-        </blockquote>
     </section>
 </div>
 
@@ -2174,4 +2220,17 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
     }});
     </script>
     
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
 </html>

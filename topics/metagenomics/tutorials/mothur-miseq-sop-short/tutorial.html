@@ -11,7 +11,7 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-45719423-18' , 'auto');
+    ga('create', '' , 'auto');
     ga('send', 'pageview');
 </script>
         
@@ -143,6 +143,9 @@
                 </label>
                 <label data-value="rainbow" class="btn btn-secondary">
                     <input type="radio" name="options" id="rainbow" autocomplete="off"> Rainbow
+                </label>
+                <label data-value="halloween" class="btn btn-secondary">
+                    <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
                 </label>
             </div>
 
@@ -311,7 +314,7 @@
 
         <div class="contributors-line">By: 
 
-<a href="/training-material/hall-of-fame#shiltemann" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Saskia Hiltemann">Saskia Hiltemann</a>, <a href="/training-material/hall-of-fame#bebatut" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Bérénice Batut">Bérénice Batut</a>, <a href="/training-material/hall-of-fame#tnabtaf" class="contributor-badge"><img src="https://avatars.githubusercontent.com/tnabtaf" alt="Dave Clements">Dave Clements</a>
+<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Saskia Hiltemann">Saskia Hiltemann</a>, <a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Bérénice Batut">Bérénice Batut</a>, <a href="/training-material/hall-of-fame/tnabtaf/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/tnabtaf" alt="Dave Clements">Dave Clements</a>
 
 </div>
 
@@ -451,6 +454,14 @@
         
     
         
+        <a class="dropdown-item" href="https://africa.usegalaxy.eu/" title="Galaxy Africa">
+            Galaxy Africa
+        </a>
+        
+    
+        
+    
+        
     
         
         <a class="dropdown-item" href="https://ecology.usegalaxy.eu/" title="Galaxy for Ecology">
@@ -527,14 +538,14 @@
         
     
         
-        <a class="dropdown-item" href="https://usegalaxy.org" title="UseGalaxy.org (Main)">
-            UseGalaxy.org (Main)
+        <a class="dropdown-item" href="https://usegalaxy.fr/" title="UseGalaxy.fr">
+            UseGalaxy.fr
         </a>
         
     
         
-        <a class="dropdown-item" href="https://usegalaxy.org.au" title="UseGalaxy.org.au">
-            UseGalaxy.org.au
+        <a class="dropdown-item" href="https://usegalaxy.org" title="UseGalaxy.org (Main)">
+            UseGalaxy.org (Main)
         </a>
         
     
@@ -551,7 +562,7 @@
             </ul>
             
 
-            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Feb 28, 2020 </p>
+            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Dec 1, 2020 </p>
         </blockquote>
 
         <div class="container">
@@ -977,7 +988,7 @@ Since we are sequencing many of the same organisms, there will likely be many id
           <li>Provide your <span class="notranslate">workflow</span>
             <ul>
               <li>Option 1: Paste the URL of the <span class="notranslate">workflow</span> into the box labelled <em>“Archived <span class="notranslate">Workflow</span> URL”</em></li>
-              <li>Option 2: Upload the worflow file in the box labelled <em>“Archived <span class="notranslate">Workflow</span> File”</em></li>
+              <li>Option 2: Upload the <span class="notranslate">workflow</span> file in the box labelled <em>“Archived <span class="notranslate">Workflow</span> File”</em></li>
             </ul>
           </li>
           <li>Click the <strong>Import <span class="notranslate">workflow</span></strong> button</li>
@@ -996,11 +1007,7 @@ Since we are sequencing many of the same organisms, there will likely be many id
         <h3 id="tip-tip-running-a-workflow"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Running a <span class="notranslate">workflow</span></h3>
         <ul>
           <li>Click on <em><span class="notranslate">Workflow</span></em> on the top menu bar of <span class="notranslate">Galaxy</span>. You will see a list of all your workflows.</li>
-          <li>Click on the dropdown menu <i class="fas fa-caret-down" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-dropdown</span> next to your <span class="notranslate">workflow</span>
-            <ul>
-              <li>Select <strong>Run</strong> from the list</li>
-            </ul>
-          </li>
+          <li>Click on the <i class="fas fa-play" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">workflow</span>-run</span> (<em>Run <span class="notranslate">workflow</span></em>) button next to your <span class="notranslate">workflow</span></li>
           <li>Configure the <span class="notranslate">workflow</span> as needed</li>
           <li>Click the <strong>Run <span class="notranslate">Workflow</span></strong> button at the top-right of the screen</li>
           <li>You may have to refresh your history to see the queued jobs</li>
@@ -1186,7 +1193,7 @@ this chimera removal using the <code class="language-plaintext highlighter-rouge
           <li>Provide your <span class="notranslate">workflow</span>
             <ul>
               <li>Option 1: Paste the URL of the <span class="notranslate">workflow</span> into the box labelled <em>“Archived <span class="notranslate">Workflow</span> URL”</em></li>
-              <li>Option 2: Upload the worflow file in the box labelled <em>“Archived <span class="notranslate">Workflow</span> File”</em></li>
+              <li>Option 2: Upload the <span class="notranslate">workflow</span> file in the box labelled <em>“Archived <span class="notranslate">Workflow</span> File”</em></li>
             </ul>
           </li>
           <li>Click the <strong>Import <span class="notranslate">workflow</span></strong> button</li>
@@ -1205,11 +1212,7 @@ this chimera removal using the <code class="language-plaintext highlighter-rouge
         <h3 id="tip-tip-running-a-workflow-1"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Running a <span class="notranslate">workflow</span></h3>
         <ul>
           <li>Click on <em><span class="notranslate">Workflow</span></em> on the top menu bar of <span class="notranslate">Galaxy</span>. You will see a list of all your workflows.</li>
-          <li>Click on the dropdown menu <i class="fas fa-caret-down" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-dropdown</span> next to your <span class="notranslate">workflow</span>
-            <ul>
-              <li>Select <strong>Run</strong> from the list</li>
-            </ul>
-          </li>
+          <li>Click on the <i class="fas fa-play" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">workflow</span>-run</span> (<em>Run <span class="notranslate">workflow</span></em>) button next to your <span class="notranslate">workflow</span></li>
           <li>Configure the <span class="notranslate">workflow</span> as needed</li>
           <li>Click the <strong>Run <span class="notranslate">Workflow</span></strong> button at the top-right of the screen</li>
           <li>You may have to refresh your history to see the queued jobs</li>
@@ -1323,7 +1326,7 @@ and want to remove them from our dataset.</p>
           <li>Provide your <span class="notranslate">workflow</span>
             <ul>
               <li>Option 1: Paste the URL of the <span class="notranslate">workflow</span> into the box labelled <em>“Archived <span class="notranslate">Workflow</span> URL”</em></li>
-              <li>Option 2: Upload the worflow file in the box labelled <em>“Archived <span class="notranslate">Workflow</span> File”</em></li>
+              <li>Option 2: Upload the <span class="notranslate">workflow</span> file in the box labelled <em>“Archived <span class="notranslate">Workflow</span> File”</em></li>
             </ul>
           </li>
           <li>Click the <strong>Import <span class="notranslate">workflow</span></strong> button</li>
@@ -1344,11 +1347,7 @@ and want to remove them from our dataset.</p>
         <h3 id="tip-tip-running-a-workflow-2"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Running a <span class="notranslate">workflow</span></h3>
         <ul>
           <li>Click on <em><span class="notranslate">Workflow</span></em> on the top menu bar of <span class="notranslate">Galaxy</span>. You will see a list of all your workflows.</li>
-          <li>Click on the dropdown menu <i class="fas fa-caret-down" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-dropdown</span> next to your <span class="notranslate">workflow</span>
-            <ul>
-              <li>Select <strong>Run</strong> from the list</li>
-            </ul>
-          </li>
+          <li>Click on the <i class="fas fa-play" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">workflow</span>-run</span> (<em>Run <span class="notranslate">workflow</span></em>) button next to your <span class="notranslate">workflow</span></li>
           <li>Configure the <span class="notranslate">workflow</span> as needed</li>
           <li>Click the <strong>Run <span class="notranslate">Workflow</span></strong> button at the top-right of the screen</li>
           <li>You may have to refresh your history to see the queued jobs</li>
@@ -1532,7 +1531,7 @@ separation.</p>
           <li>Provide your <span class="notranslate">workflow</span>
             <ul>
               <li>Option 1: Paste the URL of the <span class="notranslate">workflow</span> into the box labelled <em>“Archived <span class="notranslate">Workflow</span> URL”</em></li>
-              <li>Option 2: Upload the worflow file in the box labelled <em>“Archived <span class="notranslate">Workflow</span> File”</em></li>
+              <li>Option 2: Upload the <span class="notranslate">workflow</span> file in the box labelled <em>“Archived <span class="notranslate">Workflow</span> File”</em></li>
             </ul>
           </li>
           <li>Click the <strong>Import <span class="notranslate">workflow</span></strong> button</li>
@@ -1551,11 +1550,7 @@ separation.</p>
         <h3 id="tip-tip-running-a-workflow-3"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Running a <span class="notranslate">workflow</span></h3>
         <ul>
           <li>Click on <em><span class="notranslate">Workflow</span></em> on the top menu bar of <span class="notranslate">Galaxy</span>. You will see a list of all your workflows.</li>
-          <li>Click on the dropdown menu <i class="fas fa-caret-down" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-dropdown</span> next to your <span class="notranslate">workflow</span>
-            <ul>
-              <li>Select <strong>Run</strong> from the list</li>
-            </ul>
-          </li>
+          <li>Click on the <i class="fas fa-play" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">workflow</span>-run</span> (<em>Run <span class="notranslate">workflow</span></em>) button next to your <span class="notranslate">workflow</span></li>
           <li>Configure the <span class="notranslate">workflow</span> as needed</li>
           <li>Click the <strong>Run <span class="notranslate">Workflow</span></strong> button at the top-right of the screen</li>
           <li>You may have to refresh your history to see the queued jobs</li>
@@ -1668,7 +1663,7 @@ separation.</p>
           <li>Provide your <span class="notranslate">workflow</span>
             <ul>
               <li>Option 1: Paste the URL of the <span class="notranslate">workflow</span> into the box labelled <em>“Archived <span class="notranslate">Workflow</span> URL”</em></li>
-              <li>Option 2: Upload the worflow file in the box labelled <em>“Archived <span class="notranslate">Workflow</span> File”</em></li>
+              <li>Option 2: Upload the <span class="notranslate">workflow</span> file in the box labelled <em>“Archived <span class="notranslate">Workflow</span> File”</em></li>
             </ul>
           </li>
           <li>Click the <strong>Import <span class="notranslate">workflow</span></strong> button</li>
@@ -1688,11 +1683,7 @@ separation.</p>
         <h3 id="tip-tip-running-a-workflow-4"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Running a <span class="notranslate">workflow</span></h3>
         <ul>
           <li>Click on <em><span class="notranslate">Workflow</span></em> on the top menu bar of <span class="notranslate">Galaxy</span>. You will see a list of all your workflows.</li>
-          <li>Click on the dropdown menu <i class="fas fa-caret-down" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-dropdown</span> next to your <span class="notranslate">workflow</span>
-            <ul>
-              <li>Select <strong>Run</strong> from the list</li>
-            </ul>
-          </li>
+          <li>Click on the <i class="fas fa-play" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">workflow</span>-run</span> (<em>Run <span class="notranslate">workflow</span></em>) button next to your <span class="notranslate">workflow</span></li>
           <li>Configure the <span class="notranslate">workflow</span> as needed</li>
           <li>Click the <strong>Run <span class="notranslate">Workflow</span></strong> button at the top-right of the screen</li>
           <li>You may have to refresh your history to see the queued jobs</li>
@@ -1842,7 +1833,7 @@ species rich habitat, only a small fraction has been sampled.</p>
           <li>Provide your <span class="notranslate">workflow</span>
             <ul>
               <li>Option 1: Paste the URL of the <span class="notranslate">workflow</span> into the box labelled <em>“Archived <span class="notranslate">Workflow</span> URL”</em></li>
-              <li>Option 2: Upload the worflow file in the box labelled <em>“Archived <span class="notranslate">Workflow</span> File”</em></li>
+              <li>Option 2: Upload the <span class="notranslate">workflow</span> file in the box labelled <em>“Archived <span class="notranslate">Workflow</span> File”</em></li>
             </ul>
           </li>
           <li>Click the <strong>Import <span class="notranslate">workflow</span></strong> button</li>
@@ -1860,11 +1851,7 @@ species rich habitat, only a small fraction has been sampled.</p>
         <h3 id="tip-tip-running-a-workflow-5"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Running a <span class="notranslate">workflow</span></h3>
         <ul>
           <li>Click on <em><span class="notranslate">Workflow</span></em> on the top menu bar of <span class="notranslate">Galaxy</span>. You will see a list of all your workflows.</li>
-          <li>Click on the dropdown menu <i class="fas fa-caret-down" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-dropdown</span> next to your <span class="notranslate">workflow</span>
-            <ul>
-              <li>Select <strong>Run</strong> from the list</li>
-            </ul>
-          </li>
+          <li>Click on the <i class="fas fa-play" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">workflow</span>-run</span> (<em>Run <span class="notranslate">workflow</span></em>) button next to your <span class="notranslate">workflow</span></li>
           <li>Configure the <span class="notranslate">workflow</span> as needed</li>
           <li>Click the <strong>Run <span class="notranslate">Workflow</span></strong> button at the top-right of the screen</li>
           <li>You may have to refresh your history to see the queued jobs</li>
@@ -1953,7 +1940,7 @@ coefficient</a>. We will also calculate the <a href="https://en.wikipedia.org/wi
           <li>Provide your <span class="notranslate">workflow</span>
             <ul>
               <li>Option 1: Paste the URL of the <span class="notranslate">workflow</span> into the box labelled <em>“Archived <span class="notranslate">Workflow</span> URL”</em></li>
-              <li>Option 2: Upload the worflow file in the box labelled <em>“Archived <span class="notranslate">Workflow</span> File”</em></li>
+              <li>Option 2: Upload the <span class="notranslate">workflow</span> file in the box labelled <em>“Archived <span class="notranslate">Workflow</span> File”</em></li>
             </ul>
           </li>
           <li>Click the <strong>Import <span class="notranslate">workflow</span></strong> button</li>
@@ -1972,11 +1959,7 @@ coefficient</a>. We will also calculate the <a href="https://en.wikipedia.org/wi
         <h3 id="tip-tip-running-a-workflow-6"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Running a <span class="notranslate">workflow</span></h3>
         <ul>
           <li>Click on <em><span class="notranslate">Workflow</span></em> on the top menu bar of <span class="notranslate">Galaxy</span>. You will see a list of all your workflows.</li>
-          <li>Click on the dropdown menu <i class="fas fa-caret-down" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-dropdown</span> next to your <span class="notranslate">workflow</span>
-            <ul>
-              <li>Select <strong>Run</strong> from the list</li>
-            </ul>
-          </li>
+          <li>Click on the <i class="fas fa-play" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">workflow</span>-run</span> (<em>Run <span class="notranslate">workflow</span></em>) button next to your <span class="notranslate">workflow</span></li>
           <li>Configure the <span class="notranslate">workflow</span> as needed</li>
           <li>Click the <strong>Run <span class="notranslate">Workflow</span></strong> button at the top-right of the screen</li>
           <li>You may have to refresh your history to see the queued jobs</li>
@@ -2372,6 +2355,39 @@ This file can also be visualized in Phinch2, but requires installation of Phinch
 </li></ol>
                     
 
+                    <h1>Feedback</h1>
+                    <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
+
+                    <div id="feedback-button">
+                        <img src="/training-material/shared/images/feedback.png" title="Click to activate" alt="Click here to load Google feedback frame" />
+                    </div>
+                    <div id="feedback-form">
+                    </div>
+                    <script type="text/javascript">
+                        (function (window, document) {
+                            function onDocumentReady(fn) {
+                                if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+                                    fn();
+                                } else {
+                                    document.addEventListener('DOMContentLoaded', fn);
+                                }
+                            }
+
+                            onDocumentReady(function () {
+                                $("#feedback-button").click(function(evt){
+                                    var e = $(evt.target)
+                                    e.hide();
+
+                                    $("#feedback-form").html(`
+                                        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=16S Microbial Analysis with mothur (short) (Metagenomics)">Loading...</iframe>
+                                    `)
+                                })
+                            });
+                        })(window, document);
+                    </script>
+
+
+
                     <h1>Citing this Tutorial</h1>
                     <p>
                         <ol>
@@ -2393,8 +2409,8 @@ This file can also be visualized in Phinch2, but requires installation of Phinch
     author = "Saskia Hiltemann and Bérénice Batut and Dave Clements",
     title = "16S Microbial Analysis with mothur (short) (Galaxy Training Materials)",
     year = "2020",
-    month = "02",
-    day = "28"
+    month = "12",
+    day = "01"
     url = "\url{/training-material/topics/metagenomics/tutorials/mothur-miseq-sop-short/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
@@ -2432,18 +2448,6 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
         
 
         
-
-        <hr>
-        <br>
-
-        <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
-        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=16S Microbial Analysis with mothur (short) (Metagenomics)">Loading...
-        </iframe>
-
-        <blockquote class="feedback">
-            <h3><i class="far fa-comments" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
-            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=16S Microbial Analysis with mothur (short) (Metagenomics)">Feedback Form</a>.</p>
-        </blockquote>
     </section>
 </div>
 
@@ -2487,4 +2491,17 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
     }});
     </script>
     
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
 </html>

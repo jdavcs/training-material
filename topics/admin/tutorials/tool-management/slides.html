@@ -18,7 +18,7 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-45719423-18' , 'auto');
+    ga('create', '' , 'auto');
     ga('send', 'pageview');
 </script>
     
@@ -238,7 +238,7 @@ You can add tools to Galaxy either
   - Make a copy `$ cp tool_conf.xml.sample tool_conf.xml`.
   - Add your tool entry to the `tool_conf.xml`.
 - To add local tools with the [galaxyproject.galaxy Ansible role][galaxy-role]:
-  - Set `galaxy_local_tools`
+  - Set `galaxy_local_tools` to the local tool paths
   - Run the playbook
 - Tool dependencies need to be installed separately, unless
   `conda_auto_install: true` is set in `galaxy.yml` (not recommended for
@@ -249,11 +249,11 @@ You can add tools to Galaxy either
 
 ---
 
-## How to install from the Tool Shed
+## How to install tools from the Tool Shed
 
-* Find the repository you want to install.
-* From Galaxy's admin UI find the repo in the connected TS.
-* Install the repo into Galaxy.
+- From the Galaxy admin UI, select &quot;Tool Management &gt; Install and Uninstall&quot;
+- Find the repository with the tool(s) you want to install
+- Install the tool repository into Galaxy
 
 ---
 
@@ -287,7 +287,7 @@ workflow-install [-h] [-v] [-g GALAXY] [-u USER] [-p PASSWORD] [-a API_KEY]
 	[--publish_workflows]
 ```
 
-(use `workflow-to-tools` to extract list of tools from a workflow)
+(use `workflow-to-tools` to extract the list of tools used in a workflow)
 
 ---
 ## Get installed tool list for a Galaxy instance
@@ -333,8 +333,7 @@ shed-tools install [-h] [-v] [-g GALAXY] [-u USER] [-p PASSWORD] [-a API_KEY]
 	[-y TOOL_YAML]
 	[--name NAME]
 	[--owner OWNER]
-	[--revisions
-	[REVISIONS [REVISIONS ...]]]
+	[--revisions [REVISIONS [REVISIONS ...]]]
 	[--toolshed TOOL_SHED_URL]
 	[--install_tool_dependencies]
 	[--skip_install_resolver_dependencies]
@@ -443,9 +442,7 @@ Galaxy Version: 17.05
 ---
 class: left
 
-## Example config entry
-
-One entry in `shed_tool_conf.xml`:
+## Example `shed_tool_conf.xml` entry
 
 ```xml
 &lt;section id=&quot;filter&quot; name=&quot;Filter and Sort&quot; version=&quot;&quot;&gt;
@@ -619,7 +616,7 @@ This material is the result of a collaborative work. Thanks to the [Galaxy Train
 <div class="contributors-line">
 
 
-<a href="/training-material/hall-of-fame#mvdbeek" class="contributor-badge"><img src="https://avatars.githubusercontent.com/mvdbeek" alt="Marius van den Beek">Marius van den Beek</a>, <a href="/training-material/hall-of-fame#martenson" class="contributor-badge"><img src="https://avatars.githubusercontent.com/martenson" alt="Martin Čech">Martin Čech</a>, <a href="/training-material/hall-of-fame#slugger70" class="contributor-badge"><img src="https://avatars.githubusercontent.com/slugger70" alt="Simon Gladman">Simon Gladman</a>, <a href="/training-material/hall-of-fame#hexylena" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>, <a href="/training-material/hall-of-fame#nsoranzo" class="contributor-badge"><img src="https://avatars.githubusercontent.com/nsoranzo" alt="Nicola Soranzo">Nicola Soranzo</a>
+<a href="/training-material/hall-of-fame/mvdbeek/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/mvdbeek" alt="Marius van den Beek">Marius van den Beek</a>, <a href="/training-material/hall-of-fame/martenson/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/martenson" alt="Martin Čech">Martin Čech</a>, <a href="/training-material/hall-of-fame/slugger70/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/slugger70" alt="Simon Gladman">Simon Gladman</a>, <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>, <a href="/training-material/hall-of-fame/nsoranzo/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/nsoranzo" alt="Nicola Soranzo">Nicola Soranzo</a>
 
 
 </div>
@@ -649,5 +646,19 @@ This material is licensed under the <a rel="license" href="https://creativecommo
         target:function(trigger){return trigger.parentElement;
       }});
     </script>
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('body').prepend("<div style='text-align: center'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
+
   </body>
 </html>

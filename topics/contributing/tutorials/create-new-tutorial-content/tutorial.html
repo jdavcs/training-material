@@ -11,7 +11,7 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-45719423-18' , 'auto');
+    ga('create', '' , 'auto');
     ga('send', 'pageview');
 </script>
         
@@ -143,6 +143,9 @@
                 </label>
                 <label data-value="rainbow" class="btn btn-secondary">
                     <input type="radio" name="options" id="rainbow" autocomplete="off"> Rainbow
+                </label>
+                <label data-value="halloween" class="btn btn-secondary">
+                    <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
                 </label>
             </div>
 
@@ -298,7 +301,7 @@
 
         <div class="contributors-line">By: 
 
-<a href="/training-material/hall-of-fame#bebatut" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Bérénice Batut">Bérénice Batut</a>, <a href="/training-material/hall-of-fame#bgruening" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bgruening" alt="Björn Grüning">Björn Grüning</a>, <a href="/training-material/hall-of-fame#shiltemann" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Saskia Hiltemann">Saskia Hiltemann</a>, <a href="/training-material/hall-of-fame#hexylena" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>
+<a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Bérénice Batut">Bérénice Batut</a>, <a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bgruening" alt="Björn Grüning">Björn Grüning</a>, <a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Saskia Hiltemann">Saskia Hiltemann</a>, <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>
 
 </div>
 
@@ -380,7 +383,7 @@
             </ul>
             
 
-            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Jun 11, 2020 </p>
+            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Dec 1, 2020 </p>
         </blockquote>
 
         <div class="container">
@@ -411,6 +414,7 @@
       <li><a href="#overview-box" id="markdown-toc-overview-box"><strong>Overview</strong> box</a></li>
       <li><a href="#agenda-box" id="markdown-toc-agenda-box"><strong>Agenda</strong> box</a></li>
       <li><a href="#hands-on-box" id="markdown-toc-hands-on-box"><strong>Hands-on</strong> box</a></li>
+      <li><a href="#tool-links" id="markdown-toc-tool-links">Tool Links</a></li>
       <li><a href="#questions-and-solution-boxes" id="markdown-toc-questions-and-solution-boxes"><strong>Questions</strong> and <strong>solution</strong> boxes</a></li>
       <li><a href="#tips-box" id="markdown-toc-tips-box"><strong>Tips</strong> box</a></li>
       <li><a href="#comments-boxes" id="markdown-toc-comments-boxes"><strong>Comments</strong> boxes</a></li>
@@ -507,9 +511,9 @@ blabla
 
 </blockquote>
 
-<p>This information is used to display the data from the topic and tutorial page. They are also used to check which information are missing for the tutorials.</p>
+<p>This information is used to display the data from the topic and tutorial page. They are also used to check which information is missing for the tutorials.</p>
 
-<p>We also define metadata related to the pedagogical content of the tutorial, which will appear in the top (“Overview” box) and bottom of the online tutorial:</p>
+<p>We also define metadata related to the pedagogical content of the tutorial, which will appear at the top (“Overview” box) and bottom of the online tutorial:</p>
 
 <ul>
   <li><code class="language-plaintext highlighter-rouge">requirements</code>: list of resources that the reader of the material should be familiar with before starting this training:
@@ -560,7 +564,7 @@ blabla
       <li><code class="language-plaintext highlighter-rouge">link</code>: URL to the exte<span class="notranslate">rna</span>l resource</li>
     </ul>
 
-    <p>They will be displayed at the end of a tutorial.</p>
+    <p>They will be displayed at the end of the tutorial.</p>
   </li>
   <li><code class="language-plaintext highlighter-rouge">subtopic</code>: if the topic has <a href="/training-material/topics/contributing/tutorials/create-new-topic/tutorial.html#adapt-the-metadata-for-your-topic">multiple subtopics defined</a>, you can assign your tutorial to one of those subtopics here. Without this, the tutorial will appear in the “Other tutorials” section on the topic page.</li>
 </ul>
@@ -819,7 +823,7 @@ This can be avoided by using the <code class="language-plaintext highlighter-rou
   <ul>
     <li>The learning objectives are the goals of the tutorial</li>
     <li>They will be informed by your audience and will communicate to them and to yourself what you should focus on during the course</li>
-    <li>They are single sentences describing what a learner should be able to do once they have done completed tutorial</li>
+    <li>They are single sentences describing what a learner should be able to do once they have completed the tutorial</li>
     <li>You can use Bloom’s Taxonomy to write effective learning objectives</li>
   </ul>
 
@@ -902,7 +906,7 @@ This can be avoided by using the <code class="language-plaintext highlighter-rou
 <span class="gt">&gt;</span>
 <span class="gt">&gt;        This parameter should be length of <span class="notranslate">reads</span> - 1</span>
 <span class="gt">&gt;</span>
-<span class="gt">&gt; 2. **MultiQC** {% icon tool %}: Aggregate the STAR logs with</span>
+<span class="gt">&gt; 2. {% tool [MultiQC](<span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.8+<span class="notranslate">galaxy</span>0) %}: Aggregate the STAR logs with</span>
 <span class="gt">&gt;      - *"Which tool was used generate logs?"*: `STAR`</span>
 <span class="gt">&gt;      - *"Type of FastQC output?"*: `Log`</span>
 <span class="gt">&gt;      - *"STAR log output"*: the generated `log` files (multiple datasets)</span>
@@ -940,7 +944,7 @@ This can be avoided by using the <code class="language-plaintext highlighter-rou
         </li>
       </ul>
     </li>
-    <li><strong>MultiQC</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>: Aggregate the STAR logs with
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.8+galaxy0" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.8+galaxy0"><strong>MultiQC</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.8+<span class="notranslate">galaxy</span>0</span></span> : Aggregate the STAR logs with
       <ul>
         <li><em>“Which tool was used generate logs?”</em>: <code class="language-plaintext highlighter-rouge">STAR</code></li>
         <li><em>“Type of FastQC output?”</em>: <code class="language-plaintext highlighter-rouge">Log</code></li>
@@ -990,6 +994,47 @@ but may be helpful in some cases (for example to distinguish between single file
     </li>
   </ol>
 </blockquote>
+
+<h2 id="tool-links">Tool Links</h2>
+
+<p>With the new <a href="https://github.com/galaxyproject/galaxy/pull/10024">GTN in <span class="notranslate">Galaxy</span> Webhook</a>, trainees can view training directly within <span class="notranslate">Galaxy</span>. As part of this, we enable those trainees to click on tools, and have those tools directly activated in <span class="notranslate">Galaxy</span>, enabling for a seamless training experience for trainees.</p>
+
+<figure id="figure-2"><img src="../../images/88277962-ddda4a80-cce1-11ea-92cd-41b1df063db0.gif" alt="GIF of a user using the GTN in Galaxy webhook." /><figcaption><span class="figcaption-prefix">Figure 2:</span> A gif showing how the GTN in <span class="notranslate">Galaxy</span> webhook works. A student clicks the learning hat icon in the masthead of a <span class="notranslate">Galaxy</span> server, and an overlay is activated showing the GTN website. Within the GTN they can browse around and their place in tutorials is saved. While following a tutorial the student reches a step which instructs them to run a specific tool. Instead of the normal experience searching for a tool (quite difficult on large servers), they click a blue button and the tool is activated in <span class="notranslate">Galaxy</span>, and the overlay is closed. The student can reactivate the overlay at any time and return to their place in the tutorial.</figcaption></figure>
+
+<p>To enable these in your tutorial you can use the following syntax:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- {% tool MultiQC %}
+- {% tool [MultiQC](<span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.8+<span class="notranslate">galaxy</span>0) %}
+- {% tool [Import some data](upload1) %}
+</code></pre></div></div>
+
+<p>Which will be rendered as:</p>
+
+<ul>
+  <li><span><strong>MultiQC</strong> <i class="fas fa-wrench" aria-hidden="true"></i></span></li>
+  <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.8+galaxy0" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.8+galaxy0"><strong>MultiQC</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.8+<span class="notranslate">galaxy</span>0</span></span></li>
+  <li><span class="tool" data-tool="upload1" title="Tested with upload1"><strong>Import some data</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: upload1</span></span></li>
+</ul>
+
+<p>When viewed through <span class="notranslate">Galaxy</span>, students will see:</p>
+
+<p><span data-tool="upload1" title="Tested with upload1" class="tool galaxy-proxy-active"><strong>Import some data</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: upload1</span></span></p>
+
+<h3 id="how-to-find-these-ids">How to find these IDs?</h3>
+
+<p>The easiest way is to use planemo to generate the training from a <span class="notranslate">workflow</span>. In recent versions of planemo, this is managed automatically.</p>
+
+<p>The alte<span class="notranslate">rna</span>tive is to figure out the ID for the tool you want to use:</p>
+
+<ol>
+  <li>Find your tool in <span class="notranslate">Galaxy</span>, and click to access the tool form.</li>
+  <li>Click on Options at the top right</li>
+  <li>Click on Share</li>
+  <li>The URL shown will be something like <code class="language-plaintext highlighter-rouge">https://use<span class="notranslate">galaxy</span>.eu/root?tool_id=<span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/<span class="notranslate">galaxy</span>p/mz_to_sqlite/mz_to_sqlite/2.0.4+<span class="notranslate">galaxy</span>1</code></li>
+  <li>Keep only the part after the <code class="language-plaintext highlighter-rouge">=</code>, so <code class="language-plaintext highlighter-rouge"><span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/<span class="notranslate">galaxy</span>p/mz_to_sqlite/mz_to_sqlite/2.0.4+<span class="notranslate">galaxy</span>1</code> in this example</li>
+</ol>
+
+<p><img src="../../images/tool-id.png" alt="Finding the tool ID" /></p>
 
 <h2 id="questions-and-solution-boxes"><strong>Questions</strong> and <strong>solution</strong> boxes</h2>
 
@@ -1166,12 +1211,12 @@ With well chosen wrong answers, MCQs can do much more than just measure how much
 <span class="gt">&gt; &gt; apikey = super-secret-api-key-wow!</span>
 <span class="gt">&gt; &gt; ```</span>
 <span class="gt">&gt; {: .code-out}</span>
-{: .code-io}
+{: .code-2col}
 </code></pre></div></div>
 
 <p>Rendered (try it! resize your browser)</p>
 
-<blockquote class="code-io">
+<blockquote class="code-2col">
   <blockquote class="code-in">
     <h3 id="code-in-input-bash"><i class="far fa-keyboard" aria-hidden="true"></i><span class="visually-hidden">code-in</span> Input: Bash</h3>
     <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat</span> /tmp/test.ini
@@ -1190,7 +1235,7 @@ With well chosen wrong answers, MCQs can do much more than just measure how much
   </blockquote>
 </blockquote>
 
-<p>If you leave off the <code class="language-plaintext highlighter-rouge">{: .code-io}</code>, it will render as a single column always.</p>
+<p>If you leave off the <code class="language-plaintext highlighter-rouge">{: .code-2col}</code>, it will render as a single column always.</p>
 
 <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gt">&gt; ### {% icon code-in %} Input: Bash</span>
 <span class="gt">&gt; ```bash</span>
@@ -1313,6 +1358,39 @@ and the corresponding website {% cite <span class="notranslate">galaxy</span>-tr
 </li></ol>
                     
 
+                    <h1>Feedback</h1>
+                    <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
+
+                    <div id="feedback-button">
+                        <img src="/training-material/shared/images/feedback.png" title="Click to activate" alt="Click here to load Google feedback frame" />
+                    </div>
+                    <div id="feedback-form">
+                    </div>
+                    <script type="text/javascript">
+                        (function (window, document) {
+                            function onDocumentReady(fn) {
+                                if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+                                    fn();
+                                } else {
+                                    document.addEventListener('DOMContentLoaded', fn);
+                                }
+                            }
+
+                            onDocumentReady(function () {
+                                $("#feedback-button").click(function(evt){
+                                    var e = $(evt.target)
+                                    e.hide();
+
+                                    $("#feedback-form").html(`
+                                        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Creating a new tutorial - Writing content in Markdown (Contributing to the Galaxy Training Material)">Loading...</iframe>
+                                    `)
+                                })
+                            });
+                        })(window, document);
+                    </script>
+
+
+
                     <h1>Citing this Tutorial</h1>
                     <p>
                         <ol>
@@ -1334,8 +1412,8 @@ and the corresponding website {% cite <span class="notranslate">galaxy</span>-tr
     author = "Bérénice Batut and Björn Grüning and Saskia Hiltemann and Helena Rasche",
     title = "Creating a new tutorial - Writing content in Markdown (Galaxy Training Materials)",
     year = "2020",
-    month = "06",
-    day = "11"
+    month = "12",
+    day = "01"
     url = "\url{/training-material/topics/contributing/tutorials/create-new-tutorial-content/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
@@ -1380,6 +1458,14 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
                 
                     
             <li><a href="/training-material/topics/contributing/slides/introduction.html">Overview of the Galaxy Training Material</a></li>
+                    
+                
+            
+                
+                    
+                        
+            <li><a href="/training-material/topics/contributing/tutorials/slides-with-video/tutorial.html">Adding auto-generated video to your slides</a></li>
+                        
                     
                 
             
@@ -1468,18 +1554,6 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
         
 
         
-
-        <hr>
-        <br>
-
-        <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
-        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Creating a new tutorial - Writing content in Markdown (Contributing to the Galaxy Training Material)">Loading...
-        </iframe>
-
-        <blockquote class="feedback">
-            <h3><i class="far fa-comments" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
-            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=Creating a new tutorial - Writing content in Markdown (Contributing to the Galaxy Training Material)">Feedback Form</a>.</p>
-        </blockquote>
     </section>
 </div>
 
@@ -1523,4 +1597,17 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
     }});
     </script>
     
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
 </html>

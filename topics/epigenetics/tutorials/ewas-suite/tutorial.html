@@ -11,7 +11,7 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-45719423-18' , 'auto');
+    ga('create', '' , 'auto');
     ga('send', 'pageview');
 </script>
         
@@ -143,6 +143,9 @@
                 </label>
                 <label data-value="rainbow" class="btn btn-secondary">
                     <input type="radio" name="options" id="rainbow" autocomplete="off"> Rainbow
+                </label>
+                <label data-value="halloween" class="btn btn-secondary">
+                    <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
                 </label>
             </div>
 
@@ -359,7 +362,7 @@
 
         <div class="contributors-line">By: 
 
-<a href="/training-material/hall-of-fame#kpbioteam" class="contributor-badge"><img src="https://avatars.githubusercontent.com/kpbioteam" alt="Katarzyna Murat">Katarzyna Murat</a>, <a href="/training-material/hall-of-fame#kpoterlowicz" class="contributor-badge"><img src="https://avatars.githubusercontent.com/kpoterlowicz" alt="Krzysztof Poterlowicz">Krzysztof Poterlowicz</a>
+<a href="/training-material/hall-of-fame/kpbioteam/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/kpbioteam" alt="Katarzyna Murat">Katarzyna Murat</a>, <a href="/training-material/hall-of-fame/kpoterlowicz/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/kpoterlowicz" alt="Krzysztof Poterlowicz">Krzysztof Poterlowicz</a>
 
 </div>
 
@@ -621,6 +624,10 @@
     
         
     
+        
+    
+        
+    
     </ul>
 
 
@@ -630,7 +637,7 @@
             </ul>
             
 
-            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Feb 28, 2020 </p>
+            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Dec 1, 2020 </p>
         </blockquote>
 
         <div class="container">
@@ -816,12 +823,11 @@ https://zenodo.org/record/1251211/files/GSM1588707_8795207119_R06C02_Grn.idat
 <img src="../../images/2idat_preprocessing.png" alt="idat_preprocessing" /></p>
 
 </blockquote>
-<blockquote>
-  <blockquote class="comment">
-    <h3 id="commentoptional-normalisation-of-the-data"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span>(optional) Normalisation of the data</h3>
-    <p>If your files require normalisation, you might prefer to use one of the other preprocessing tools provided in Infinium Human Methylation BeadChip tool i.e. Preprocess Funnorm or Preprocess Quantile look for recommendation at <a class="citation" href="#Hansen">Aryee <i>et al.</i> 2014</a>.</p>
 
-  </blockquote>
+<blockquote class="comment">
+  <h3 id="commentoptional-normalisation-of-the-data"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span>(optional) Normalisation of the data</h3>
+  <p>If your files require normalisation, you might prefer to use one of the other preprocessing tools provided in Infinium Human Methylation BeadChip tool i.e. Preprocess Funnorm or Preprocess Quantile look for recommendation at <a class="citation" href="#Hansen">Aryee <i>et al.</i> 2014</a>.</p>
+
 </blockquote>
 
 <h1 id="differentially-methylated-regions-and-positions-analysis">Differentially methylated regions and positions analysis</h1>
@@ -847,7 +853,7 @@ Set the following parameters:</p>
 
   <p><img src="../../images/4parameters.png" alt="params" /></p>
   <ul>
-    <li><em>“Number of Resamples”</em>:<code class="language-plaintext highlighter-rouge">0</code> 
+    <li><em>“Number of Resamples”</em>:<code class="language-plaintext highlighter-rouge">0</code>
 Default value 0 for permutation method apply selection of randomized cases with replacement from the original data while using ‘bootstrap’ method.</li>
     <li><em>“nullMethod”</em>:<code class="language-plaintext highlighter-rouge">permutation</code>
 Method used to generate null candidate regions, must be one of ‘bootstrap’ or
@@ -859,9 +865,9 @@ Identify regions where methylation is associated with a continuous or categorica
   <p>Search for <code class="language-plaintext highlighter-rouge">UCSC Main</code> in the tool search bar (top left)
 <img src="../../images/5parameters.png" alt="params" /></p>
   <ul>
-    <li><em>“qCutoff Size”</em>:<code class="language-plaintext highlighter-rouge">0.5</code> 
+    <li><em>“qCutoff Size”</em>:<code class="language-plaintext highlighter-rouge">0.5</code>
 Diffrentialy methylated positions with an FDR q-value greater than this value will not be returned.</li>
-    <li><em>“Variance Shrinkage”</em>:<code class="language-plaintext highlighter-rouge"> TRUE</code> 
+    <li><em>“Variance Shrinkage”</em>:<code class="language-plaintext highlighter-rouge"> TRUE</code>
 Default TRUE as it is recommended when sample sizes are small &lt;10</li>
     <li><em>“Genome Table”</em>: <code class="language-plaintext highlighter-rouge">wgEncodeHaibMethyl450 ... </code>
 Click on <code class="language-plaintext highlighter-rouge">UCSC Main</code> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>. You will be taken to the <strong>UCSC table browser</strong></li>
@@ -898,9 +904,7 @@ Set the database build of your dataset to <code class="language-plaintext highli
 This will launch UCSC Genome Browser with your Custom Track</p>
 </blockquote>
 
-<blockquote>
-  <figure id="figure-4"><img src="../../images/ucsc.png" alt="Display at UCSC" /><figcaption><span class="figcaption-prefix">Figure 4:</span> UCSC genome track showing differentialy methylated regions located on chromosome 6</figcaption></figure>
-</blockquote>
+<figure id="figure-4"><img src="../../images/ucsc.png" alt="Display at UCSC" /><figcaption><span class="figcaption-prefix">Figure 4:</span> UCSC genome track showing differentialy methylated regions located on chromosome 6</figcaption></figure>
 
 <blockquote class="question">
   <h3 id="question-questions"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Questions</h3>
@@ -1051,6 +1055,39 @@ This will launch UCSC Genome Browser with your Custom Track</p>
 </li></ol>
                     
 
+                    <h1>Feedback</h1>
+                    <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
+
+                    <div id="feedback-button">
+                        <img src="/training-material/shared/images/feedback.png" title="Click to activate" alt="Click here to load Google feedback frame" />
+                    </div>
+                    <div id="feedback-form">
+                    </div>
+                    <script type="text/javascript">
+                        (function (window, document) {
+                            function onDocumentReady(fn) {
+                                if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+                                    fn();
+                                } else {
+                                    document.addEventListener('DOMContentLoaded', fn);
+                                }
+                            }
+
+                            onDocumentReady(function () {
+                                $("#feedback-button").click(function(evt){
+                                    var e = $(evt.target)
+                                    e.hide();
+
+                                    $("#feedback-form").html(`
+                                        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Infinium Human Methylation BeadChip (Epigenetics)">Loading...</iframe>
+                                    `)
+                                })
+                            });
+                        })(window, document);
+                    </script>
+
+
+
                     <h1>Citing this Tutorial</h1>
                     <p>
                         <ol>
@@ -1072,8 +1109,8 @@ This will launch UCSC Genome Browser with your Custom Track</p>
     author = "Katarzyna Murat and Krzysztof Poterlowicz",
     title = "Infinium Human Methylation BeadChip (Galaxy Training Materials)",
     year = "2020",
-    month = "02",
-    day = "28"
+    month = "12",
+    day = "01"
     url = "\url{/training-material/topics/epigenetics/tutorials/ewas-suite/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
@@ -1111,18 +1148,6 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
         
 
         
-
-        <hr>
-        <br>
-
-        <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
-        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Infinium Human Methylation BeadChip (Epigenetics)">Loading...
-        </iframe>
-
-        <blockquote class="feedback">
-            <h3><i class="far fa-comments" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
-            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=Infinium Human Methylation BeadChip (Epigenetics)">Feedback Form</a>.</p>
-        </blockquote>
     </section>
 </div>
 
@@ -1166,4 +1191,17 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
     }});
     </script>
     
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
 </html>

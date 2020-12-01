@@ -11,7 +11,7 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-45719423-18' , 'auto');
+    ga('create', '' , 'auto');
     ga('send', 'pageview');
 </script>
         
@@ -143,6 +143,9 @@
                 </label>
                 <label data-value="rainbow" class="btn btn-secondary">
                     <input type="radio" name="options" id="rainbow" autocomplete="off"> Rainbow
+                </label>
+                <label data-value="halloween" class="btn btn-secondary">
+                    <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
                 </label>
             </div>
 
@@ -313,7 +316,7 @@
 
         <div class="contributors-line">By: 
 
-<a href="/training-material/hall-of-fame#simonbray" class="contributor-badge"><img src="https://avatars.githubusercontent.com/simonbray" alt="Simon Bray">Simon Bray</a>, <a href="/training-material/hall-of-fame#tsenapathi" class="contributor-badge"><img src="https://avatars.githubusercontent.com/tsenapathi" alt="Tharindu Senapathi">Tharindu Senapathi</a>, <a href="/training-material/hall-of-fame#chrisbarnettster" class="contributor-badge"><img src="https://avatars.githubusercontent.com/chrisbarnettster" alt="Christopher Barnett">Christopher Barnett</a>, <a href="/training-material/hall-of-fame#bgruening" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bgruening" alt="Björn Grüning">Björn Grüning</a>
+<a href="/training-material/hall-of-fame/simonbray/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/simonbray" alt="Simon Bray">Simon Bray</a>, <a href="/training-material/hall-of-fame/tsenapathi/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/tsenapathi" alt="Tharindu Senapathi">Tharindu Senapathi</a>, <a href="/training-material/hall-of-fame/chrisbarnettster/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/chrisbarnettster" alt="Christopher Barnett">Christopher Barnett</a>, <a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bgruening" alt="Björn Grüning">Björn Grüning</a>
 
 </div>
 
@@ -447,6 +450,8 @@
         
     
         
+    
+        
         <a class="dropdown-item" href="https://cheminformatics.usegalaxy.eu/" title="ChemicalToolbox">
             ChemicalToolbox
         </a>
@@ -462,6 +467,12 @@
     
         
     
+        
+    
+        
+        <a class="dropdown-item" href="https://africa.usegalaxy.eu/" title="Galaxy Africa">
+            Galaxy Africa
+        </a>
         
     
         
@@ -555,7 +566,7 @@
             </ul>
             
 
-            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> May 20, 2020 </p>
+            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Dec 1, 2020 </p>
         </blockquote>
 
         <div class="container">
@@ -567,7 +578,7 @@
                 <div class="col-sm-10">
                     <h1 class="no_toc" id="introduction">Introduction</h1>
 
-<p>This tutorial provides an introduction to using high-throughput molecular dynamics to study protein-ligand interaction, as applied to N-terminus of Hsp90 (heat shock protein 90).</p>
+<p>This tutorial provides an introduction to using high-throughput molecular dynamics to study protein-ligand interaction, as applied to the N-terminal domain of Hsp90 (heat shock protein 90).</p>
 
 <blockquote class="agenda">
   <h3 id="agenda">Agenda</h3>
@@ -584,7 +595,7 @@
   <li><a href="#simulation" id="markdown-toc-simulation">Simulation</a>    <ol>
       <li><a href="#topology-generation" id="markdown-toc-topology-generation">Topology generation</a></li>
       <li><a href="#combine-topology-and-gro-files" id="markdown-toc-combine-topology-and-gro-files">Combine topology and GRO files</a></li>
-      <li><a href="#create-the-simulation-box-with-gromacs-structure-configuration" id="markdown-toc-create-the-simulation-box-with-gromacs-structure-configuration">Create the simulation box with <strong>GROMACS structure configuration</strong></a></li>
+      <li><a href="#create-the-simulation-box" id="markdown-toc-create-the-simulation-box">Create the simulation box</a></li>
       <li><a href="#solvation" id="markdown-toc-solvation">Solvation</a></li>
       <li><a href="#energy-minimization" id="markdown-toc-energy-minimization">Energy minimization</a></li>
       <li><a href="#equilibration" id="markdown-toc-equilibration">Equilibration</a></li>
@@ -609,10 +620,10 @@
 <h1 id="background">Background</h1>
 
 <h2 id="what-is-high-throughput-molecular-dynamics">What is high-throughput molecular dynamics?</h2>
-<p>Molecular dynamics (MD) is a method to simulate molecular motion by iterative application of Newton’s laws of motion. It is often applied to large biomolecules such as proteins or nucleic acids. A common application is to assess the interaction between these macromolecules and a number of small molecules (e.g.~potential drug candidates). This tutorial provides a guide to setting up and running a high-throughput <span class="notranslate">workflow</span> for screening multiple small molecules, using the open-source GROMACS tools provided through the <span class="notranslate">Galaxy</span> platform. Following simulation, the trajectory data is analyzed using a range of tools to investigate structural properties and correlations over time.</p>
+<p>Molecular dynamics (MD) is a method to simulate molecular motion by iterative application of Newton’s laws of motion. It is often applied to large biomolecules such as proteins or nucleic acids. A common application is to assess the interaction between these macromolecules and a number of small molecules (e.g. potential drug candidates). This tutorial provides a guide to setting up and running a high-throughput <span class="notranslate">workflow</span> for screening multiple small molecules, using the open-source GROMACS tools provided through the <span class="notranslate">Galaxy</span> platform. Following simulation, the trajectory data is analyzed using a range of tools to investigate structural properties and correlations over time.</p>
 
 <h2 id="why-is-hsp90-interesting-to-study">Why is Hsp90 interesting to study?</h2>
-<p>The 90 kDa heat shock protein (Hsp90) is a chaperone protein responsible for catalyzing the conversion of a wide variety of proteins to a functional form; examples of the Hsp90 clientele, which totals several hundred proteins, include nuclear steroid hormone receptors and protein kinases(<a class="citation" href="#Pearl2006">Pearl and Prodromou 2006</a>). The mechanism by which Hsp90 acts varies between clients, as does the client binding site; the process is dependent on post-translational modifications of Hsp90 and the identity of co-chaperones which bind and regulate the conformational cycle(<a class="citation" href="#Schopf2017">Schopf <i>et al.</i> 2017</a>).</p>
+<p>The 90 kDa heat shock protein (Hsp90) is a chaperone protein responsible for catalyzing the conversion of a wide variety of proteins to a functional form; examples of the Hsp90 clientele, which totals several hundred proteins, include nuclear steroid hormone receptors and protein kinases (<a class="citation" href="#Pearl2006">Pearl and Prodromou 2006</a>). The mechanism by which Hsp90 acts varies between clients, as does the client binding site; the process is dependent on post-translational modifications of Hsp90 and the identity of co-chaperones which bind and regulate the conformational cycle (<a class="citation" href="#Schopf2017">Schopf <i>et al.</i> 2017</a>).</p>
 
 <p>Due to its vital biochemical role as a chaperone protein involved in facilitating the folding of many client proteins, Hsp90 is an attractive pharmaceutical target. In particular, as protein folding is a potential bottleneck to cellular reproduction and growth, blocking Hsp90 function using inhibitors which bind tightly to the ATP binding site of the NTD could assist in treating cancer; for example, the antibiotic geldanamycin and its analogs are under investigation as possible anti-tumor agents (<a class="citation" href="#Stebbins1997">Stebbins <i>et al.</i> 1997</a>, <a class="citation" href="#Hermane2019">Hermane <i>et al.</i> 2019</a>).</p>
 
@@ -744,13 +755,23 @@
 
 <p>To generate a topology for the ligand, we will use the <strong>acpype</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> tool (<a class="citation" href="#SousadaSilva2012">da Silva and Vranken 2012</a>). This provides a convenient interface to the AmberTools suite and allows us to easily create the ligand topology in the format required by GROMACS.</p>
 
+<p>Inspecting the contents of the <code class="language-plaintext highlighter-rouge">Ligand (PDB)</code> file shows that it contains no hydrogen atoms. These need to be added before the topology can be calculated. The <strong>Compound conversion</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (which is based on OpenBabel) can be used to achieve this.</p>
+
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-generate-ligand-topology"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Generate ligand topology</h3>
 
   <ol>
+    <li><strong>Compound conversion</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
+      <ul>
+        <li><em>“Molecular input file”</em>: ‘Ligand (PDB)’</li>
+        <li><em>“Output format”</em>: <code class="language-plaintext highlighter-rouge">Protein Data Bank format (pdb)</code></li>
+        <li><em>“Add hydrogens appropriate for pH”</em>: <code class="language-plaintext highlighter-rouge">7.0</code></li>
+      </ul>
+    </li>
+    <li>Rename the output file to <code class="language-plaintext highlighter-rouge">Hydrated ligand (PDB)</code>.</li>
     <li><strong>Generate MD topologies for small molecules</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
       <ul>
-        <li><em>“Input file”</em>: ‘Ligand (PDB)’</li>
+        <li><em>“Input file”</em>: ‘Hydrated ligand (PDB)’</li>
         <li><em>“Charge of the molecule”</em>: <code class="language-plaintext highlighter-rouge">0</code></li>
         <li><em>“Multiplicity”</em>: <code class="language-plaintext highlighter-rouge">1</code></li>
         <li><em>“Force field to use for parameterization”</em>: <code class="language-plaintext highlighter-rouge">gaff</code></li>
@@ -791,7 +812,7 @@ minimization step.</p>
 
 </blockquote>
 
-<h2 id="create-the-simulation-box-with-gromacs-structure-configuration">Create the simulation box with <strong>GROMACS structure configuration</strong></h2>
+<h2 id="create-the-simulation-box">Create the simulation box</h2>
 
 <p>The next step, once combined coordinate (GRO) and topology (TOP) files have been created, is to create a simulation box in which the system is situated.</p>
 
@@ -919,6 +940,8 @@ minimization step.</p>
 
 <p>We now carry out equilibration in two stages: NVT and NPT. This is discussed at greater length in the basic GROMACS tutorial. Equilibration requires restraining the protein structure - we use the ITP file produced by the initial setup tool for this.</p>
 
+<p>Simulation under the NVT ensemble allows the solvent to be brought to the desired temperature, while simulation under the NPT ensemble bring the solvent to the correct pressure.</p>
+
 <blockquote class="comment">
   <h3 id="comment-more-detail-about-equilibration"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> More detail about equilibration</h3>
 
@@ -955,7 +978,7 @@ minimization step.</p>
               <ul>
                 <li><em>“Bond constraints (constraints)”</em>: <code class="language-plaintext highlighter-rouge">All bonds (all-bonds).</code></li>
                 <li><em>“Temperature /K”</em>: <code class="language-plaintext highlighter-rouge">300</code></li>
-                <li><em>“Step length in ps”</em>: <code class="language-plaintext highlighter-rouge">0.0002</code></li>
+                <li><em>“Step length in ps”</em>: <code class="language-plaintext highlighter-rouge">0.001</code></li>
                 <li><em>“Number of steps that elapse between saving data points (velocities, forces, energies)”</em>: <code class="language-plaintext highlighter-rouge">1000</code></li>
                 <li><em>“Number of steps for the simulation”</em>: <code class="language-plaintext highlighter-rouge">50000</code></li>
               </ul>
@@ -1009,7 +1032,7 @@ NVT simulation.</p>
               <ul>
                 <li><em>“Bond constraints (constraints)”</em>: <code class="language-plaintext highlighter-rouge">All bonds (all-bonds).</code></li>
                 <li><em>“Temperature /K”</em>: <code class="language-plaintext highlighter-rouge">300</code></li>
-                <li><em>“Step length in ps”</em>: <code class="language-plaintext highlighter-rouge">0.002</code></li>
+                <li><em>“Step length in ps”</em>: <code class="language-plaintext highlighter-rouge">0.001</code></li>
                 <li><em>“Number of steps that elapse between saving data points (velocities, forces, energies)”</em>: <code class="language-plaintext highlighter-rouge">1000</code></li>
                 <li><em>“Number of steps for the simulation”</em>: <code class="language-plaintext highlighter-rouge">50000</code></li>
               </ul>
@@ -1315,11 +1338,11 @@ Having discovered the principal components usually these are visualized. The PCA
 
 </blockquote>
 
-<p>This process runs the entire simulation and analysis procedure described so far on the new set of ligands. It uses <span class="notranslate">Galaxy</span>’s <a href="/training-material/topics/galaxy-data-manipulation/tutorials/collections/tutorial.html">collection feature</a> to organize the data; each item in the history is a collection (essentially a directory containing multiple individual datasets) containing one file corresponding to each of the input ligands.</p>
+<p>This process runs the entire simulation and analysis procedure described so far on the new set of ligands. It uses <span class="notranslate">Galaxy</span>’s <a href="/training-material/topics/galaxy-interface/tutorials/collections/tutorial.html">collection feature</a> to organize the data; each item in the history is a collection (essentially a directory containing multiple individual datasets) containing one file corresponding to each of the input ligands.</p>
 
 <p>Note that the SD-file needs to contain ligands with the correct 3D coordinates for MD simulation. The easiest way to obtain these is using a molecular docking tool such as Autodock Vina (<a class="citation" href="#Trott2009">Trott and Olson 2009</a>) or rDock (<a class="citation" href="#Ruiz2014">Ruiz-Carmona <i>et al.</i> 2014</a>); tutorials and workflows are available for both of these from the <span class="notranslate">Galaxy</span> Training Network. As an example, the history in which the SD-file used in the HTMD <span class="notranslate">workflow</span> is generated (using AutoDock Vina) is provided (<a class="citation" href="#eu_6hhr">“<b><span class="notranslate">Galaxy</span> | Europe | Accessible History | Protein-ligand docking (6hhr)</b>”</a>).</p>
 
-<p>Apart from manual setups or collections, there are several other alte<span class="notranslate">rna</span>tives which are helpful in scaling up workflows. <span class="notranslate">Galaxy</span> supports and provides training material for converting <a href="/training-material/topics/galaxy-ui/tutorials/history-to-workflow/tutorial.html">histories to workflows</a>, using <a href="/training-material/topics/galaxy-ui/tutorials/history/tutorial.html">multiple histories</a>, and the <a href="/training-material/topics/dev/tutorials/bioblend-api/slides.html"><span class="notranslate">Galaxy</span> Application Programming Interface (API)</a>. For beginners and users who prefer a visual interface, automation can be done using multiple histories and collections with the standard <span class="notranslate">Galaxy</span> user interface.</p>
+<p>Apart from manual setups or collections, there are several other alte<span class="notranslate">rna</span>tives which are helpful in scaling up workflows. <span class="notranslate">Galaxy</span> supports and provides training material for converting <a href="/training-material/topics/galaxy-interface/tutorials/history-to-workflow/tutorial.html">histories to workflows</a>, using <a href="/training-material/topics/galaxy-interface/tutorials/history/tutorial.html">multiple histories</a>, and the <a href="/training-material/topics/dev/tutorials/bioblend-api/slides.html"><span class="notranslate">Galaxy</span> Application Programming Interface (API)</a>. For beginners and users who prefer a visual interface, automation can be done using multiple histories and collections with the standard <span class="notranslate">Galaxy</span> user interface.</p>
 
 <p>If you are able to write small scripts, you can automate everything you have learned here with the <span class="notranslate">Galaxy</span> API. This allows you to interact with the server to automate repetitive tasks and create more complex workflows (which may have repetition or branching). The simplest way to access the API is through the Python library BioBlend (<a class="citation" href="#sloggett_bioblend">Sloggett <i>et al.</i> 2013</a>). An example Python script, which uses BioBlend to run the GROMACS simulation <span class="notranslate">workflow</span> for each of a list of ligands, is given in the hands-on box below.</p>
 
@@ -1450,11 +1473,14 @@ for name, _id in ligands.items():
     
 
 </li>
-<li><span id="Pearl2006">Pearl, L. H., and C. Prodromou, 2006 <b>Structure and Mechanism of the Hsp90 Molecular Chaperone Machinery.</b> Annual Review of Biochemistry 75: 271–294.</span>
+<li><span id="Pearl2006">Pearl, L. H., and C. Prodromou, 2006 <b>Structure and Mechanism of the Hsp90 Molecular Chaperone Machinery</b>. Annual Review of Biochemistry 75: 271–294.</span>
     
     
     <a href="https://doi.org/10.1146/annurev.biochem.75.103004.142738">10.1146/annurev.biochem.75.103004.142738</a>
     
+    
+      <!-- prevent duplicate doi links -->
+      
     
 
 </li>
@@ -1469,14 +1495,11 @@ Publisher: Nature Publishing Group.
     
 
 </li>
-<li><span id="Trott2009">Trott, O., and A. J. Olson, 2009 <b>AutoDock Vina: Improving the speed and accuracy of docking with a new scoring function,  efficient optimization,  and multithreading</b>. Journal of Computational Chemistry NA–NA.</span>
+<li><span id="Trott2009">Trott, O., and A. J. Olson, 2009 <b>AutoDock Vina: Improving the speed and accuracy of docking with a new scoring function,  efficient optimization,  and multithreading</b>. Journal of Computational Chemistry 31: NA–NA.</span>
     
     
     <a href="https://doi.org/10.1002/jcc.21334">10.1002/jcc.21334</a>
     
-    
-      <!-- prevent duplicate doi links -->
-      
     
 
 </li>
@@ -1573,6 +1596,14 @@ Publisher: Nature Publishing Group.
     
 
 </li>
+<li><span id="Rose2018ngl">Rose, A. S., A. R. Bradley, Y. Valasatava, J. M. Duarte, A. Prlić <i>et al.</i>, 2018 <b>NGL viewer: web-based molecular graphics for large complexes</b>. Bioinformatics 34: 3755–3758.</span>
+    
+    
+    <a href="https://doi.org/10.1093/bioinformatics/bty419">10.1093/bioinformatics/bty419</a>
+    
+    
+
+</li>
 <li><span id="ngl">Rose, A. S., A. R. Bradley, Y. Valasatava, J. M. Duarte, A. Prlić <i>et al.</i>, 2018 <b>NGL viewer: web-based molecular graphics for large complexes</b>. Bioinformatics 34: 3755–3758.</span>
     
     
@@ -1581,14 +1612,6 @@ Publisher: Nature Publishing Group.
     
       <!-- prevent duplicate doi links -->
       
-    
-
-</li>
-<li><span id="Rose2018ngl">Rose, A. S., A. R. Bradley, Y. Valasatava, J. M. Duarte, A. Prlić <i>et al.</i>, 2018 <b>NGL viewer: web-based molecular graphics for large complexes</b>. Bioinformatics 34: 3755–3758.</span>
-    
-    
-    <a href="https://doi.org/10.1093/bioinformatics/bty419">10.1093/bioinformatics/bty419</a>
-    
     
 
 </li>
@@ -1636,6 +1659,39 @@ Publisher: Nature Publishing Group.
 </li></ol>
                     
 
+                    <h1>Feedback</h1>
+                    <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
+
+                    <div id="feedback-button">
+                        <img src="/training-material/shared/images/feedback.png" title="Click to activate" alt="Click here to load Google feedback frame" />
+                    </div>
+                    <div id="feedback-form">
+                    </div>
+                    <script type="text/javascript">
+                        (function (window, document) {
+                            function onDocumentReady(fn) {
+                                if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+                                    fn();
+                                } else {
+                                    document.addEventListener('DOMContentLoaded', fn);
+                                }
+                            }
+
+                            onDocumentReady(function () {
+                                $("#feedback-button").click(function(evt){
+                                    var e = $(evt.target)
+                                    e.hide();
+
+                                    $("#feedback-form").html(`
+                                        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=High Throughput Molecular Dynamics and Analysis (Computational chemistry)">Loading...</iframe>
+                                    `)
+                                })
+                            });
+                        })(window, document);
+                    </script>
+
+
+
                     <h1>Citing this Tutorial</h1>
                     <p>
                         <ol>
@@ -1657,8 +1713,8 @@ Publisher: Nature Publishing Group.
     author = "Simon Bray and Tharindu Senapathi and Christopher Barnett and Björn Grüning",
     title = "High Throughput Molecular Dynamics and Analysis (Galaxy Training Materials)",
     year = "2020",
-    month = "05",
-    day = "20"
+    month = "12",
+    day = "01"
     url = "\url{/training-material/topics/computational-chemistry/tutorials/htmd-analysis/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
@@ -1696,18 +1752,6 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
         
 
         
-
-        <hr>
-        <br>
-
-        <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
-        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=High Throughput Molecular Dynamics and Analysis (Computational chemistry)">Loading...
-        </iframe>
-
-        <blockquote class="feedback">
-            <h3><i class="far fa-comments" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
-            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=High Throughput Molecular Dynamics and Analysis (Computational chemistry)">Feedback Form</a>.</p>
-        </blockquote>
     </section>
 </div>
 
@@ -1751,4 +1795,17 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
     }});
     </script>
     
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
 </html>

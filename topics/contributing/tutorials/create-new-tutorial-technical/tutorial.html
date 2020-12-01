@@ -11,7 +11,7 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-45719423-18' , 'auto');
+    ga('create', '' , 'auto');
     ga('send', 'pageview');
 </script>
         
@@ -143,6 +143,9 @@
                 </label>
                 <label data-value="rainbow" class="btn btn-secondary">
                     <input type="radio" name="options" id="rainbow" autocomplete="off"> Rainbow
+                </label>
+                <label data-value="halloween" class="btn btn-secondary">
+                    <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
                 </label>
             </div>
 
@@ -298,7 +301,7 @@
 
         <div class="contributors-line">By: 
 
-<a href="/training-material/hall-of-fame#bebatut" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Bérénice Batut">Bérénice Batut</a>, <a href="/training-material/hall-of-fame#bgruening" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bgruening" alt="Björn Grüning">Björn Grüning</a>, <a href="/training-material/hall-of-fame#shiltemann" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Saskia Hiltemann">Saskia Hiltemann</a>, <a href="/training-material/hall-of-fame#hexylena" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>
+<a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Bérénice Batut">Bérénice Batut</a>, <a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bgruening" alt="Björn Grüning">Björn Grüning</a>, <a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Saskia Hiltemann">Saskia Hiltemann</a>, <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>
 
 </div>
 
@@ -395,7 +398,7 @@
             </ul>
             
 
-            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Feb 19, 2020 </p>
+            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Dec 1, 2020 </p>
         </blockquote>
 
         <div class="container">
@@ -409,9 +412,9 @@
 
 <p>To be able to run the tutorial, we need a <span class="notranslate">Galaxy</span> instance where all of the needed tools and data are available. Thus we need to describe the needed technical infrastructure.</p>
 
-<p>This files we define in this tutorial will be used to automatically build a Docker <span class="notranslate">Galaxy</span> flavour, and also to test if a public <span class="notranslate">Galaxy</span> instance is able to run the tool.</p>
+<p>The files we define in this tutorial will be used to automatically build a Docker <span class="notranslate">Galaxy</span> flavour, and also to test if a public <span class="notranslate">Galaxy</span> instance is able to run the tool.</p>
 
-<p>In this tutorial, you will learn how to create a virtualised <span class="notranslate">Galaxy</span> instance, based on Docker, to run your training - either on normal computers or cloud environments.</p>
+<p>In this tutorial, you will learn how to create a virtualized <span class="notranslate">Galaxy</span> instance, based on Docker, to run your training - either on normal computers or cloud environments.</p>
 
 <blockquote class="agenda">
   <h3 id="agenda">Agenda</h3>
@@ -439,7 +442,7 @@
   <h3 id="hands_on-hands-on-extract-the-workflow"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Extract the <span class="notranslate">workflow</span></h3>
 
   <ol>
-    <li>Add the topic name as Tag and the tutorial title as Annotation/Notes to the <span class="notranslate">workflow</span> using the <span class="notranslate">workflow</span> editor.</li>
+    <li>Add the topic name as a Tag and the tutorial title as Annotation/Notes to the <span class="notranslate">workflow</span> using the <span class="notranslate">workflow</span> editor.</li>
     <li>Download the <span class="notranslate">workflow</span> for the tutorial</li>
     <li>Save it in the <code class="language-plaintext highlighter-rouge"><span class="notranslate">workflow</span></code> directory of the tutorial</li>
     <li>
@@ -493,7 +496,7 @@
 
 <h3 id="inputs">Inputs</h3>
 
-<p>Your <span class="notranslate">workflow</span> <strong>must</strong> use “Data Inputs” for each input dataset. For each of these input step in the <code class="language-plaintext highlighter-rouge">.ga</code> file, you’ll need to do the following:</p>
+<p>Your <span class="notranslate">workflow</span> <strong>must</strong> use “Data Inputs” for each input dataset. For each of these input steps in the <code class="language-plaintext highlighter-rouge">.ga</code> file, you’ll need to do the following:</p>
 
 <ol>
   <li>Edit the <code class="language-plaintext highlighter-rouge">label</code></li>
@@ -737,6 +740,39 @@ It is a great way to help users run the tutorial directly inside <span class="no
 
                     
 
+                    <h1>Feedback</h1>
+                    <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
+
+                    <div id="feedback-button">
+                        <img src="/training-material/shared/images/feedback.png" title="Click to activate" alt="Click here to load Google feedback frame" />
+                    </div>
+                    <div id="feedback-form">
+                    </div>
+                    <script type="text/javascript">
+                        (function (window, document) {
+                            function onDocumentReady(fn) {
+                                if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+                                    fn();
+                                } else {
+                                    document.addEventListener('DOMContentLoaded', fn);
+                                }
+                            }
+
+                            onDocumentReady(function () {
+                                $("#feedback-button").click(function(evt){
+                                    var e = $(evt.target)
+                                    e.hide();
+
+                                    $("#feedback-form").html(`
+                                        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Creating a new tutorial - Defining the technical infrastructure (Contributing to the Galaxy Training Material)">Loading...</iframe>
+                                    `)
+                                })
+                            });
+                        })(window, document);
+                    </script>
+
+
+
                     <h1>Citing this Tutorial</h1>
                     <p>
                         <ol>
@@ -758,8 +794,8 @@ It is a great way to help users run the tutorial directly inside <span class="no
     author = "Bérénice Batut and Björn Grüning and Saskia Hiltemann and Helena Rasche",
     title = "Creating a new tutorial - Defining the technical infrastructure (Galaxy Training Materials)",
     year = "2020",
-    month = "02",
-    day = "19"
+    month = "12",
+    day = "01"
     url = "\url{/training-material/topics/contributing/tutorials/create-new-tutorial-technical/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
@@ -804,6 +840,14 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
                 
                     
             <li><a href="/training-material/topics/contributing/slides/introduction.html">Overview of the Galaxy Training Material</a></li>
+                    
+                
+            
+                
+                    
+                        
+            <li><a href="/training-material/topics/contributing/tutorials/slides-with-video/tutorial.html">Adding auto-generated video to your slides</a></li>
+                        
                     
                 
             
@@ -892,18 +936,6 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
         
 
         
-
-        <hr>
-        <br>
-
-        <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
-        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Creating a new tutorial - Defining the technical infrastructure (Contributing to the Galaxy Training Material)">Loading...
-        </iframe>
-
-        <blockquote class="feedback">
-            <h3><i class="far fa-comments" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
-            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=Creating a new tutorial - Defining the technical infrastructure (Contributing to the Galaxy Training Material)">Feedback Form</a>.</p>
-        </blockquote>
     </section>
 </div>
 
@@ -947,4 +979,17 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
     }});
     </script>
     
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
 </html>

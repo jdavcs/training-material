@@ -11,7 +11,7 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-45719423-18' , 'auto');
+    ga('create', '' , 'auto');
     ga('send', 'pageview');
 </script>
         
@@ -143,6 +143,9 @@
                 </label>
                 <label data-value="rainbow" class="btn btn-secondary">
                     <input type="radio" name="options" id="rainbow" autocomplete="off"> Rainbow
+                </label>
+                <label data-value="halloween" class="btn btn-secondary">
+                    <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
                 </label>
             </div>
 
@@ -349,7 +352,7 @@
 
         <div class="contributors-line">By: 
 
-<a href="/training-material/hall-of-fame#natefoo" class="contributor-badge"><img src="https://avatars.githubusercontent.com/natefoo" alt="Nate Coraor">Nate Coraor</a>, <a href="/training-material/hall-of-fame#bgruening" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bgruening" alt="Björn Grüning">Björn Grüning</a>, <a href="/training-material/hall-of-fame#hexylena" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>
+<a href="/training-material/hall-of-fame/natefoo/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/natefoo" alt="Nate Coraor">Nate Coraor</a>, <a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bgruening" alt="Björn Grüning">Björn Grüning</a>, <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>
 
 </div>
 
@@ -629,7 +632,7 @@
             </ul>
             
 
-            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Jun 17, 2020 </p>
+            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Dec 1, 2020 </p>
         </blockquote>
 
         <div class="container">
@@ -709,7 +712,7 @@ be taken into consideration when choosing where to run jobs and what parameters 
       <p>Edit your <code class="language-plaintext highlighter-rouge">requirements.yml</code> and include the following contents:</p>
 
       <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">src</span><span class="pi">:</span> <span class="s"><span class="notranslate">galaxy</span>project.repos</span>
-  <span class="na">version</span><span class="pi">:</span> <span class="s">0.0.1</span>
+  <span class="na">version</span><span class="pi">:</span> <span class="s">0.0.2</span>
 <span class="pi">-</span> <span class="na">src</span><span class="pi">:</span> <span class="s"><span class="notranslate">galaxy</span>project.slurm</span>
   <span class="na">version</span><span class="pi">:</span> <span class="s">0.1.2</span>
 </code></pre></div>      </div>
@@ -1012,12 +1015,10 @@ sleep </span>30
     <li>
       <p>Inform <code class="language-plaintext highlighter-rouge"><span class="notranslate">galaxy</span>project.<span class="notranslate">galaxy</span></code> of where you would like the <code class="language-plaintext highlighter-rouge">job_conf.xml</code> to reside in your group variables:</p>
 
-      <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na"><span class="notranslate">galaxy</span>_job_config_file</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s"><span class="notranslate">galaxy</span>_config_dir</span><span class="nv"> </span><span class="s">}}/job_conf.xml"</span>
-
-<span class="na"><span class="notranslate">galaxy</span>_config</span><span class="pi">:</span>
+      <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na"><span class="notranslate">galaxy</span>_config</span><span class="pi">:</span>
   <span class="na"><span class="notranslate">galaxy</span></span><span class="pi">:</span>
     <span class="c1"># ... existing configuration options in the `<span class="notranslate">galaxy</span>` section ...</span>
-    <span class="na">job_config_file</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s"><span class="notranslate">galaxy</span>_job_config_file</span><span class="nv"> </span><span class="s">}}"</span>
+    <span class="na">job_config_file</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s"><span class="notranslate">galaxy</span>_config_dir</span><span class="nv"> </span><span class="s">}}/job_conf.xml"</span>
 </code></pre></div>      </div>
 
       <p>And then deploy the new config file using the <code class="language-plaintext highlighter-rouge"><span class="notranslate">galaxy</span>_config_templates</code> var in your group vars:</p>
@@ -1025,7 +1026,7 @@ sleep </span>30
       <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na"><span class="notranslate">galaxy</span>_config_templates</span><span class="pi">:</span>
   <span class="c1"># ... possible existing config file definitions</span>
   <span class="pi">-</span> <span class="na">src</span><span class="pi">:</span> <span class="s">templates/<span class="notranslate">galaxy</span>/config/job_conf.xml.j2</span>
-    <span class="na">dest</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s"><span class="notranslate">galaxy</span>_job_config_file</span><span class="nv"> </span><span class="s">}}"</span>
+    <span class="na">dest</span><span class="pi">:</span> <span class="s2">"</span><span class="s">{{</span><span class="nv"> </span><span class="s"><span class="notranslate">galaxy</span>_config.<span class="notranslate">galaxy</span>.job_config_file</span><span class="nv"> </span><span class="s">}}"</span>
 </code></pre></div>      </div>
 
       <p>The variable <code class="language-plaintext highlighter-rouge"><span class="notranslate">galaxy</span>_config_files</code> is an array of hashes, each with <code class="language-plaintext highlighter-rouge">src</code> and <code class="language-plaintext highlighter-rouge">dest</code>, the files from src will be copied to dest on the server. <code class="language-plaintext highlighter-rouge"><span class="notranslate">galaxy</span>_config_templates</code> exist to template files out. We use templates by default, because in some of the later tutorials there will be variables we want to use in the templates.</p>
@@ -1683,6 +1684,39 @@ sleep </span>30
 
                     
 
+                    <h1>Feedback</h1>
+                    <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
+
+                    <div id="feedback-button">
+                        <img src="/training-material/shared/images/feedback.png" title="Click to activate" alt="Click here to load Google feedback frame" />
+                    </div>
+                    <div id="feedback-form">
+                    </div>
+                    <script type="text/javascript">
+                        (function (window, document) {
+                            function onDocumentReady(fn) {
+                                if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+                                    fn();
+                                } else {
+                                    document.addEventListener('DOMContentLoaded', fn);
+                                }
+                            }
+
+                            onDocumentReady(function () {
+                                $("#feedback-button").click(function(evt){
+                                    var e = $(evt.target)
+                                    e.hide();
+
+                                    $("#feedback-form").html(`
+                                        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Connecting Galaxy to a compute cluster (Galaxy Server administration)">Loading...</iframe>
+                                    `)
+                                })
+                            });
+                        })(window, document);
+                    </script>
+
+
+
                     <h1>Citing this Tutorial</h1>
                     <p>
                         <ol>
@@ -1704,8 +1738,8 @@ sleep </span>30
     author = "Nate Coraor and Björn Grüning and Helena Rasche",
     title = "Connecting Galaxy to a compute cluster (Galaxy Training Materials)",
     year = "2020",
-    month = "06",
-    day = "17"
+    month = "12",
+    day = "01"
     url = "\url{/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
@@ -1743,18 +1777,6 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
         
 
         
-
-        <hr>
-        <br>
-
-        <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
-        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Connecting Galaxy to a compute cluster (Galaxy Server administration)">Loading...
-        </iframe>
-
-        <blockquote class="feedback">
-            <h3><i class="far fa-comments" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
-            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=Connecting Galaxy to a compute cluster (Galaxy Server administration)">Feedback Form</a>.</p>
-        </blockquote>
     </section>
 </div>
 
@@ -1798,4 +1820,17 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
     }});
     </script>
     
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
 </html>

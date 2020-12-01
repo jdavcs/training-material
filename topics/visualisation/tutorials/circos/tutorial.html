@@ -11,7 +11,7 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-45719423-18' , 'auto');
+    ga('create', '' , 'auto');
     ga('send', 'pageview');
 </script>
         
@@ -143,6 +143,9 @@
                 </label>
                 <label data-value="rainbow" class="btn btn-secondary">
                     <input type="radio" name="options" id="rainbow" autocomplete="off"> Rainbow
+                </label>
+                <label data-value="halloween" class="btn btn-secondary">
+                    <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
                 </label>
             </div>
 
@@ -296,7 +299,7 @@
 
         <div class="contributors-line">By: 
 
-<a href="/training-material/hall-of-fame#shiltemann" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Saskia Hiltemann">Saskia Hiltemann</a>, <a href="/training-material/hall-of-fame#hexylena" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>
+<a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Saskia Hiltemann">Saskia Hiltemann</a>, <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>
 
 </div>
 
@@ -416,6 +419,8 @@
         
     
         
+    
+        
         <a class="dropdown-item" href="https://climate.usegalaxy.eu/" title="Climate Science Workbench">
             Climate Science Workbench
         </a>
@@ -429,6 +434,12 @@
     
         
     
+        
+    
+        
+        <a class="dropdown-item" href="https://africa.usegalaxy.eu/" title="Galaxy Africa">
+            Galaxy Africa
+        </a>
         
     
         
@@ -458,6 +469,10 @@
         
     
         
+        <a class="dropdown-item" href="https://www.galaxytrakr.org/" title="GalaxyTrakr">
+            GalaxyTrakr
+        </a>
+        
     
         
     
@@ -470,12 +485,6 @@
         
         <a class="dropdown-item" href="https://humancellatlas.usegalaxy.eu/" title="Human Cell Atlas">
             Human Cell Atlas
-        </a>
-        
-    
-        
-        <a class="dropdown-item" href="http://galaxy.hunter.cuny.edu:8080/" title="Hunter College Galaxy">
-            Hunter College Galaxy
         </a>
         
     
@@ -518,6 +527,8 @@
         
     
         
+    
+        
         <a class="dropdown-item" href="https://singlecell.usegalaxy.eu/" title="Single Cell Omics workbench">
             Single Cell Omics workbench
         </a>
@@ -538,14 +549,14 @@
         
     
         
-        <a class="dropdown-item" href="https://usegalaxy.org" title="UseGalaxy.org (Main)">
-            UseGalaxy.org (Main)
+        <a class="dropdown-item" href="https://usegalaxy.fr/" title="UseGalaxy.fr">
+            UseGalaxy.fr
         </a>
         
     
         
-        <a class="dropdown-item" href="https://usegalaxy.org.au" title="UseGalaxy.org.au">
-            UseGalaxy.org.au
+        <a class="dropdown-item" href="https://usegalaxy.org" title="UseGalaxy.org (Main)">
+            UseGalaxy.org (Main)
         </a>
         
     
@@ -562,7 +573,7 @@
             </ul>
             
 
-            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Feb 28, 2020 </p>
+            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Dec 1, 2020 </p>
         </blockquote>
 
         <div class="container">
@@ -640,7 +651,7 @@
 
   <p>To learn more about using Circos outside of <span class="notranslate">Galaxy</span> (e.g. for tweaking the
 Circos configuration output by the <span class="notranslate">Galaxy</span> tool), there are a wide range
-of tutorials available from the <a href="https://circos.ca">Circos website</a></p>
+of tutorials available from the <a href="http://circos.ca">Circos website</a></p>
 </blockquote>
 
 <h1 id="circos-basics">Circos Basics</h1>
@@ -862,7 +873,7 @@ of tutorials available from the <a href="https://circos.ca">Circos website</a></
       </blockquote>
     </li>
     <li>
-      <p><strong>Import Data.</strong></p>
+      <p><span class="tool" data-tool="upload1" title="Tested with upload1"><strong>Import Data</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: upload1</span></span></p>
       <ul>
         <li>Import the sample data files to your history, either from a shared data library (if available), or from Zenodo using the following URLs:</li>
       </ul>
@@ -929,7 +940,7 @@ https://zenodo.org/record/3603221/files/hg18_karyotype.txt
   <h3 id="hands_on-hands-on-set-ideogram-configuration"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Set ideogram configuration</h3>
 
   <ol>
-    <li><strong>Circos</strong> visualizes data in a ciruclar layout <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/circos/circos/0.69.8+galaxy7" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/circos/circos/0.69.8+galaxy7"><strong>Circos</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/circos/circos/0.69.8+<span class="notranslate">galaxy</span>7</span></span>  visualizes data in a ciruclar layout with the following parameters:
       <ul>
         <li>In <em>“Karyotype”</em>:
           <ul>
@@ -1108,7 +1119,7 @@ The full definition of <code class="language-plaintext highlighter-rouge">hg18</
   <h3 id="hands_on-hands-on-prepare-input-data"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Prepare input data</h3>
 
   <ol>
-    <li><strong>Select</strong> lines that match an <span class="notranslate">expression</span> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
+    <li><span class="tool" data-tool="Grep1" title="Tested with Grep1"><strong>Select</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: Grep1</span></span>  lines that match an <span class="notranslate">expression</span> with the following parameters:
       <ul>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Select lines from”</em>: <code class="language-plaintext highlighter-rouge">VCaP highConfidenceJunctions.tsv</code></li>
         <li><em>“that”</em>: <code class="language-plaintext highlighter-rouge">NOT Matching</code></li>
@@ -1354,19 +1365,19 @@ chr1	72017	72017	-0.1353417	0
   <h3 id="hands_on-hands-on-prepare-cnv-input-file"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Prepare CNV input file</h3>
 
   <ol>
-    <li><strong>Remove beginning</strong> of a file <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
+    <li><span class="tool" data-tool="Remove+beginning1" title="Tested with Remove+beginning1"><strong>Remove beginning</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: Remove+beginning1</span></span>  of a file with the following parameters:
       <ul>
         <li><em>“Remove first”</em>: <code class="language-plaintext highlighter-rouge">1</code></li>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“from”</em>: <code class="language-plaintext highlighter-rouge">VCaP copy number.tsv</code></li>
       </ul>
     </li>
-    <li><strong>Cut</strong> columns from a table <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
+    <li><span class="tool" data-tool="Cut1" title="Tested with Cut1"><strong>Cut</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: Cut1</span></span>  columns from a table  with the following parameters:
       <ul>
         <li><em>“Cut columns”</em>: <code class="language-plaintext highlighter-rouge">c1,c2,c3,c4</code></li>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“From”</em>: output of <strong>Remove beginning</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
       </ul>
     </li>
-    <li><strong>Select random lines</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
+    <li><span class="tool" data-tool="random_lines1" title="Tested with random_lines1"><strong>Select random lines</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: random_lines1</span></span>  with the following parameters:
       <ul>
         <li><em>“Randomly select”</em>: <code class="language-plaintext highlighter-rouge">25000</code></li>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“from”</em>: output of <strong>Cut</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
@@ -1642,13 +1653,13 @@ chr1	110905	110905	0.9918569
   <h3 id="hands_on-hands-on-prepare-the-b-allele-frequency-table"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Prepare the B-allele frequency table</h3>
 
   <ol>
-    <li><strong>Remove beginning</strong> of a file <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
+    <li><span class="tool" data-tool="Remove+beginning1" title="Tested with Remove+beginning1"><strong>Remove beginning</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: Remove+beginning1</span></span>  with the following parameters:
       <ul>
         <li><em>“Remove first”</em>: <code class="language-plaintext highlighter-rouge">1</code></li>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“from”</em>: <code class="language-plaintext highlighter-rouge">B-allele frequence.tsv</code></li>
       </ul>
     </li>
-    <li><strong>Select random lines</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
+    <li><span class="tool" data-tool="random_lines1" title="Tested with random_lines1"><strong>Select random lines</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: random_lines1</span></span>  with the following parameters:
       <ul>
         <li><em>“Randomly select”</em>: <code class="language-plaintext highlighter-rouge">25000</code></li>
         <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“from”</em>: output of <strong>Select</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
@@ -2067,7 +2078,7 @@ The last column indicates the party of each candidate (democratic or republican)
   <h3 id="hands_on-hands-on-set-ideogram-configuration-1"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Set ideogram configuration</h3>
 
   <ol>
-    <li><strong>Circos</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/circos/circos/0.69.8+galaxy7" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/circos/circos/0.69.8+galaxy7"><strong>Circos</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/circos/circos/0.69.8+<span class="notranslate">galaxy</span>7</span></span>  with the following parameters:
       <ul>
         <li>In <em>“Karyotype”</em>:
           <ul>
@@ -2397,7 +2408,7 @@ https://zenodo.org/record/3603221/files/highlights.tab
   <h3 id="hands_on-hands-on-circos"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Circos</h3>
 
   <ol>
-    <li><strong>Circos</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters:
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/circos/circos/0.69.8+galaxy7" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/circos/circos/0.69.8+galaxy7"><strong>Circos</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/circos/circos/0.69.8+<span class="notranslate">galaxy</span>7</span></span>  with the following parameters:
       <ul>
         <li>In <em>“Karyotype”</em>:
           <ul>
@@ -2743,6 +2754,39 @@ https://zenodo.org/record/3603221/files/highlights.tab
 </li></ol>
                     
 
+                    <h1>Feedback</h1>
+                    <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
+
+                    <div id="feedback-button">
+                        <img src="/training-material/shared/images/feedback.png" title="Click to activate" alt="Click here to load Google feedback frame" />
+                    </div>
+                    <div id="feedback-form">
+                    </div>
+                    <script type="text/javascript">
+                        (function (window, document) {
+                            function onDocumentReady(fn) {
+                                if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+                                    fn();
+                                } else {
+                                    document.addEventListener('DOMContentLoaded', fn);
+                                }
+                            }
+
+                            onDocumentReady(function () {
+                                $("#feedback-button").click(function(evt){
+                                    var e = $(evt.target)
+                                    e.hide();
+
+                                    $("#feedback-form").html(`
+                                        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Visualisation with Circos (Visualisation)">Loading...</iframe>
+                                    `)
+                                })
+                            });
+                        })(window, document);
+                    </script>
+
+
+
                     <h1>Citing this Tutorial</h1>
                     <p>
                         <ol>
@@ -2764,8 +2808,8 @@ https://zenodo.org/record/3603221/files/highlights.tab
     author = "Saskia Hiltemann and Helena Rasche",
     title = "Visualisation with Circos (Galaxy Training Materials)",
     year = "2020",
-    month = "02",
-    day = "28"
+    month = "12",
+    day = "01"
     url = "\url{/training-material/topics/visualisation/tutorials/circos/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
@@ -2803,18 +2847,6 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
         
 
         
-
-        <hr>
-        <br>
-
-        <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
-        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Visualisation with Circos (Visualisation)">Loading...
-        </iframe>
-
-        <blockquote class="feedback">
-            <h3><i class="far fa-comments" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
-            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=Visualisation with Circos (Visualisation)">Feedback Form</a>.</p>
-        </blockquote>
     </section>
 </div>
 
@@ -2858,4 +2890,17 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
     }});
     </script>
     
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
 </html>

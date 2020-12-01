@@ -11,7 +11,7 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-45719423-18' , 'auto');
+    ga('create', '' , 'auto');
     ga('send', 'pageview');
 </script>
         
@@ -143,6 +143,9 @@
                 </label>
                 <label data-value="rainbow" class="btn btn-secondary">
                     <input type="radio" name="options" id="rainbow" autocomplete="off"> Rainbow
+                </label>
+                <label data-value="halloween" class="btn btn-secondary">
+                    <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
                 </label>
             </div>
 
@@ -303,7 +306,7 @@
 
         <div class="contributors-line">By: 
 
-<a href="/training-material/hall-of-fame#thomaswollmann" class="contributor-badge"><img src="https://avatars.githubusercontent.com/thomaswollmann" alt="Thomas Wollmann">Thomas Wollmann</a>
+<a href="/training-material/hall-of-fame/thomaswollmann/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/thomaswollmann" alt="Thomas Wollmann">Thomas Wollmann</a>
 
 </div>
 
@@ -387,6 +390,8 @@
                                 
                             
                             </li>
+                        
+                    
                         
                     
                 
@@ -497,6 +502,14 @@
         
     
         
+        <a class="dropdown-item" href="https://africa.usegalaxy.eu/" title="Galaxy Africa">
+            Galaxy Africa
+        </a>
+        
+    
+        
+    
+        
     
         
     
@@ -585,7 +598,7 @@
             </ul>
             
 
-            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Feb 28, 2020 </p>
+            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Dec 1, 2020 </p>
         </blockquote>
 
         <div class="container">
@@ -725,8 +738,8 @@
 
         <ol>
           <li>Click on the collection</li>
-          <li>Click on the name of the collection</li>
-          <li>Type the new name</li>
+          <li>Click on the name of the collection at the top</li>
+          <li>Change the name</li>
           <li>Press <kbd>Enter</kbd></li>
         </ol>
       </blockquote>
@@ -983,11 +996,7 @@ max	100000	0.5
         <h3 id="tip-tip-running-a-workflow"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Running a <span class="notranslate">workflow</span></h3>
         <ul>
           <li>Click on <em><span class="notranslate">Workflow</span></em> on the top menu bar of <span class="notranslate">Galaxy</span>. You will see a list of all your workflows.</li>
-          <li>Click on the dropdown menu <i class="fas fa-caret-down" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-dropdown</span> next to your <span class="notranslate">workflow</span>
-            <ul>
-              <li>Select <strong>Run</strong> from the list</li>
-            </ul>
-          </li>
+          <li>Click on the <i class="fas fa-play" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">workflow</span>-run</span> (<em>Run <span class="notranslate">workflow</span></em>) button next to your <span class="notranslate">workflow</span></li>
           <li>Configure the <span class="notranslate">workflow</span> as needed</li>
           <li>Click the <strong>Run <span class="notranslate">Workflow</span></strong> button at the top-right of the screen</li>
           <li>You may have to refresh your history to see the queued jobs</li>
@@ -1083,6 +1092,39 @@ max	100000	0.5
 
                     
 
+                    <h1>Feedback</h1>
+                    <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
+
+                    <div id="feedback-button">
+                        <img src="/training-material/shared/images/feedback.png" title="Click to activate" alt="Click here to load Google feedback frame" />
+                    </div>
+                    <div id="feedback-form">
+                    </div>
+                    <script type="text/javascript">
+                        (function (window, document) {
+                            function onDocumentReady(fn) {
+                                if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+                                    fn();
+                                } else {
+                                    document.addEventListener('DOMContentLoaded', fn);
+                                }
+                            }
+
+                            onDocumentReady(function () {
+                                $("#feedback-button").click(function(evt){
+                                    var e = $(evt.target)
+                                    e.hide();
+
+                                    $("#feedback-form").html(`
+                                        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Analyse HeLa fluorescence siRNA screen (Imaging)">Loading...</iframe>
+                                    `)
+                                })
+                            });
+                        })(window, document);
+                    </script>
+
+
+
                     <h1>Citing this Tutorial</h1>
                     <p>
                         <ol>
@@ -1104,8 +1146,8 @@ max	100000	0.5
     author = "Thomas Wollmann",
     title = "Analyse HeLa fluorescence siRNA screen (Galaxy Training Materials)",
     year = "2020",
-    month = "02",
-    day = "28"
+    month = "12",
+    day = "01"
     url = "\url{/training-material/topics/imaging/tutorials/hela-screen-analysis/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
@@ -1191,18 +1233,6 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
             </ul>
         </blockquote>
         
-
-        <hr>
-        <br>
-
-        <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
-        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Analyse HeLa fluorescence siRNA screen (Imaging)">Loading...
-        </iframe>
-
-        <blockquote class="feedback">
-            <h3><i class="far fa-comments" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
-            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=Analyse HeLa fluorescence siRNA screen (Imaging)">Feedback Form</a>.</p>
-        </blockquote>
     </section>
 </div>
 
@@ -1246,4 +1276,17 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
     }});
     </script>
     
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
 </html>

@@ -11,7 +11,7 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-45719423-18' , 'auto');
+    ga('create', '' , 'auto');
     ga('send', 'pageview');
 </script>
         
@@ -144,6 +144,9 @@
                 <label data-value="rainbow" class="btn btn-secondary">
                     <input type="radio" name="options" id="rainbow" autocomplete="off"> Rainbow
                 </label>
+                <label data-value="halloween" class="btn btn-secondary">
+                    <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
+                </label>
             </div>
 
         </div>
@@ -275,7 +278,7 @@
 
         <div class="contributors-line">By: 
 
-<a href="/training-material/hall-of-fame#annasyme" class="contributor-badge"><img src="https://avatars.githubusercontent.com/annasyme" alt="Anna Syme">Anna Syme</a>
+<a href="/training-material/hall-of-fame/annasyme/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/annasyme" alt="Anna Syme">Anna Syme</a>
 
 </div>
 
@@ -330,8 +333,8 @@
             <ul>
                 <div class="supporting_material">
                 
-                    <li class="btn btn-default supporting_material"><a href="/training-material/topics/introduction/slides/introduction.html" title="Introduction slides">
-                        <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span> Introduction slides
+                    <li class="btn btn-default"><a href="/training-material/topics/introduction/tutorials/galaxy-intro-short/slides.html" title="Slides for this tutorial">
+                        <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span> Slides
                     </a></li>
                 
 
@@ -385,7 +388,19 @@
         
     
         
+        <a class="dropdown-item" href="http://143.169.238.104/galaxy/" title="Biomina">
+            Biomina
+        </a>
+        
     
+        
+    
+        
+    
+        
+        <a class="dropdown-item" href="https://clipseq.usegalaxy.eu/" title="CLIP-Explorer">
+            CLIP-Explorer
+        </a>
         
     
         
@@ -406,6 +421,10 @@
     
         
     
+        
+        <a class="dropdown-item" href="https://africa.usegalaxy.eu/" title="Galaxy Africa">
+            Galaxy Africa
+        </a>
         
     
         
@@ -453,7 +472,9 @@
         
     
         
-    
+        <a class="dropdown-item" href="https://galaxy.hyphy.org/" title="HyPhy HIV NGS Tools">
+            HyPhy HIV NGS Tools
+        </a>
         
     
         
@@ -474,12 +495,18 @@
     
         
     
+        
+        <a class="dropdown-item" href="http://galaxy.migale.inra.fr/" title="Migale">
+            Migale
+        </a>
         
     
         
         <a class="dropdown-item" href="https://nanopore.usegalaxy.eu/" title="NanoGalaxy">
             NanoGalaxy
         </a>
+        
+    
         
     
         
@@ -511,14 +538,14 @@
         
     
         
-        <a class="dropdown-item" href="https://usegalaxy.org" title="UseGalaxy.org (Main)">
-            UseGalaxy.org (Main)
+        <a class="dropdown-item" href="https://usegalaxy.fr/" title="UseGalaxy.fr">
+            UseGalaxy.fr
         </a>
         
     
         
-        <a class="dropdown-item" href="https://usegalaxy.org.au" title="UseGalaxy.org.au">
-            UseGalaxy.org.au
+        <a class="dropdown-item" href="https://usegalaxy.org" title="UseGalaxy.org (Main)">
+            UseGalaxy.org (Main)
         </a>
         
     
@@ -539,7 +566,7 @@
             </ul>
             
 
-            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Apr 16, 2020 </p>
+            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Dec 1, 2020 </p>
         </blockquote>
 
         <div class="container">
@@ -631,6 +658,11 @@
     <li>Press <kbd>Enter</kbd> on your keyboard to save it</li>
   </ol>
 
+  <blockquote class="comment">
+    <h3 id="comment-renaming-not-an-option"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Renaming not an option?</h3>
+    <p>If renaming does not work, it is possible you aren’t logged in, so try logging in to <span class="notranslate">Galaxy</span> first. Anonymous users are only permitted to have one history, and they cannot rename it.</p>
+  </blockquote>
+
 </blockquote>
 
 <h2 id="upload-a-file">Upload a file</h2>
@@ -667,7 +699,7 @@ When the file has uploaded to <span class="notranslate">Galaxy</span>, it will t
 
 <blockquote class="comment">
   <h3 id="comment-comment"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
-  <p>After this you will see your first history item in <span class="notranslate">Galaxy</span>’s right panel. It will go through
+  <p>After this you will see your first history item (called a “dataset”) in <span class="notranslate">Galaxy</span>’s right panel. It will go through
 the gray (preparing/queued) and yellow (running) states to become green (success).</p>
 
 </blockquote>
@@ -675,10 +707,10 @@ the gray (preparing/queued) and yellow (running) states to become green (success
 <p>What is this file?</p>
 
 <blockquote class="notranslate hands_on">
-  <h3 id="hands_on-hands-on-view-the-file-content"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: View the file content</h3>
+  <h3 id="hands_on-hands-on-view-the-dataset-content"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: View the dataset content</h3>
   <ol>
     <li>
-      <p>Click on the <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-eye</span> (eye) icon next to the file name, to look at the file content</p>
+      <p>Click on the <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-eye</span> (eye) icon next to the dataset name, to look at the file content</p>
 
       <p><img src="../../images/eye-icon.png" alt="eye" width="320px" /></p>
     </li>
@@ -700,13 +732,13 @@ the gray (preparing/queued) and yellow (running) states to become green (success
   <ol>
     <li>Type <strong>FastQC</strong> in the tools panel search box (top)</li>
     <li>
-      <p>Click on the <strong>FastQC</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> tool</p>
+      <p>Click on the <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.72" title="Tested with toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.72"><strong>FastQC</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.72</span></span>  tool</p>
 
       <p>The tool will be displayed in the central <span class="notranslate">Galaxy</span> panel.</p>
     </li>
     <li>Select the following parameters:
       <ul>
-        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Short read data from your current history”</em>: the FASTQ file that we uploaded</li>
+        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Short read data from your current history”</em>: the FASTQ dataset that we uploaded</li>
         <li>No change in the other parameters</li>
       </ul>
     </li>
@@ -715,16 +747,16 @@ the gray (preparing/queued) and yellow (running) states to become green (success
 
 </blockquote>
 
-<p>This tool will run and the two output files will appear at the top of your history panel.</p>
+<p>This tool will run and two new output datasets will appear at the top of your history panel.</p>
 
 <h2 id="view-results">View results</h2>
 
-<p>We will look at the output file called <em>FastQC on data 1: Webpage</em>.</p>
+<p>We will look at the output dataset called <em>FastQC on data 1: Webpage</em>.</p>
 
 <blockquote class="comment">
   <h3 id="comment-comment-1"><i class="far fa-comment-dots" aria-hidden="true"></i><span class="visually-hidden">comment</span> Comment</h3>
   <ul>
-    <li>Note that <span class="notranslate">Galaxy</span> has given this file a name according to both the tool name (“FastQC”) and the dataset (“data 1”) that it used.</li>
+    <li>Note that <span class="notranslate">Galaxy</span> has given this dataset a name according to both the tool name (“FastQC”) and the input (“data 1”) that it used.</li>
     <li>The name “data 1” means the dataset number 1 in <span class="notranslate">Galaxy</span>’s current history (our FASTQ file).</li>
   </ul>
 
@@ -734,7 +766,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
   <h3 id="hands_on-hands-on-view-results"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: View results</h3>
   <ul>
     <li>
-      <p>Click on the <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-eye</span> (eye) icon next to the output file.</p>
+      <p>Click on the <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-eye</span> (eye) icon next to the “Webpage” output dataset.</p>
 
       <p>The information is displayed in the central panel</p>
 
@@ -770,10 +802,10 @@ the gray (preparing/queued) and yellow (running) states to become green (success
   <h3 id="hands_on-hands-on-run-another-tool"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Run another tool</h3>
   <ol>
     <li>Type <strong>Filter by quality</strong> in the tools panel search box (top)</li>
-    <li>Click on the tool <strong>Filter by quality</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
+    <li>Click on the tool <span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/devteam/fastq_quality_filter/cshl_fastq_quality_filter/1.0.1" title="Tested with toolshed.g2.bx.psu.edu/repos/devteam/fastq_quality_filter/cshl_fastq_quality_filter/1.0.1"><strong>Filter by quality</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/devteam/fastq_quality_filter/cshl_fastq_quality_filter/1.0.1</span></span></li>
     <li>Set the following parameters:
       <ul>
-        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input FASTQ file”</em>: the input FASTQ file</li>
+        <li><i class="far fa-file" aria-hidden="true"></i><span class="visually-hidden">param-file</span> <em>“Input FASTQ file”</em>: our initial FASTQ dataset</li>
         <li><em>“Quality cut-off value”</em>: 35</li>
         <li><em>“Percent of bases in sequence that must have quality equal to / higher than cut-off value”</em>: 80</li>
       </ul>
@@ -782,11 +814,11 @@ the gray (preparing/queued) and yellow (running) states to become green (success
   </ol>
 </blockquote>
 
-<p>After the tool has run, the output file will appear at the top of your History panel.</p>
+<p>After the tool has run, its output dataset will appear at the top of your History panel.</p>
 <ul>
-  <li>This file will be called “Filter by quality on data 1”.</li>
-  <li>Remember that <span class="notranslate">Galaxy</span> has named this file according to the tool it used (“Filter by quality”) and the data file (“data 1”).</li>
-  <li>The actual numbers in front of the files in the history are not important.</li>
+  <li>This dataset will be called “Filter by quality on data 1”.</li>
+  <li>Remember that <span class="notranslate">Galaxy</span> has named this file according to the tool it used (“Filter by quality”) and the input dataset (“data 1”).</li>
+  <li>The actual numbers in front of the datasets in the history are not important.</li>
 </ul>
 
 <p>What are the results from this filtering tool?</p>
@@ -797,7 +829,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
   <h3 id="hands_on-hands-on-get-metadata-about-a-file"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Get metadata about a file</h3>
   <ol>
     <li>
-      <p>Click on the output file name in the History panel</p>
+      <p>Click on the output dataset name in the History panel.</p>
 
       <p>This expands the information about the file.</p>
 
@@ -838,7 +870,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
       <p>For example, you might decide you want 80 percent of bases to have a quality of 36 or higher, instead of 35.</p>
     </li>
     <li>Click <strong>Execute</strong></li>
-    <li>View the results: Click on the output file name to expand the information. (<em>Note</em>: not the <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-eye</span> (eye) icon.)</li>
+    <li>View the results: Click on the output dataset name to expand the information. (<em>Note</em>: not the <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-eye</span> (eye) icon.)</li>
   </ol>
 </blockquote>
 
@@ -849,7 +881,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
 
 </blockquote>
 
-<p>You can re-run a tool many times with different settings. Each time you re-run the tool, the new output file will appear at the top of your current history.</p>
+<p>You can re-run a tool many times with different settings. Each time you re-run the tool, its new output datasets will appear at the top of your current history.</p>
 
 <h2 id="create-a-new-history">Create a new history</h2>
 
@@ -892,7 +924,7 @@ the gray (preparing/queued) and yellow (running) states to become green (success
 
 </blockquote>
 
-<p>This new history does not have any files in it yet.</p>
+<p>This new history does not have any datasets in it yet.</p>
 
 <h2 id="look-at-all-your-histories">Look at all your histories</h2>
 
@@ -904,13 +936,13 @@ the gray (preparing/queued) and yellow (running) states to become green (success
     <li>
       <p>Click on the <strong>View all histories</strong> (<i class="fas fa-columns" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-columns</span> icon) at the top right of your history</p>
 
-      <p><img src="../../images/view-hist.png" alt="view-hist" /></p>
+      <p><img src="../../images/galaxy_interface_history_switch.png" alt="view-hist" width="320px" /></p>
 
       <p>A new page will appear with all your histories displayed here.</p>
     </li>
     <li>Copy a dataset into your new history
       <ol>
-        <li>Click on the FASTQ file in “my-analysis” history</li>
+        <li>Click on the FASTQ dataset in “my-analysis” history</li>
         <li>Drag it into the “Next-analysis” history</li>
       </ol>
 
@@ -969,6 +1001,39 @@ the gray (preparing/queued) and yellow (running) states to become green (success
 
                     
 
+                    <h1>Feedback</h1>
+                    <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
+
+                    <div id="feedback-button">
+                        <img src="/training-material/shared/images/feedback.png" title="Click to activate" alt="Click here to load Google feedback frame" />
+                    </div>
+                    <div id="feedback-form">
+                    </div>
+                    <script type="text/javascript">
+                        (function (window, document) {
+                            function onDocumentReady(fn) {
+                                if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+                                    fn();
+                                } else {
+                                    document.addEventListener('DOMContentLoaded', fn);
+                                }
+                            }
+
+                            onDocumentReady(function () {
+                                $("#feedback-button").click(function(evt){
+                                    var e = $(evt.target)
+                                    e.hide();
+
+                                    $("#feedback-form").html(`
+                                        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=A short introduction to Galaxy (Introduction to Galaxy Analyses)">Loading...</iframe>
+                                    `)
+                                })
+                            });
+                        })(window, document);
+                    </script>
+
+
+
                     <h1>Citing this Tutorial</h1>
                     <p>
                         <ol>
@@ -990,8 +1055,8 @@ the gray (preparing/queued) and yellow (running) states to become green (success
     author = "Anna Syme",
     title = "A short introduction to Galaxy (Galaxy Training Materials)",
     year = "2020",
-    month = "04",
-    day = "16"
+    month = "12",
+    day = "01"
     url = "\url{/training-material/topics/introduction/tutorials/galaxy-intro-short/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
@@ -1029,18 +1094,6 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
         
 
         
-
-        <hr>
-        <br>
-
-        <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
-        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=A short introduction to Galaxy (Introduction to Galaxy Analyses)">Loading...
-        </iframe>
-
-        <blockquote class="feedback">
-            <h3><i class="far fa-comments" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
-            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=A short introduction to Galaxy (Introduction to Galaxy Analyses)">Feedback Form</a>.</p>
-        </blockquote>
     </section>
 </div>
 
@@ -1084,4 +1137,17 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
     }});
     </script>
     
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
 </html>

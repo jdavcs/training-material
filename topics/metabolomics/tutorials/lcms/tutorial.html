@@ -11,7 +11,7 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-45719423-18' , 'auto');
+    ga('create', '' , 'auto');
     ga('send', 'pageview');
 </script>
         
@@ -143,6 +143,9 @@
                 </label>
                 <label data-value="rainbow" class="btn btn-secondary">
                     <input type="radio" name="options" id="rainbow" autocomplete="off"> Rainbow
+                </label>
+                <label data-value="halloween" class="btn btn-secondary">
+                    <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
                 </label>
             </div>
 
@@ -327,7 +330,7 @@
 
         <div class="contributors-line">By: 
 
-<a href="/training-material/hall-of-fame#melpetera" class="contributor-badge"><img src="https://avatars.githubusercontent.com/melpetera" alt="Mélanie Petera">Mélanie Petera</a>, <a href="/training-material/hall-of-fame#lecorguille" class="contributor-badge"><img src="https://avatars.githubusercontent.com/lecorguille" alt="Gildas Le Corguillé">Gildas Le Corguillé</a>, <a href="/training-material/hall-of-fame#jfrancoismartin" class="contributor-badge"><img src="https://avatars.githubusercontent.com/jfrancoismartin" alt="Jean-François Martin">Jean-François Martin</a>, <a href="/training-material/hall-of-fame#yguitton" class="contributor-badge"><img src="https://avatars.githubusercontent.com/yguitton" alt="Yann Guitton">Yann Guitton</a>, <a href="/training-material/hall-of-fame#workflow4metabolomics" class="contributor-badge"><img src="https://avatars.githubusercontent.com/workflow4metabolomics" alt="Workflow4Metabolomics core team">Workflow4Metabolomics core team</a>
+<a href="/training-material/hall-of-fame/melpetera/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/melpetera" alt="Mélanie Petera">Mélanie Petera</a>, <a href="/training-material/hall-of-fame/lecorguille/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/lecorguille" alt="Gildas Le Corguillé">Gildas Le Corguillé</a>, <a href="/training-material/hall-of-fame/jfrancoismartin/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/jfrancoismartin" alt="Jean-François Martin">Jean-François Martin</a>, <a href="/training-material/hall-of-fame/yguitton/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/yguitton" alt="Yann Guitton">Yann Guitton</a>, <a href="/training-material/hall-of-fame/workflow4metabolomics/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/workflow4metabolomics" alt="Workflow4Metabolomics core team">Workflow4Metabolomics core team</a>
 
 </div>
 
@@ -470,6 +473,14 @@
         
     
         
+        <a class="dropdown-item" href="https://africa.usegalaxy.eu/" title="Galaxy Africa">
+            Galaxy Africa
+        </a>
+        
+    
+        
+    
+        
     
         
     
@@ -534,10 +545,6 @@
         
     
         
-        <a class="dropdown-item" href="https://usegalaxy.be/" title="UseGalaxy.be">
-            UseGalaxy.be
-        </a>
-        
     
         
         <a class="dropdown-item" href="https://usegalaxy.eu" title="UseGalaxy.eu">
@@ -546,11 +553,11 @@
         
     
         
-    
-        
-        <a class="dropdown-item" href="https://usegalaxy.org.au" title="UseGalaxy.org.au">
-            UseGalaxy.org.au
+        <a class="dropdown-item" href="https://usegalaxy.fr/" title="UseGalaxy.fr">
+            UseGalaxy.fr
         </a>
+        
+    
         
     
         
@@ -566,7 +573,7 @@
             </ul>
             
 
-            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Mar 17, 2020 </p>
+            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Dec 1, 2020 </p>
         </blockquote>
 
         <div class="container">
@@ -778,17 +785,20 @@ https://zenodo.org/record/3244991/files/QC1_014.mzML
 
       <blockquote class="tip">
 
-        <h3 id="tip-tip-create-a-dataset-collection"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Create a dataset collection</h3>
+        <h3 id="tip-tip-creating-a-dataset-collection"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Creating a dataset collection</h3>
 
-        <ol>
-          <li>Click on <i class="far fa-check-square" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-selector</span> icon (<strong>Operation on multiple datasets</strong>) on the top of the history</li>
-          <li>Select all the datasets for the collection</li>
-          <li>Expand <strong>For all selected</strong> menu</li>
-          <li>Select <strong>Build dataset list</strong></li>
-          <li>Enter a name for the collection</li>
-          <li>Tick <strong>Hide original elements?</strong></li>
-          <li>Click on <strong>Create list</strong> (and wait a bit)</li>
-        </ol>
+        <ul>
+          <li>Click on <strong>Operations on multiple datasets</strong> (check box icon) at the top of the history panel <img src="../../../galaxy-interface/images/historyItemControls.png" alt="Operations on multiple datasets button" /></li>
+          <li>Check all the datasets in your history you would like to include</li>
+          <li>
+            <p>Click <strong>For all selected..</strong> and choose <strong>Build dataset list</strong></p>
+
+            <p><img src="/training-material/topics/galaxy-interface/images/buildList.png" alt="build list collection menu item" width="15%" /></p>
+          </li>
+          <li>Enter a name for your collection</li>
+          <li>Click <strong>Create List</strong> to build your collection</li>
+          <li>Click on the checkmark icon at the top of your history again</li>
+        </ul>
       </blockquote>
     </li>
   </ol>
@@ -2442,6 +2452,39 @@ and create, run and share!</p>
 </li></ol>
                     
 
+                    <h1>Feedback</h1>
+                    <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
+
+                    <div id="feedback-button">
+                        <img src="/training-material/shared/images/feedback.png" title="Click to activate" alt="Click here to load Google feedback frame" />
+                    </div>
+                    <div id="feedback-form">
+                    </div>
+                    <script type="text/javascript">
+                        (function (window, document) {
+                            function onDocumentReady(fn) {
+                                if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+                                    fn();
+                                } else {
+                                    document.addEventListener('DOMContentLoaded', fn);
+                                }
+                            }
+
+                            onDocumentReady(function () {
+                                $("#feedback-button").click(function(evt){
+                                    var e = $(evt.target)
+                                    e.hide();
+
+                                    $("#feedback-form").html(`
+                                        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Mass spectrometry: LC-MS analysis (Metabolomics)">Loading...</iframe>
+                                    `)
+                                })
+                            });
+                        })(window, document);
+                    </script>
+
+
+
                     <h1>Citing this Tutorial</h1>
                     <p>
                         <ol>
@@ -2463,8 +2506,8 @@ and create, run and share!</p>
     author = "Mélanie Petera and Gildas Le Corguillé and Jean-François Martin and Yann Guitton and Workflow4Metabolomics core team",
     title = "Mass spectrometry: LC-MS analysis (Galaxy Training Materials)",
     year = "2020",
-    month = "03",
-    day = "17"
+    month = "12",
+    day = "01"
     url = "\url{/training-material/topics/metabolomics/tutorials/lcms/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
@@ -2502,18 +2545,6 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
         
 
         
-
-        <hr>
-        <br>
-
-        <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
-        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Mass spectrometry: LC-MS analysis (Metabolomics)">Loading...
-        </iframe>
-
-        <blockquote class="feedback">
-            <h3><i class="far fa-comments" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
-            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=Mass spectrometry: LC-MS analysis (Metabolomics)">Feedback Form</a>.</p>
-        </blockquote>
     </section>
 </div>
 
@@ -2557,4 +2588,17 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
     }});
     </script>
     
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
 </html>

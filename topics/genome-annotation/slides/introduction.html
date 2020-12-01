@@ -18,7 +18,7 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-45719423-18' , 'auto');
+    ga('create', '' , 'auto');
     ga('send', 'pageview');
 </script>
     
@@ -351,7 +351,7 @@ Multiple pieces of evidence
 .pull-left[
 Predictions using:
 - Genome sequence
-- Stastical model (specific to organism)
+- Statistical model (specific to organism)
 
 Models:
 - Built from training on evidence-based gene calls (2-3 iterations)
@@ -396,7 +396,7 @@ Source: [Maker tutorial](http://weatherby.genetics.utah.edu/MAKER/wiki/index.php
 
 #### Benchmarking Universal Single-Copy Orthologs
 
-* Sets of genes having single-copy orthologs in all species of a clad (insects, plants, bacteria, ...)
+* Sets of genes having single-copy orthologs in all species of a clade (insects, plants, bacteria, ...)
 * Genes supposed to be vital for the species
 * Expected to be found in a good annotation
 * Results:
@@ -416,7 +416,7 @@ Genome Browsers (JBrowse, UCSC, ...)
 
 ### Repeat Elements
 
-- Tranposons, low complexity regions
+- Transposons, low complexity regions
 - Disrupt gene calling
 - Prediction pipelines:
   - RepeatMasker
@@ -492,7 +492,7 @@ Collection of information on the function of identified genes
 
 Data Sources
 - wet lab experiments (reliable but long and expensive)
-- manual assignment (cf apollo)
+- manual assignment (cf Apollo)
 - **automatic assignment**
 
 ---
@@ -633,7 +633,7 @@ This material is the result of a collaborative work. Thanks to the [Galaxy Train
 <div class="contributors-line">
 
 
-<a href="/training-material/hall-of-fame#abretaud" class="contributor-badge"><img src="https://avatars.githubusercontent.com/abretaud" alt="Anthony Bretaudeau">Anthony Bretaudeau</a>, <a href="/training-material/hall-of-fame#hexylena" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>
+<a href="/training-material/hall-of-fame/abretaud/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/abretaud" alt="Anthony Bretaudeau">Anthony Bretaudeau</a>, <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>
 
 
 </div>
@@ -661,5 +661,19 @@ This material is licensed under the <a rel="license" href="https://creativecommo
         target:function(trigger){return trigger.parentElement;
       }});
     </script>
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('body').prepend("<div style='text-align: center'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
+
   </body>
 </html>

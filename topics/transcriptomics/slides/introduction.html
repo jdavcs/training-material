@@ -18,7 +18,7 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-45719423-18' , 'auto');
+    ga('create', '' , 'auto');
     ga('send', 'pageview');
 </script>
     
@@ -638,6 +638,10 @@ Account for variability of expression across biological replicates&lt;br&gt;with
         
     
 
+    
+        
+    
+
 
 
 ---
@@ -650,7 +654,7 @@ This material is the result of a collaborative work. Thanks to the [Galaxy Train
 <div class="contributors-line">
 
 
-<a href="/training-material/hall-of-fame#bebatut" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Bérénice Batut">Bérénice Batut</a>, <a href="/training-material/hall-of-fame#erxleben" class="contributor-badge"><img src="https://avatars.githubusercontent.com/erxleben" alt="Anika Erxleben">Anika Erxleben</a>, <a href="/training-material/hall-of-fame#mwolfien" class="contributor-badge"><img src="https://avatars.githubusercontent.com/mwolfien" alt="Markus Wolfien">Markus Wolfien</a>
+<a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Bérénice Batut">Bérénice Batut</a>, <a href="/training-material/hall-of-fame/erxleben/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/erxleben" alt="Anika Erxleben">Anika Erxleben</a>, <a href="/training-material/hall-of-fame/mwolfien/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/mwolfien" alt="Markus Wolfien">Markus Wolfien</a>
 
 
 </div>
@@ -678,5 +682,19 @@ This material is licensed under the <a rel="license" href="https://creativecommo
         target:function(trigger){return trigger.parentElement;
       }});
     </script>
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('body').prepend("<div style='text-align: center'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
+
   </body>
 </html>

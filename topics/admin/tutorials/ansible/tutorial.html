@@ -11,7 +11,7 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-45719423-18' , 'auto');
+    ga('create', '' , 'auto');
     ga('send', 'pageview');
 </script>
         
@@ -143,6 +143,9 @@
                 </label>
                 <label data-value="rainbow" class="btn btn-secondary">
                     <input type="radio" name="options" id="rainbow" autocomplete="off"> Rainbow
+                </label>
+                <label data-value="halloween" class="btn btn-secondary">
+                    <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
                 </label>
             </div>
 
@@ -282,7 +285,7 @@
 
         <div class="contributors-line">By: 
 
-<a href="/training-material/hall-of-fame#hexylena" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>, <a href="/training-material/hall-of-fame#shiltemann" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Saskia Hiltemann">Saskia Hiltemann</a>
+<a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>, <a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Saskia Hiltemann">Saskia Hiltemann</a>
 
 </div>
 
@@ -351,7 +354,7 @@
             </ul>
             
 
-            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Jun 16, 2020 </p>
+            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Dec 1, 2020 </p>
         </blockquote>
 
         <div class="container">
@@ -449,7 +452,7 @@
 
 <blockquote class="details">
   <h3 id="details-ansible-inventory-documentation"><i class="fas fa-info-circle" aria-hidden="true"></i><span class="visually-hidden">details</span> Ansible Inventory Documentation</h3>
-  <p>For more advanced features of the inventory file, check out <a href="https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html">the official documentation on this topic</a>.</p>
+  <p>For more advanced features of the inventory file, check out <a href="https://docs.ansible.com/ansible/2.9/user_guide/intro_inventory.html">the official documentation on this topic</a>.</p>
 </blockquote>
 
 <h2 id="roles">Roles</h2>
@@ -525,7 +528,7 @@
 <blockquote class="details">
   <h3 id="details-ansible-role-documentation"><i class="fas fa-info-circle" aria-hidden="true"></i><span class="visually-hidden">details</span> Ansible Role Documentation</h3>
 
-  <p>For more information check out <a href="https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html">the official documentation on this topic</a>.</p>
+  <p>For more information check out <a href="https://docs.ansible.com/ansible/2.9/user_guide/playbooks_reuse_roles.html">the official documentation on this topic</a>.</p>
 </blockquote>
 
 <h2 id="modules-and-tasks">Modules and Tasks</h2>
@@ -548,11 +551,11 @@
 
 <p>Here we have two tasks. Each has a <code class="language-plaintext highlighter-rouge">name</code> that will be shown to the person running the playbook.</p>
 
-<p>The first invokes the <code class="language-plaintext highlighter-rouge">yum</code> module with the arguments <code class="language-plaintext highlighter-rouge">name: cvmfs, state: ...</code>. This will use yum to install the package named <code class="language-plaintext highlighter-rouge">cvmfs</code>. The state parameter uses a <a href="http://jinja.pocoo.org/">Jinja2</a> template to evaluate the value of the variable <code class="language-plaintext highlighter-rouge">cvmfs_upgrade_client</code>. We can <a href="https://github.com/galaxyproject/ansible-cvmfs/search?q=cvmfs_upgrade_client&amp;unscoped_q=cvmfs_upgrade_client">grep through</a> the repository and see that <code class="language-plaintext highlighter-rouge">defaults/main.yml</code> sets that to <code class="language-plaintext highlighter-rouge">false</code> by default. We can override this if we need, we’ll come back to that later. The first task also has a <code class="language-plaintext highlighter-rouge">when</code> condition to ensure it only runs on RHEL family machines, so RedHat or CentOS. It is better to use the OS-generic <a href="http://docs.ansible.com/ansible/latest/package_module.html"><code class="language-plaintext highlighter-rouge">package</code></a> module, if possible.</p>
+<p>The first invokes the <code class="language-plaintext highlighter-rouge">yum</code> module with the arguments <code class="language-plaintext highlighter-rouge">name: cvmfs, state: ...</code>. This will use yum to install the package named <code class="language-plaintext highlighter-rouge">cvmfs</code>. The state parameter uses a <a href="http://jinja.pocoo.org/">Jinja2</a> template to evaluate the value of the variable <code class="language-plaintext highlighter-rouge">cvmfs_upgrade_client</code>. We can <a href="https://github.com/galaxyproject/ansible-cvmfs/search?q=cvmfs_upgrade_client&amp;unscoped_q=cvmfs_upgrade_client">grep through</a> the repository and see that <code class="language-plaintext highlighter-rouge">defaults/main.yml</code> sets that to <code class="language-plaintext highlighter-rouge">false</code> by default. We can override this if we need, we’ll come back to that later. The first task also has a <code class="language-plaintext highlighter-rouge">when</code> condition to ensure it only runs on RHEL family machines, so RedHat or CentOS. It is better to use the OS-generic <a href="http://docs.ansible.com/ansible/2.9/package_module.html"><code class="language-plaintext highlighter-rouge">package</code></a> module, if possible.</p>
 
-<p>The second invokes the <a href="http://docs.ansible.com/ansible/latest/service_module.html"><code class="language-plaintext highlighter-rouge">service</code></a> module. The arguments to this one are quite legible and the functionality can be inferred from the names for the most part: The service <code class="language-plaintext highlighter-rouge">name: autofs</code> will be <code class="language-plaintext highlighter-rouge">enabled</code> and its <code class="language-plaintext highlighter-rouge">state</code> should be <code class="language-plaintext highlighter-rouge">started</code>.</p>
+<p>The second invokes the <a href="http://docs.ansible.com/ansible/2.9/service_module.html"><code class="language-plaintext highlighter-rouge">service</code></a> module. The arguments to this one are quite legible and the functionality can be inferred from the names for the most part: The service <code class="language-plaintext highlighter-rouge">name: autofs</code> will be <code class="language-plaintext highlighter-rouge">enabled</code> and its <code class="language-plaintext highlighter-rouge">state</code> should be <code class="language-plaintext highlighter-rouge">started</code>.</p>
 
-<p><a href="https://docs.ansible.com/ansible/latest/modules/modules_by_category.html">Many modules</a> are available for you to use.</p>
+<p><a href="https://docs.ansible.com/ansible/2.9/modules/modules_by_category.html">Many modules</a> are available for you to use.</p>
 
 <h3 id="stylistic-choices">Stylistic Choices</h3>
 
@@ -587,7 +590,7 @@
 <blockquote class="details">
   <h3 id="details-ansible-playbook-documentation"><i class="fas fa-info-circle" aria-hidden="true"></i><span class="visually-hidden">details</span> Ansible Playbook Documentation</h3>
 
-  <p>For more information check out <a href="https://docs.ansible.com/ansible/latest/user_guide/playbooks_intro.html">the official documentation on this topic</a>.</p>
+  <p>For more information check out <a href="https://docs.ansible.com/ansible/2.9/user_guide/playbooks_intro.html">the official documentation on this topic</a>.</p>
 </blockquote>
 
 <h3 id="philosophies">Philosophies</h3>
@@ -615,7 +618,7 @@
 
 <h2 id="variables">Variables</h2>
 
-<p>There are a bunch of places variables can be set. <a href="https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable">The list is ridiculous.</a> Try and find a convention within your group and stick to that to help manage the chaos.</p>
+<p>There are a bunch of places variables can be set. <a href="https://docs.ansible.com/ansible/2.9/user_guide/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable">The list is ridiculous.</a> Try and find a convention within your group and stick to that to help manage the chaos.</p>
 
 <p>There are some special places you can put variables that will be loaded automatically:</p>
 
@@ -628,7 +631,7 @@
 
 <h2 id="vaults">Vaults</h2>
 
-<p><a href="https://docs.ansible.com/ansible/latest/user_guide/vault.html"><code class="language-plaintext highlighter-rouge">ansible-vault</code></a> is a super useful tool that lets you encrypt secrets for your group using a pre-shared key. This allows you to commit ALL of your Ansible playbooks and variables to source control, without the concern of leaking secrets. E.g. <a href="https://github.com/usegalaxy-eu/infrastructure-playbook/blob/master/secret_group_vars/all.yml">Use<span class="notranslate">Galaxy</span>.eu</a>’s vault file. The encrypted version is not very interesting to look at, but it is mostly to show that we confidently place an encrypted copy of our secrets online, under configuration management. This has made our life a lot easier.</p>
+<p><a href="https://docs.ansible.com/ansible/2.9/user_guide/vault.html"><code class="language-plaintext highlighter-rouge">ansible-vault</code></a> is a super useful tool that lets you encrypt secrets for your group using a pre-shared key. This allows you to commit ALL of your Ansible playbooks and variables to source control, without the concern of leaking secrets. E.g. <a href="https://github.com/usegalaxy-eu/infrastructure-playbook/blob/master/secret_group_vars/all.yml">Use<span class="notranslate">Galaxy</span>.eu</a>’s vault file. The encrypted version is not very interesting to look at, but it is mostly to show that we confidently place an encrypted copy of our secrets online, under configuration management. This has made our life a lot easier.</p>
 
 <h1 id="your-first-playbook-and-first-role">Your First Playbook and First Role</h1>
 
@@ -663,7 +666,7 @@ Ansible provides some flags which can help you identify changes before they’re
       <p>All of the steps are the same, no matter which machine Ansible will manage and where you run it. The only difference is the connection setup</p>
     </li>
     <li>
-      <p><a href="https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html">Install Ansible.</a> where you will run it</p>
+      <p><a href="https://docs.ansible.com/ansible/2.9/installation_guide/intro_installation.html">Install Ansible.</a> where you will run it</p>
     </li>
     <li>
       <p>Create an directory named <code class="language-plaintext highlighter-rouge">intro</code> and <code class="language-plaintext highlighter-rouge">cd</code> into it</p>
@@ -676,7 +679,7 @@ Ansible provides some flags which can help you identify changes before they’re
           <p>We will call our group <code class="language-plaintext highlighter-rouge">my_hosts</code></p>
         </li>
         <li>
-          <p>Create <a href="https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html">an inventory file</a> with the group <code class="language-plaintext highlighter-rouge">my_hosts</code> and <code class="language-plaintext highlighter-rouge">localhost ansible_connection=local</code>, which tells ansible to not use SSH, and just use the local connection.</p>
+          <p>Create <a href="https://docs.ansible.com/ansible/2.9/user_guide/intro_inventory.html">an inventory file</a> with the group <code class="language-plaintext highlighter-rouge">my_hosts</code> and <code class="language-plaintext highlighter-rouge">localhost ansible_connection=local</code>, which tells ansible to not use SSH, and just use the local connection.</p>
 
           <blockquote class="solution">
             <h3 id="solution-solution"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
@@ -736,11 +739,11 @@ Ansible provides some flags which can help you identify changes before they’re
     <span class="na">dest</span><span class="pi">:</span> <span class="s">/tmp/test.txt</span>
 </code></pre></div>      </div>
 
-      <p>You can read about all of the parameters available to the <a href="http://docs.ansible.com/ansible/latest/copy_module.html"><code class="language-plaintext highlighter-rouge">copy</code></a> module on Ansible’s documentation.</p>
+      <p>You can read about all of the parameters available to the <a href="http://docs.ansible.com/ansible/2.9/copy_module.html"><code class="language-plaintext highlighter-rouge">copy</code></a> module on Ansible’s documentation.</p>
 
       <blockquote class="details">
         <h3 id="details-ansible-module-documentation"><i class="fas fa-info-circle" aria-hidden="true"></i><span class="visually-hidden">details</span> Ansible Module Documentation</h3>
-        <p>You can usually find a module that will represent most commands you will run at a shell. Usually by searching the internet for “ansible do-some-action” e.g. “ansible copy file to server” or “ansible restart service.” If you cannot find a module that does it, there is the <a href="http://docs.ansible.com/ansible/latest/command_module.html"><code class="language-plaintext highlighter-rouge">command</code></a> module, but this should be avoided if possible. Expect to have a browser session with 10-30 different Ansible module documentation tabs if you work with Ansible regularly, no one remembers what arguments are available to every module.</p>
+        <p>You can usually find a module that will represent most commands you will run at a shell. Usually by searching the internet for “ansible do-some-action” e.g. “ansible copy file to server” or “ansible restart service.” If you cannot find a module that does it, there is the <a href="http://docs.ansible.com/ansible/2.9/command_module.html"><code class="language-plaintext highlighter-rouge">command</code></a> module, but this should be avoided if possible. Expect to have a browser session with 10-30 different Ansible module documentation tabs if you work with Ansible regularly, no one remembers what arguments are available to every module.</p>
 
       </blockquote>
     </li>
@@ -784,7 +787,7 @@ Ansible provides some flags which can help you identify changes before they’re
     <li>
       <p>Run the playbook:</p>
 
-      <blockquote class="code-io">
+      <blockquote class="code-2col">
         <blockquote class="code-in">
           <h3 id="code-in-input-bash"><i class="far fa-keyboard" aria-hidden="true"></i><span class="visually-hidden">code-in</span> Input: Bash</h3>
           <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-playbook <span class="nt">-i</span> hosts playbook.yml
@@ -843,13 +846,13 @@ localhost                  : ok=2    changed=1    unreachable=0    failed=0    s
 
 <h2 id="facts">Facts</h2>
 
-<p>In the last step of the last hands-on, you ran your playbook. The first <code class="language-plaintext highlighter-rouge">TASK</code> that was executed was not one that you had written, it read:</p>
+<p>In the last step of the last hands-on, you ran your playbook. The first <code class="language-plaintext highlighter-rouge">TASK</code> that was executed was not one that you had written, it <span class="notranslate">reads</span>:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>TASK [Gathering Facts] *********************************************************
 ok: [localhost]
 </code></pre></div></div>
 
-<p>The <a href="https://docs.ansible.com/ansible/latest/modules/setup_module.html"><code class="language-plaintext highlighter-rouge">setup</code></a> module runs by default for every host and gathers facts about the host.</p>
+<p>The <a href="https://docs.ansible.com/ansible/2.9/modules/setup_module.html"><code class="language-plaintext highlighter-rouge">setup</code></a> module runs by default for every host and gathers facts about the host.</p>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-the-setup-module"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: The Setup Module</h3>
@@ -951,7 +954,7 @@ ok: [localhost]
     <li>
       <p>Check the contents of <code class="language-plaintext highlighter-rouge">/tmp/test.ini</code></p>
 
-      <blockquote class="code-io">
+      <blockquote class="code-2col">
         <blockquote class="code-in">
           <h3 id="code-in-input-bash-1"><i class="far fa-keyboard" aria-hidden="true"></i><span class="visually-hidden">code-in</span> Input: Bash</h3>
           <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat</span> /tmp/test.ini
@@ -1049,7 +1052,7 @@ localhost                  : ok=3    changed=1    unreachable=0    failed=0
 
   <ol>
     <li>It collects variables defined in group variables and other places</li>
-    <li>The first task for each machine is the <a href="https://docs.ansible.com/ansible/latest/modules/setup_module.html"><code class="language-plaintext highlighter-rouge">setup</code> module</a> which gathers facts about the host, which are added to the available variables</li>
+    <li>The first task for each machine is the <a href="https://docs.ansible.com/ansible/2.9/modules/setup_module.html"><code class="language-plaintext highlighter-rouge">setup</code> module</a> which gathers facts about the host, which are added to the available variables</li>
     <li>When multiple roles execute in a playbook:
       <ol>
         <li>Their defaults are added to the set of variables (the group variables having precedence over these variables)</li>
@@ -1074,7 +1077,7 @@ localhost                  : ok=3    changed=1    unreachable=0    failed=0
     <li>
       <p>Install the geerlingguy.git role with ansible-<span class="notranslate">galaxy</span> into your roles folder:</p>
 
-      <blockquote class="code-io">
+      <blockquote class="code-2col">
         <blockquote class="code-in">
           <h3 id="code-in-input-bash-3"><i class="far fa-keyboard" aria-hidden="true"></i><span class="visually-hidden">code-in</span> Input: Bash</h3>
           <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ansible-<span class="notranslate">galaxy</span> <span class="nb">install</span> <span class="se">\</span>
@@ -1123,7 +1126,7 @@ The solution to this is to set <code class="language-plaintext highlighter-rouge
 
           <blockquote class="details">
             <h3 id="details-ansible-become"><i class="fas fa-info-circle" aria-hidden="true"></i><span class="visually-hidden">details</span> Ansible Become</h3>
-            <p>See the <a href="https://docs.ansible.com/ansible/latest/user_guide/become.html">documentation</a> if you need to control this behaviour differently. <code class="language-plaintext highlighter-rouge">become</code> can be set either at the task level or the playbook level.</p>
+            <p>See the <a href="https://docs.ansible.com/ansible/2.9/user_guide/become.html">documentation</a> if you need to control this behaviour differently. <code class="language-plaintext highlighter-rouge">become</code> can be set either at the task level or the playbook level.</p>
 
           </blockquote>
 
@@ -1231,7 +1234,7 @@ $ANSIBLE_VAULT;1.1;AES256
     <li>
       <p>Check the contents of <code class="language-plaintext highlighter-rouge">/tmp/test.ini</code></p>
 
-      <blockquote class="code-io">
+      <blockquote class="code-2col">
         <blockquote class="code-in">
           <h3 id="code-in-input-bash-4"><i class="far fa-keyboard" aria-hidden="true"></i><span class="visually-hidden">code-in</span> Input: Bash</h3>
           <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat</span> /tmp/test.ini
@@ -1360,6 +1363,39 @@ Note that for this task one would normally list multiple packages in the <code c
 
                     
 
+                    <h1>Feedback</h1>
+                    <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
+
+                    <div id="feedback-button">
+                        <img src="/training-material/shared/images/feedback.png" title="Click to activate" alt="Click here to load Google feedback frame" />
+                    </div>
+                    <div id="feedback-form">
+                    </div>
+                    <script type="text/javascript">
+                        (function (window, document) {
+                            function onDocumentReady(fn) {
+                                if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+                                    fn();
+                                } else {
+                                    document.addEventListener('DOMContentLoaded', fn);
+                                }
+                            }
+
+                            onDocumentReady(function () {
+                                $("#feedback-button").click(function(evt){
+                                    var e = $(evt.target)
+                                    e.hide();
+
+                                    $("#feedback-form").html(`
+                                        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Ansible (Galaxy Server administration)">Loading...</iframe>
+                                    `)
+                                })
+                            });
+                        })(window, document);
+                    </script>
+
+
+
                     <h1>Citing this Tutorial</h1>
                     <p>
                         <ol>
@@ -1381,8 +1417,8 @@ Note that for this task one would normally list multiple packages in the <code c
     author = "Helena Rasche and Saskia Hiltemann",
     title = "Ansible (Galaxy Training Materials)",
     year = "2020",
-    month = "06",
-    day = "16"
+    month = "12",
+    day = "01"
     url = "\url{/training-material/topics/admin/tutorials/ansible/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
@@ -1420,18 +1456,6 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
         
 
         
-
-        <hr>
-        <br>
-
-        <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
-        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Ansible (Galaxy Server administration)">Loading...
-        </iframe>
-
-        <blockquote class="feedback">
-            <h3><i class="far fa-comments" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
-            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=Ansible (Galaxy Server administration)">Feedback Form</a>.</p>
-        </blockquote>
     </section>
 </div>
 
@@ -1475,4 +1499,17 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
     }});
     </script>
     
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
 </html>

@@ -18,7 +18,7 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-45719423-18' , 'auto');
+    ga('create', '' , 'auto');
     ga('send', 'pageview');
 </script>
     
@@ -303,7 +303,7 @@ slide to change on the other. Useful when presenting.
 
 **accessible** **reproducible** **transparent** research means *sharing everything*.
 
-If the Galaxy framework makes everything as simple as possible, researchers are able to:
+The Galaxy framework aims to make as simple as possible for researchers to:
 - share their analyses
 - track all used tools and versions
 - check all parameters
@@ -316,8 +316,8 @@ Pages: interactive, web-based documents that describe a complete analysis.
 
 ## Galaxy growth
 - More than 7,000 ready to use tools for users
-- More than 9,500 [citations](https://www.zotero.org/groups/1732893/galaxy)
-- More than 350 [public Galaxy resources](https://galaxyproject.org/use/)
+- More than 10,000 [citations](https://www.zotero.org/groups/1732893/galaxy)
+- More than 160 [public Galaxy resources](https://galaxyproject.org/use/)
 -  - 120+ public servers, many more non-public
 -  - Both general-purpose and domain-specific
 
@@ -325,7 +325,7 @@ Pages: interactive, web-based documents that describe a complete analysis.
 
 ???
 
-- The number of public galaxy resources should be regularly updated.
+- The number of public Galaxy resources should be regularly updated.
 
 ![Galaxy timeline](../images/galaxy_timeline.png)
 
@@ -360,7 +360,7 @@ Link            | Usage
 *Analyze Data*  | go back to the homepage
 *Workflow*      | access existing workflows or create new one using the editable diagrammatic pipeline
 *Visualize*     | create new visualisations and launch Interactive Environments
-*Shared data*   | access data libraries, histories, workflows, visualizations and pages shared with you
+*Shared Data*   | access data libraries, histories, workflows, visualizations and pages shared with you
 *Help*          | links to Galaxy Help Forum (Q&amp;A), Galaxy Community Hub (Wiki), and Interactive Tours
 *User*          | your preferences and saved histories, datasets, pages and visualizations
 
@@ -440,7 +440,7 @@ Tools can be viewed as tiny LEGO pieces: each one solves a specific problem, and
 
 ???
 
-- Give it a good name so you can find it later. I have around a hundred histories and after a month I can't remember what I was doing in some, so a good name is important.
+- Give it a good name so you can find it later, which can otherwise become difficult when you have a large number of old histories.
 - You can drag and drop datasets between histories
 
 ---
@@ -453,10 +453,10 @@ History behavior is controlled by the *History options* (gear icon)
 ]
 .pull-right[
 .image-75[![History options gear button](../images/galaxy_interface_history_menu.png)]
-- *Create New* history will **not** make your current history disappear
+- *Create new history* (+ icon) will **not** make your current history disappear
 - To see all of your histories, use the history switcher
 
-  .image-50[![History Switcher](../images/galaxy_interface_history_switch.png)]
+  .image-75[![History Switcher](../images/galaxy_interface_history_switch.png)]
 
 - *Copy Datasets* from one history to another and save disk space for your quota
 ]
@@ -479,14 +479,14 @@ Galaxy
 
 ### Importing data
 
-- Copy/paste from a file
-- Upload data from a local computer
-- Upload data from internet using URL
+- Copy/paste some text
+- Upload files from your local computer
+- Upload data from an internet URL
 - Upload data from online databases: UCSC, BioMart, ENCODE, modENCODE, Flymine etc.
 - Import from Shared Data (libraries, histories, pages)
 - Upload data from FTP
 
-See [Getting data into Galaxy](../../galaxy-data-manipulation/tutorials/get-data/slides.html)
+See [Getting data into Galaxy](../../galaxy-interface/tutorials/get-data/slides.html)
 
 ---
 
@@ -495,11 +495,11 @@ See [Getting data into Galaxy](../../galaxy-data-manipulation/tutorials/get-data
 - Tools only accept input datasets with the appropriate datatypes
 - When uploading a dataset, its datatype can be either:
   - automatically detected
-  - assigned by user
-- Dataset produced by a tool: datatype assigned by the tool
-- To change the datatype of a dataset:
-  - &lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;galaxy-pencil&lt;/span&gt; *Edit Attributes* and *Datatype*
-  - &lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;galaxy-pencil&lt;/span&gt; *Edit Attributes* and *Convert Formats*
+  - assigned by the user
+- Datasets produced by a tool have their datatype assigned by the tool
+- To change the datatype of a dataset, either:
+  - &lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;galaxy-pencil&lt;/span&gt; *Edit attributes* and *Datatypes* (if original wrong), or
+  - &lt;i class=&quot;fas fa-pencil-alt&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;span class=&quot;visually-hidden&quot;&gt;galaxy-pencil&lt;/span&gt; *Edit attributes* and *Convert*
 
 ???
 
@@ -517,7 +517,7 @@ See [Getting data into Galaxy](../../galaxy-data-manipulation/tutorials/get-data
 .pull-left[
 - Genome build specifies which genome assembly a dataset is associated with
   - e.g. mm10, hg38...
-- Can be automatically detected or assigned by user
+- Can be assigned by a tool or by the user
 - Users can create custom genome builds
 - New builds can be added by the admin
 ]
@@ -609,7 +609,7 @@ Potential information overload for newbies
 - Support forum: [Galaxy Help](https://help.galaxyproject.org/)
 
   ![Galaxy Help](../images/galaxy_help.png)
-- Community curated documentation: [Galaxy Community Hub](https://www.galaxyproject.org/)
+- Community curated documentation: [Galaxy Community Hub](https://galaxyproject.org/)
 - [Events](https://galaxyproject.org/events/) all around the world
 - Galaxy Training for scientists, developers, admins, instructors: [Galaxy Training Community](/training-material/)
   - Training questions? Chat with us on [Gitter](https://gitter.im/Galaxy-Training-Network/Lobby)
@@ -684,7 +684,7 @@ This material is the result of a collaborative work. Thanks to the [Galaxy Train
 <div class="contributors-line">
 
 
-<a href="/training-material/hall-of-fame#bagnacan" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bagnacan" alt="Andrea Bagnacani">Andrea Bagnacani</a>, <a href="/training-material/hall-of-fame#bebatut" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Bérénice Batut">Bérénice Batut</a>, <a href="/training-material/hall-of-fame#shiltemann" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Saskia Hiltemann">Saskia Hiltemann</a>, <a href="/training-material/hall-of-fame#pajanne" class="contributor-badge"><img src="https://avatars.githubusercontent.com/pajanne" alt="Anne Pajon">Anne Pajon</a>, <a href="/training-material/hall-of-fame#nsoranzo" class="contributor-badge"><img src="https://avatars.githubusercontent.com/nsoranzo" alt="Nicola Soranzo">Nicola Soranzo</a>, <a href="/training-material/hall-of-fame#hexylena" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>, <a href="/training-material/hall-of-fame#chrisbarnettster" class="contributor-badge"><img src="https://avatars.githubusercontent.com/chrisbarnettster" alt="Christopher Barnett">Christopher Barnett</a>, <a href="/training-material/hall-of-fame#michelemaroni89" class="contributor-badge"><img src="https://avatars.githubusercontent.com/michelemaroni89" alt="Michele Maroni">Michele Maroni</a>, <a href="/training-material/hall-of-fame#annefou" class="contributor-badge"><img src="https://avatars.githubusercontent.com/annefou" alt="Anne Fouilloux">Anne Fouilloux</a>, <a href="/training-material/hall-of-fame#nagoue" class="contributor-badge"><img src="https://avatars.githubusercontent.com/nagoue" alt="Nadia Goué">Nadia Goué</a>, <a href="/training-material/hall-of-fame#olanag1" class="contributor-badge"><img src="https://avatars.githubusercontent.com/olanag1" alt="Olha Nahorna">Olha Nahorna</a>, <a href="/training-material/hall-of-fame#tnabtaf" class="contributor-badge"><img src="https://avatars.githubusercontent.com/tnabtaf" alt="Dave Clements">Dave Clements</a>
+<a href="/training-material/hall-of-fame/bagnacan/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bagnacan" alt="Andrea Bagnacani">Andrea Bagnacani</a>, <a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Bérénice Batut">Bérénice Batut</a>, <a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Saskia Hiltemann">Saskia Hiltemann</a>, <a href="/training-material/hall-of-fame/pajanne/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/pajanne" alt="Anne Pajon">Anne Pajon</a>, <a href="/training-material/hall-of-fame/nsoranzo/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/nsoranzo" alt="Nicola Soranzo">Nicola Soranzo</a>, <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>, <a href="/training-material/hall-of-fame/chrisbarnettster/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/chrisbarnettster" alt="Christopher Barnett">Christopher Barnett</a>, <a href="/training-material/hall-of-fame/michelemaroni89/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/michelemaroni89" alt="Michele Maroni">Michele Maroni</a>, <a href="/training-material/hall-of-fame/annefou/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/annefou" alt="Anne Fouilloux">Anne Fouilloux</a>, <a href="/training-material/hall-of-fame/nagoue/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/nagoue" alt="Nadia Goué">Nadia Goué</a>, <a href="/training-material/hall-of-fame/olanag1/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/olanag1" alt="Olha Nahorna">Olha Nahorna</a>, <a href="/training-material/hall-of-fame/tnabtaf/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/tnabtaf" alt="Dave Clements">Dave Clements</a>
 
 
 </div>
@@ -712,5 +712,19 @@ This material is licensed under the <a rel="license" href="https://creativecommo
         target:function(trigger){return trigger.parentElement;
       }});
     </script>
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('body').prepend("<div style='text-align: center'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
+
   </body>
 </html>

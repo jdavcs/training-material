@@ -11,7 +11,7 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-45719423-18' , 'auto');
+    ga('create', '' , 'auto');
     ga('send', 'pageview');
 </script>
         
@@ -143,6 +143,9 @@
                 </label>
                 <label data-value="rainbow" class="btn btn-secondary">
                     <input type="radio" name="options" id="rainbow" autocomplete="off"> Rainbow
+                </label>
+                <label data-value="halloween" class="btn btn-secondary">
+                    <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
                 </label>
             </div>
 
@@ -304,7 +307,7 @@
 
         <div class="contributors-line">By: 
 
-<a href="/training-material/hall-of-fame#willemdek11" class="contributor-badge"><img src="https://avatars.githubusercontent.com/willemdek11" alt="Willem de Koning">Willem de Koning</a>, <a href="/training-material/hall-of-fame#shiltemann" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Saskia Hiltemann">Saskia Hiltemann</a>
+<a href="/training-material/hall-of-fame/willemdek11/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/willemdek11" alt="Willem de Koning">Willem de Koning</a>, <a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Saskia Hiltemann">Saskia Hiltemann</a>
 
 </div>
 
@@ -460,6 +463,14 @@
         
     
         
+        <a class="dropdown-item" href="https://africa.usegalaxy.eu/" title="Galaxy Africa">
+            Galaxy Africa
+        </a>
+        
+    
+        
+    
+        
     
         
     
@@ -508,6 +519,10 @@
         
     
         
+        <a class="dropdown-item" href="https://nanopore.usegalaxy.eu/" title="NanoGalaxy">
+            NanoGalaxy
+        </a>
+        
     
         
     
@@ -548,7 +563,7 @@
             </ul>
             
 
-            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Feb 28, 2020 </p>
+            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Dec 1, 2020 </p>
         </blockquote>
 
         <div class="container">
@@ -575,7 +590,7 @@
 <p>In this tutorial we will recreate the analysis described in the paper by <a class="citation" href="#LiXie2018">Li <i>et al.</i> 2018</a> entitled <em>Efficient generation of complete sequences of MDR-encoding plasmids by rapid assembly of MinION barcoding sequencing data</em>. We will use data sequenced by the <a href="https://nanoporetech.com/">Nanopore</a> MinION sequencer.</p>
 
 <p>The assembly will be performed with <strong>Minimap2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Li2018">Li 2018</a>),
-<strong>Miniasm</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Li2016">Li 2016</a>), <strong>Racon</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Vaser2017">Vaser <i>et al.</i> 2017</a>) and <strong>Unicycler</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Wick2017">Wick <i>et al.</i> 2017</a>).
+<strong>Miniasm</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Li2016">Li <i>et al.</i> 2015</a>), <strong>Racon</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Vaser2017">Vaser <i>et al.</i> 2017</a>) and <strong>Unicycler</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Wick2017">Wick <i>et al.</i> 2017</a>).
 The <span class="notranslate">downstream</span> analysis will use <strong>Nanoplot</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#DeCoster2018">Coster <i>et al.</i> 2018</a>),
 <strong>Bandage</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Wick2015">Wick <i>et al.</i> 2015</a>), <strong>PlasFlow</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Krawczyk2018">Krawczyk <i>et al.</i> 2018</a>) and <strong>starmr</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a href="https://github.com/phac-nml/staramr">GitHub</a>).</p>
 
@@ -715,12 +730,12 @@ https://zenodo.org/record/3247504/files/RB12.fasta
         <h3 id="tip-tip-creating-a-dataset-collection"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Creating a dataset collection</h3>
 
         <ul>
-          <li>Click on <strong>Operations on multiple datasets</strong> (check box icon) at the top of the history panel <img src="../../../galaxy-data-manipulation/images/historyItemControls.png" alt="Operations on multiple datasets button" /></li>
+          <li>Click on <strong>Operations on multiple datasets</strong> (check box icon) at the top of the history panel <img src="../../../galaxy-interface/images/historyItemControls.png" alt="Operations on multiple datasets button" /></li>
           <li>Check all the datasets in your history you would like to include</li>
           <li>
             <p>Click <strong>For all selected..</strong> and choose <strong>Build dataset list</strong></p>
 
-            <p><img src="/training-material/topics/galaxy-data-manipulation/images/buildList.png" alt="build list collection menu item" width="15%" /></p>
+            <p><img src="/training-material/topics/galaxy-interface/images/buildList.png" alt="build list collection menu item" width="15%" /></p>
           </li>
           <li>Enter a name for your collection</li>
           <li>Click <strong>Create List</strong> to build your collection</li>
@@ -746,11 +761,11 @@ report page.</p>
   <h3 id="hands_on-hands-on-plotting-scripts-for-long-read-sequencing-data"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Plotting scripts for long read sequencing data</h3>
 
   <ol>
-    <li><strong>NanoPlot</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/nanoplot/nanoplot/1.28.2+galaxy1" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/nanoplot/nanoplot/1.28.2+galaxy1"><strong>Nanoplot</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/nanoplot/nanoplot/1.28.2+<span class="notranslate">galaxy</span>1</span></span>  with the following parameters
       <ul>
-        <li><em>“Select multifile mode”</em>: <code class="language-plaintext highlighter-rouge">batch</code></li>
-        <li><em>“Type of the file(s) to work on”</em>: <code class="language-plaintext highlighter-rouge">fasta</code></li>
-        <li><em>“files”</em>: The <code class="language-plaintext highlighter-rouge">Plasmids</code> dataset collection you just created</li>
+        <li><i class="fas fa-filter" aria-hidden="true"></i><span class="visually-hidden">param-select</span> <em>“Select multifile mode”</em>: <code class="language-plaintext highlighter-rouge">batch</code></li>
+        <li><i class="fas fa-filter" aria-hidden="true"></i><span class="visually-hidden">param-select</span> <em>“Type of the file(s) to work on”</em>: <code class="language-plaintext highlighter-rouge">fasta</code></li>
+        <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“files”</em>: The <code class="language-plaintext highlighter-rouge">Plasmids</code> dataset collection you just created</li>
       </ul>
 
       <blockquote class="tip">
@@ -810,16 +825,22 @@ the Minimap2 publication (<a class="citation" href="#Li2018">Li 2018</a>).</p>
   <h3 id="hands_on-hands-on-pairwise-sequence-alignment"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Pairwise sequence alignment</h3>
 
   <ol>
-    <li><strong>Map with minimap2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/minimap2/minimap2/2.17+galaxy2" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/minimap2/minimap2/2.17+galaxy2"><strong>Map with minimap2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/minimap2/minimap2/2.17+<span class="notranslate">galaxy</span>2</span></span>  with the following parameters
       <ul>
-        <li><em>“Will you select a reference genome from your history or use a built-in index?”</em>: <code class="language-plaintext highlighter-rouge">Use a genome from history and build index</code></li>
-        <li><em>“Use the following data collection as the reference sequence”</em>: <code class="language-plaintext highlighter-rouge">Created dataset collection (Plasmids)</code></li>
-        <li><em>“Single or Paired-end <span class="notranslate">reads</span>”</em>: <code class="language-plaintext highlighter-rouge">Single</code></li>
-        <li><em>“Select fastq dataset”</em>: The <code class="language-plaintext highlighter-rouge">Plasmids</code> dataset collection</li>
-        <li><em>“Select analysis mode (sets default)”</em>: <code class="language-plaintext highlighter-rouge">Oxford Nanopore all-vs--all overlap <span class="notranslate">mapping</span></code></li>
+        <li><i class="fas fa-filter" aria-hidden="true"></i><span class="visually-hidden">param-select</span> <em>“Will you select a reference genome from your history or use a built-in index?”</em>: <code class="language-plaintext highlighter-rouge">Use a genome from history and build index</code>
+          <ul>
+            <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Use the following data collection as the reference sequence”</em>: <code class="language-plaintext highlighter-rouge">Plasmids</code> dataset collection we just created</li>
+          </ul>
+        </li>
+        <li><i class="fas fa-filter" aria-hidden="true"></i><span class="visually-hidden">param-select</span> <em>“Single or Paired-end <span class="notranslate">reads</span>”</em>: <code class="language-plaintext highlighter-rouge">Single</code>
+          <ul>
+            <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Select fastq dataset”</em>: The <code class="language-plaintext highlighter-rouge">Plasmids</code> dataset collection</li>
+            <li><i class="fas fa-filter" aria-hidden="true"></i><span class="visually-hidden">param-select</span> <em>“Select a profile of preset options”</em>: <code class="language-plaintext highlighter-rouge">Oxford Nanopore all-vs--all overlap <span class="notranslate">mapping</span></code></li>
+          </ul>
+        </li>
         <li>In the section <strong>Set advanced output options</strong>:
           <ul>
-            <li><em>“Select an output format”</em>: <code class="language-plaintext highlighter-rouge">paf</code></li>
+            <li><i class="fas fa-filter" aria-hidden="true"></i><span class="visually-hidden">param-select</span> <em>“Select an output format”</em>: <code class="language-plaintext highlighter-rouge">paf</code></li>
           </ul>
         </li>
       </ul>
@@ -924,7 +945,7 @@ channel_100_69f2ea89-01c5-45f4-8e1b-55a09acdb3f5_template	4518	251	1328	+	channe
 
 <h2 id="ultrafast-de-novo-assembly-using-miniasm">Ultrafast de novo assembly using Miniasm</h2>
 
-<p>The mapped <span class="notranslate">reads</span> are ready to be assembled with <strong>Miniasm</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Li2016">Li 2016</a>). Miniasm is a very fast Overlap Layout Consensus based de-novo assembler for noisy long <span class="notranslate">reads</span>.
+<p>The mapped <span class="notranslate">reads</span> are ready to be assembled with <strong>Miniasm</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Li2016">Li <i>et al.</i> 2015</a>). Miniasm is a very fast Overlap Layout Consensus based de-novo assembler for noisy long <span class="notranslate">reads</span>.
 It takes all-vs-all read self-<span class="notranslate">mapping</span>s (typically by <strong>Minimap2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>) as input and outputs an assembly graph in the GFA format.</p>
 
 <p>Different from mainstream assemblers, miniasm does not have a consensus step.
@@ -937,10 +958,10 @@ Thus the per-base error rate is similar to the raw input <span class="notranslat
   <h3 id="hands_on-hands-on-de-novo-assembly"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: De novo assembly</h3>
 
   <ol>
-    <li><strong>miniasm</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/miniasm/miniasm/0.3+galaxy0" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/miniasm/miniasm/0.3+galaxy0"><strong>miniasm</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/miniasm/miniasm/0.3+<span class="notranslate">galaxy</span>0</span></span>  with the following parameters
       <ul>
-        <li><em>“Sequence <span class="notranslate">Reads</span>”</em>: The <code class="language-plaintext highlighter-rouge">Plasmids</code> dataset collection</li>
-        <li><em>“PAF file”</em>: <code class="language-plaintext highlighter-rouge">Output Minimap dataset collection</code> created by <strong>Minimap2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
+        <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Sequence <span class="notranslate">Reads</span>”</em>: The <code class="language-plaintext highlighter-rouge">Plasmids</code> dataset collection</li>
+        <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“PAF file”</em>: <code class="language-plaintext highlighter-rouge">Output Minimap dataset collection</code> created by <strong>Minimap2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
       </ul>
 
       <blockquote class="tip">
@@ -976,21 +997,42 @@ a	utg000001l	0	channel_364_204a2254-2b6f-4f10-9ec5-6d40f0b870e4_template:101-445
   <h3 id="hands_on-hands-on-pairwise-sequence-alignment-1"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Pairwise sequence alignment</h3>
 
   <ol>
-    <li><strong>GFA to Fasta</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/gfa_to_fa/gfa_to_fa/0.1.1" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/gfa_to_fa/gfa_to_fa/0.1.1"><strong>GFA to Fasta</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/gfa_to_fa/gfa_to_fa/0.1.1</span></span>  with the following parameters
       <ul>
-        <li><em>“Input GFA file”</em>: the <code class="language-plaintext highlighter-rouge">Assembly Graph</code> (collection) created by <strong>Miniasm</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
+        <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Input GFA file”</em>: the <code class="language-plaintext highlighter-rouge">Assembly Graph</code> (collection) created by <strong>Miniasm</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
       </ul>
+
+      <blockquote class="question">
+        <h3 id="question-question-1"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
+
+        <p>How many contigs do we have for the RB05 sample after de novo assembly?
+<br /><br />
+Hint: run <strong>Nanoplot</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> on the output of <strong>GFA to Fasta</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></p>
+
+        <blockquote class="solution">
+          <h3 id="solution-solution-1"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+          <p>25</p>
+
+          <p>This can be determined by looking at the NanoStats output of NanoPlot.</p>
+        </blockquote>
+      </blockquote>
     </li>
-    <li><strong>Map with minimap2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/minimap2/minimap2/2.17+galaxy2" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/minimap2/minimap2/2.17+galaxy2"><strong>Map with minimap2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/minimap2/minimap2/2.17+<span class="notranslate">galaxy</span>2</span></span>  with the following parameters
       <ul>
-        <li><em>“Will you select a reference genome from your history or use a built-in index?”</em>: <code class="language-plaintext highlighter-rouge">Use a genome from history and build index</code></li>
-        <li><em>“Use the following dataset as the reference sequence”</em>: <code class="language-plaintext highlighter-rouge">FASTA file</code> collection created by <strong>GFA to Fasta</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
-        <li><em>“Single or Paired-end <span class="notranslate">reads</span>”</em>: <code class="language-plaintext highlighter-rouge">single</code></li>
-        <li><em>“Select fastq dataset”</em>: The <code class="language-plaintext highlighter-rouge">Plasmids</code> collection</li>
-        <li><em>“Select analysis mode (sets default)”</em>: <code class="language-plaintext highlighter-rouge">PacBio/Oxford Nanopore read to reference <span class="notranslate">mapping</span> (-Hk19)</code></li>
+        <li><i class="fas fa-filter" aria-hidden="true"></i><span class="visually-hidden">param-select</span> <em>“Will you select a reference genome from your history or use a built-in index?”</em>: <code class="language-plaintext highlighter-rouge">Use a genome from history and build index</code>
+          <ul>
+            <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Use the following dataset as the reference sequence”</em>: <code class="language-plaintext highlighter-rouge">FASTA file</code> output from <strong>GFA to Fasta</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (collection)</li>
+          </ul>
+        </li>
+        <li><i class="fas fa-filter" aria-hidden="true"></i><span class="visually-hidden">param-select</span> <em>“Single or Paired-end <span class="notranslate">reads</span>”</em>: <code class="language-plaintext highlighter-rouge">single</code>
+          <ul>
+            <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Select fastq dataset”</em>: The <code class="language-plaintext highlighter-rouge">Plasmids</code> collection</li>
+            <li><i class="fas fa-filter" aria-hidden="true"></i><span class="visually-hidden">param-select</span> <em>“Select a profile of preset options”</em>:: <code class="language-plaintext highlighter-rouge">PacBio/Oxford Nanopore read to reference <span class="notranslate">mapping</span> (-Hk19)</code></li>
+          </ul>
+        </li>
         <li>In the section <strong>Set advanced output options</strong>:
           <ul>
-            <li><em>“Select an output format”</em>: <code class="language-plaintext highlighter-rouge">paf</code></li>
+            <li><i class="fas fa-filter" aria-hidden="true"></i><span class="visually-hidden">param-select</span> <em>“Select an output format”</em>: <code class="language-plaintext highlighter-rouge">paf</code></li>
           </ul>
         </li>
       </ul>
@@ -1005,23 +1047,9 @@ front of the input parameter you want to supply the collection to.</li>
           <li>Select the collection you want to use from the list</li>
         </ol>
       </blockquote>
-
-      <blockquote class="question">
-        <h3 id="question-question-1"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
-
-        <p>How many contigs do we have for the RB05 sample after the use of <strong>Minimap2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> and <strong>Miniasm</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span>?
-<br /><br />
-Hint: run <strong>Nanoplot</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> on the output of <strong>GFA to Fasta</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></p>
-
-        <blockquote class="solution">
-          <h3 id="solution-solution-1"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
-          <p>22</p>
-
-          <p>This can be determined by looking at the NanoStats output of NanoPlot.</p>
-        </blockquote>
-      </blockquote>
     </li>
   </ol>
+
 </blockquote>
 
 <h2 id="ultrafast-consensus-module-using-racon">Ultrafast consensus module using Racon</h2>
@@ -1036,11 +1064,11 @@ It supports data produced by both Pacific Biosciences and Oxford Nanopore Techno
   <h3 id="hands_on-hands-on-consensus-module"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Consensus module</h3>
 
   <ol>
-    <li><strong>Racon</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/bgruening/racon/racon/1.4.13" title="Tested with toolshed.g2.bx.psu.edu/repos/bgruening/racon/racon/1.4.13"><strong>Racon</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/bgruening/racon/racon/1.4.13</span></span>  with the following parameters
       <ul>
-        <li><em>“Sequences”</em>: The <code class="language-plaintext highlighter-rouge">Plasmids</code> dataset collection</li>
-        <li><em>“Overlaps”</em>: the latest <code class="language-plaintext highlighter-rouge">PAF file</code> collection created by <strong>Minimap2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
-        <li><em>“Target sequences”</em>: the <code class="language-plaintext highlighter-rouge">FASTA file</code> collection created by <strong>GFA to Fasta</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
+        <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Sequences”</em>: The <code class="language-plaintext highlighter-rouge">Plasmids</code> dataset collection</li>
+        <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Overlaps”</em>: the latest <code class="language-plaintext highlighter-rouge">PAF file</code> collection created by <strong>Minimap2</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
+        <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Target sequences”</em>: the <code class="language-plaintext highlighter-rouge">FASTA file</code> collection created by <strong>GFA to Fasta</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
       </ul>
     </li>
   </ol>
@@ -1060,7 +1088,7 @@ AATGCAGCTATGGCGCGTGCGGTGCCAAGAAAGCCCGCAGATATTCCGCTTCCTCGCTCATT [..]
 <p>To get a sense of how well our data was assembled, and to determine whether the contigs are chomosomal or plasmid <span class="notranslate">DNA</span> (the former being linear sequences while plasmids are circular molecules), <strong>Bandage</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> can give a clear view of the assembly.</p>
 
 <p><strong>Bandage</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Wick2015">Wick <i>et al.</i> 2015</a>) (a <strong>B</strong>ioinformatics <strong>A</strong>pplication for <strong>N</strong>avigating <strong>D</strong>e novo <strong>A</strong>ssembly <strong>G</strong>raphs <strong>E</strong>asily), is a program that creates visualisations of assembly graphs.
-Sequence assembler programs (such as <strong>Miniasm</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Li2016">Li 2016</a>), <strong>Velvet</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Zerbino2008">Zerbino and Birney 2008</a>), <strong>SPAdes</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Bankevich2012">Bankevich <i>et al.</i> 2012</a>), <strong>Trinity</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Grabherr2011">Grabherr <i>et al.</i> 2011</a>) and <strong>MEGAHIT</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> <a class="citation" href="#Li2015">Li <i>et al.</i> 2015</a>) carry out assembly by building a graph, from which contigs are generated.</p>
+Sequence assembler programs (such as <strong>Miniasm</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Li2016">Li <i>et al.</i> 2015</a>), <strong>Velvet</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Zerbino2008">Zerbino and Birney 2008</a>), <strong>SPAdes</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Bankevich2012">Bankevich <i>et al.</i> 2012</a>), <strong>Trinity</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (<a class="citation" href="#Grabherr2011">Grabherr <i>et al.</i> 2011</a>) and <strong>MEGAHIT</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> <a class="citation" href="#Li2015">Li <i>et al.</i> 2015</a>) carry out assembly by building a graph, from which contigs are generated.</p>
 
 <p>By visualizing these assembly graphs, Bandage allows users to better understand, troubleshoot, and improve the assemblies.</p>
 
@@ -1070,9 +1098,9 @@ Sequence assembler programs (such as <strong>Miniasm</strong> <i class="fas fa-w
   <h3 id="hands_on-hands-on-visualising-de-novo-assembly-graphs"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Visualising de novo assembly graphs</h3>
 
   <ol>
-    <li><strong>Bandage image</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_image/0.8.1+galaxy2" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_image/0.8.1+galaxy2"><strong>Bandage image</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/bandage/bandage_image/0.8.1+<span class="notranslate">galaxy</span>2</span></span>  with the following parameters
       <ul>
-        <li><em>“Graphical Fragment Assembly”</em>: the <code class="language-plaintext highlighter-rouge">Assembly graph</code> collection created by <strong>Miniasm</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
+        <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Graphical Fragment Assembly”</em>: the <code class="language-plaintext highlighter-rouge">Assembly graph</code> collection created by <strong>Miniasm</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
       </ul>
     </li>
     <li>Explore <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-eye</span> the output images</li>
@@ -1120,30 +1148,94 @@ This is not the case for most of the samples, but we will improve our assemblies
   <h3 id="hands_on-hands-on-unicycler-assembly"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Unicycler assembly</h3>
 
   <ol>
-    <li><strong>Create assemblies with Unicycler</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/unicycler/unicycler/0.4.8.0" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/unicycler/unicycler/0.4.8.0"><strong>Create assemblies with Unicycler</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/unicycler/unicycler/0.4.8.0</span></span>  with the following parameters
       <ul>
-        <li><em>“Paired or Single end data”</em>: <code class="language-plaintext highlighter-rouge">None</code></li>
-        <li><em>“Select long <span class="notranslate">reads</span>. If there are no long <span class="notranslate">reads</span>, leave this empty”</em>: The <code class="language-plaintext highlighter-rouge">Plasmids</code> dataset collection</li>
+        <li><i class="fas fa-filter" aria-hidden="true"></i><span class="visually-hidden">param-select</span> <em>“Paired or Single end data”</em>: <code class="language-plaintext highlighter-rouge">None</code></li>
+        <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Select long <span class="notranslate">reads</span>. If there are no long <span class="notranslate">reads</span>, leave this empty”</em>: The <code class="language-plaintext highlighter-rouge">Plasmids</code> dataset collection</li>
       </ul>
     </li>
-    <li><strong>Bandage image</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_image/0.8.1+galaxy2" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_image/0.8.1+galaxy2"><strong>Bandage image</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/bandage/bandage_image/0.8.1+<span class="notranslate">galaxy</span>2</span></span>  with the following parameters
       <ul>
-        <li><em>“Graphical Fragment Assembly”</em>: the <code class="language-plaintext highlighter-rouge">Final Assembly Graph</code> collection created by <strong>Unicycler</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
+        <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Graphical Fragment Assembly”</em>: the <code class="language-plaintext highlighter-rouge">Final Assembly Graph</code> collection created by <strong>Unicycler</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
       </ul>
     </li>
-    <li>Examine <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-eye</span> the output images again</li>
+    <li>
+      <p>Examine <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-eye</span> the output images again</p>
+    </li>
+    <li>Use the <strong>Scratchbook</strong> <i class="fas fa-th" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-scratchbook</span> to compare the two assemblies for sample <code class="language-plaintext highlighter-rouge">RB01</code>
+      <ul>
+        <li>Compare the <strong>Bandage</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> images for our two assemblies:
+          <ol>
+            <li>The assembly we got from running <strong>minimap2, miniasm, racon</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> (first time we ran bandage)</li>
+            <li>The assembly obtained with <strong>Unicycler</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
+          </ol>
+        </li>
+        <li>Tip: Search your history for the term <code class="language-plaintext highlighter-rouge">bandage</code> to easily find the outputs from our two bandage runs</li>
+      </ul>
+
+      <blockquote class="tip">
+
+        <h3 id="tip-tip-using-the-scratchbook-to-view-multiple-datasets-at-once"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Using the Scratchbook to view multiple datasets at once</h3>
+        <p>If you would like to view two or more datasets at once, you can use the <strong>Scratchbook</strong> feature in <span class="notranslate">Galaxy</span>:</p>
+        <ol>
+          <li><strong>Click</strong> on the <em>Scratchbook</em> icon <i class="fas fa-th" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-scratchbook</span> on the top menu bar.
+            <ul>
+              <li>You should see a little checkmark on the icon now</li>
+            </ul>
+          </li>
+          <li><strong>View</strong> <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-eye</span> a dataset by clicking on the eye icon <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-eye</span> to view the output
+            <ul>
+              <li>You should see the output in a window overlayed over <span class="notranslate">Galaxy</span></li>
+              <li>You can resize this window by dragging the bottom-right corner</li>
+            </ul>
+          </li>
+          <li><strong>Click</strong> outside the file to exit the Scratchbook</li>
+          <li><strong>View</strong> <i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-eye</span> a second dataset from your history
+            <ul>
+              <li>You should now see a second window with the new dataset</li>
+              <li>This makes it easier to compare the two outputs</li>
+            </ul>
+          </li>
+          <li>Repeat this for as many files as you would like to compare</li>
+          <li>You can turn off the <strong>Scratchbook</strong> <i class="fas fa-th" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-scratchbook</span> by clicking on the icon again</li>
+        </ol>
+      </blockquote>
+
+      <blockquote class="tip">
+
+        <h3 id="tip-tip-searching-your-history"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Tip: Searching your history</h3>
+
+        <p>To make it easier to find datasets in large histories, you can filter your history by keywords as follows:</p>
+        <ol>
+          <li>
+            <p><strong>Click</strong> on the <em>search datasets</em> box at the top of the history panel.</p>
+
+            <p><img src="/training-material/shared/images/history_search_datasets.png" alt="history search box" /></p>
+          </li>
+          <li><strong>Type</strong> a search term in this box
+            <ul>
+              <li>For example a tool name, or sample name</li>
+            </ul>
+          </li>
+          <li>To undo the filtering and show your full history again, press on the <em>clear search</em> button <i class="fas fa-times-circle" aria-hidden="true"></i><span class="visually-hidden"><span class="notranslate">galaxy</span>-clear</span> next to the search box</li>
+        </ol>
+      </blockquote>
+    </li>
+    <li>
+      <p>Repeat this comparison for the other samples.</p>
+
+      <blockquote class="question">
+        <h3 id="question-question-3"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
+
+        <p>For which samples has the plasmid assembly improved?</p>
+
+        <blockquote class="solution">
+          <h3 id="solution-solution-3"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
+          <p>Exploring the outputs for all the samples reveals that many now display circular assemblies, indicating the full plasmids sequence was resolved.</p>
+        </blockquote>
+      </blockquote>
+    </li>
   </ol>
-
-  <blockquote class="question">
-    <h3 id="question-question-3"><i class="far fa-question-circle" aria-hidden="true"></i><span class="visually-hidden">question</span> Question</h3>
-
-    <p>For which samples has the plasmid assembly improved?</p>
-
-    <blockquote class="solution">
-      <h3 id="solution-solution-3"><i class="far fa-eye" aria-hidden="true"></i><span class="visually-hidden">solution</span> Solution</h3>
-      <p>Exploring the outputs for all the samples reveals that many now display circular assemblies, indicating the full plasmids sequence was resolved.</p>
-    </blockquote>
-  </blockquote>
 
 </blockquote>
 
@@ -1166,9 +1258,9 @@ It relies on the neural network models trained on full genome and plasmid sequen
   <h3 id="hands_on-hands-on-prediction-of-plasmid-sequences"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Prediction of plasmid sequences</h3>
 
   <ol>
-    <li><strong>PlasFlow</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/iuc/plasflow/PlasFlow/1.0" title="Tested with toolshed.g2.bx.psu.edu/repos/iuc/plasflow/PlasFlow/1.0"><strong>PlasFlow</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/iuc/plasflow/PlasFlow/1.0</span></span>  with the following parameters
       <ul>
-        <li><em>“Sequence <span class="notranslate">Reads</span>”</em>: the <code class="language-plaintext highlighter-rouge">Final Assembly</code> collection created by <strong>Unicycler</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
+        <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“Sequence <span class="notranslate">Reads</span>”</em>: the <code class="language-plaintext highlighter-rouge">Final Assembly</code> collection created by <strong>Unicycler</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
       </ul>
     </li>
   </ol>
@@ -1219,9 +1311,9 @@ and compiles a summary report of detected antimicrobial resistance genes.</p>
   <h3 id="hands_on-hands-on-prediction-of-amr-genes"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Prediction of AMR genes</h3>
 
   <ol>
-    <li><strong>staramr</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span> with the following parameters
+    <li><span class="tool" data-tool="toolshed.g2.bx.psu.edu/repos/nml/staramr/staramr_search/0.7.1+galaxy2" title="Tested with toolshed.g2.bx.psu.edu/repos/nml/staramr/staramr_search/0.7.1+galaxy2"><strong>staramr</strong> <i class="fas fa-wrench" aria-hidden="true"></i><i aria-hidden="true" class="fas fa-cog"></i><span class="visually-hidden">Tool: <span class="notranslate">toolshed</span>.g2.bx.psu.edu/repos/nml/staramr/staramr_search/0.7.1+<span class="notranslate">galaxy</span>2</span></span>  with the following parameters
       <ul>
-        <li><em>“genomes”</em>: the <code class="language-plaintext highlighter-rouge">Final Assembly</code> collection created by <strong>Unicycler</strong></li>
+        <li><i class="far fa-folder" aria-hidden="true"></i><span class="visually-hidden">param-collection</span> <em>“genomes”</em>: the <code class="language-plaintext highlighter-rouge">Final Assembly</code> collection created by <strong>Unicycler</strong> <i class="fas fa-wrench" aria-hidden="true"></i><span class="visually-hidden">tool</span></li>
       </ul>
     </li>
   </ol>
@@ -1407,7 +1499,20 @@ may provide further insight.</p>
     
 
 </li>
-<li><span id="Li2015">Li, D., C.-M. Liu, R. Luo, K. Sadakane, and T.-W. Lam, 2015 <b>MEGAHIT: an ultra-fast single-node solution for large and complex metagenomics assembly via succinct de Bruijn graph</b>. Bioinformatics 31: 1674–1676.</span>
+<li><span id="Li2015">Li, M., R. Schröder, S. Ni, B. Madea, and M. Stoneking, 2015 <b>Extensive tissue-related and allele-related mtDNA heteroplasmy suggests positive selection for somatic mutations</b>. Proceedings of the National Academy of Sciences 112: 2491–2496.</span>
+    
+    
+    <a href="https://doi.org/10.1073/pnas.1419651112">10.1073/pnas.1419651112</a>
+    
+    
+      <!-- prevent duplicate doi links -->
+      
+      <a href="https://www.pnas.org/content/112/8/2491">https://www.pnas.org/content/112/8/2491</a>
+      
+    
+
+</li>
+<li><span id="Li2016">Li, D., C.-M. Liu, R. Luo, K. Sadakane, and T.-W. Lam, 2015 <b>MEGAHIT: an ultra-fast single-node solution for large and complex metagenomics assembly via succinct de Bruijn graph</b>. Bioinformatics 31: 1674–1676.</span>
     
     
     <a href="https://doi.org/10.1093/bioinformatics/btv033">10.1093/bioinformatics/btv033</a>
@@ -1422,17 +1527,6 @@ may provide further insight.</p>
     
     
     <a href="https://doi.org/10.1093/bioinformatics/btv383">10.1093/bioinformatics/btv383</a>
-    
-    
-      <!-- prevent duplicate doi links -->
-      
-    
-
-</li>
-<li><span id="Li2016">Li, H., 2016 <b>Minimap and miniasm: fast mapping and de novo assembly for noisy long sequences</b>. Bioinformatics 32: 2103–2110.</span>
-    
-    
-    <a href="https://doi.org/10.1093/bioinformatics/btw152">10.1093/bioinformatics/btw152</a>
     
     
       <!-- prevent duplicate doi links -->
@@ -1552,6 +1646,39 @@ may provide further insight.</p>
 </li></ol>
                     
 
+                    <h1>Feedback</h1>
+                    <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
+
+                    <div id="feedback-button">
+                        <img src="/training-material/shared/images/feedback.png" title="Click to activate" alt="Click here to load Google feedback frame" />
+                    </div>
+                    <div id="feedback-form">
+                    </div>
+                    <script type="text/javascript">
+                        (function (window, document) {
+                            function onDocumentReady(fn) {
+                                if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+                                    fn();
+                                } else {
+                                    document.addEventListener('DOMContentLoaded', fn);
+                                }
+                            }
+
+                            onDocumentReady(function () {
+                                $("#feedback-button").click(function(evt){
+                                    var e = $(evt.target)
+                                    e.hide();
+
+                                    $("#feedback-form").html(`
+                                        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Antibiotic resistance detection (Metagenomics)">Loading...</iframe>
+                                    `)
+                                })
+                            });
+                        })(window, document);
+                    </script>
+
+
+
                     <h1>Citing this Tutorial</h1>
                     <p>
                         <ol>
@@ -1573,8 +1700,8 @@ may provide further insight.</p>
     author = "Willem de Koning and Saskia Hiltemann",
     title = "Antibiotic resistance detection (Galaxy Training Materials)",
     year = "2020",
-    month = "02",
-    day = "28"
+    month = "12",
+    day = "01"
     url = "\url{/training-material/topics/metagenomics/tutorials/plasmid-metagenomics-nanopore/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
@@ -1612,18 +1739,6 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
         
 
         
-
-        <hr>
-        <br>
-
-        <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
-        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Antibiotic resistance detection (Metagenomics)">Loading...
-        </iframe>
-
-        <blockquote class="feedback">
-            <h3><i class="far fa-comments" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
-            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=Antibiotic resistance detection (Metagenomics)">Feedback Form</a>.</p>
-        </blockquote>
     </section>
 </div>
 
@@ -1667,4 +1782,17 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
     }});
     </script>
     
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
 </html>

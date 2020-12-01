@@ -11,7 +11,7 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-45719423-18' , 'auto');
+    ga('create', '' , 'auto');
     ga('send', 'pageview');
 </script>
         
@@ -143,6 +143,9 @@
                 </label>
                 <label data-value="rainbow" class="btn btn-secondary">
                     <input type="radio" name="options" id="rainbow" autocomplete="off"> Rainbow
+                </label>
+                <label data-value="halloween" class="btn btn-secondary">
+                    <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
                 </label>
             </div>
 
@@ -311,7 +314,7 @@
 
         <div class="contributors-line">By: 
 
-<a href="/training-material/hall-of-fame#khanteymoori" class="contributor-badge"><img src="https://avatars.githubusercontent.com/khanteymoori" alt="Alireza Khanteymoori">Alireza Khanteymoori</a>, <a href="/training-material/hall-of-fame#anuprulez" class="contributor-badge"><img src="https://avatars.githubusercontent.com/anuprulez" alt="Anup Kumar">Anup Kumar</a>, <a href="/training-material/hall-of-fame#simonbray" class="contributor-badge"><img src="https://avatars.githubusercontent.com/simonbray" alt="Simon Bray">Simon Bray</a>
+<a href="/training-material/hall-of-fame/khanteymoori/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/khanteymoori" alt="Alireza Khanteymoori">Alireza Khanteymoori</a>, <a href="/training-material/hall-of-fame/anuprulez/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/anuprulez" alt="Anup Kumar">Anup Kumar</a>, <a href="/training-material/hall-of-fame/simonbray/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/simonbray" alt="Simon Bray">Simon Bray</a>
 
 </div>
 
@@ -450,6 +453,14 @@
         
     
         
+        <a class="dropdown-item" href="https://africa.usegalaxy.eu/" title="Galaxy Africa">
+            Galaxy Africa
+        </a>
+        
+    
+        
+    
+        
         <a class="dropdown-item" href="https://test.galaxyproject.org/" title="Galaxy Test">
             Galaxy Test
         </a>
@@ -530,14 +541,10 @@
         
     
         
-        <a class="dropdown-item" href="https://usegalaxy.org" title="UseGalaxy.org (Main)">
-            UseGalaxy.org (Main)
-        </a>
-        
     
         
-        <a class="dropdown-item" href="https://usegalaxy.org.au" title="UseGalaxy.org.au">
-            UseGalaxy.org.au
+        <a class="dropdown-item" href="https://usegalaxy.org" title="UseGalaxy.org (Main)">
+            UseGalaxy.org (Main)
         </a>
         
     
@@ -554,7 +561,7 @@
             </ul>
             
 
-            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Jun 24, 2020 </p>
+            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Dec 1, 2020 </p>
         </blockquote>
 
         <div class="container">
@@ -584,7 +591,7 @@
       <li><a href="#learn-the-linear-model-from-training-dataset" id="markdown-toc-learn-the-linear-model-from-training-dataset">Learn the linear model from training dataset</a></li>
       <li><a href="#predict-age-using-test-dataset" id="markdown-toc-predict-age-using-test-dataset">Predict age using test dataset</a></li>
       <li><a href="#visualize-the-prediction" id="markdown-toc-visualize-the-prediction">Visualize the prediction</a></li>
-      <li><a href="#using-ensemble-methods-for-regression" id="markdown-toc-using-ensemble-methods-for-regression">Using Ensemble Methods for Regression</a></li>
+      <li><a href="#using-ensemble-methods-for-regression" id="markdown-toc-using-ensemble-methods-for-regression">Using ensemble methods for regression</a></li>
       <li><a href="#create-data-processing-pipeline" id="markdown-toc-create-data-processing-pipeline">Create data processing pipeline</a></li>
     </ol>
   </li>
@@ -599,11 +606,11 @@
 
 <figure id="figure-1"><img src="images/regression.png" alt="regression" /><figcaption><span class="figcaption-prefix">Figure 1:</span> Regression fit through data points.</figcaption></figure>
 
-<p>Linear regression is a technique used to analyze a linear relationship between input variables (independent variables) and a single target variable. A linear relationship means that the data points tend to follow a straight line. Simple linear regression involves only a single input variable. Figure 2 shows a data set with a linear relationship.</p>
+<p>Linear regression is a technique used to analyze a linear relationship between input variables (independent variables) and a single target variable. A linear relationship means that the data points tend to follow a straight line. Simple linear regression involves only a single input variable. Figure 2 shows a dataset with a linear relationship.</p>
 
 <figure id="figure-2"><img src="images/linear_regression_generated_data.png" alt="regression" /><figcaption><span class="figcaption-prefix">Figure 2:</span> Data points with a linear relationship.</figcaption></figure>
 
-<p>In linear regression, our goal is to find the line that best models the path of the data points. Figure 3 shows the data set we used in Figure 2 with a line of best fit through it. The position of the line is determined by certain fitting coefficients (in this simple case, the gradient and intercept) and linear regression helps us pick appropriate values for these coefficients. In this example we have only one input variable and the problem is therefore simple linear regression. Note that in real problems we have more than one input variable. In this case, we call it multiple linear regression. Adding extra input variables just means that we’ll need to find more weights.</p>
+<p>In linear regression, our goal is to find the line that best models the path of the data points. Figure 3 shows the dataset we used in Figure 2 with a line of best fit through it. The position of the line is determined by certain fitting coefficients (in this simple case, the gradient and intercept) and linear regression helps us pick appropriate values for these coefficients. In this example we have only one input variable and the problem is therefore simple linear regression. Note that in real problems we have more than one input variable. In this case, we call it multiple linear regression. Adding extra input variables just means that we’ll need to find more weights.</p>
 
 <figure id="figure-3"><img src="images/linear_regression_regressor.png" alt="regression" /><figcaption><span class="figcaption-prefix">Figure 3:</span> Regression fit through data points.</figcaption></figure>
 
@@ -619,10 +626,10 @@
 
 <h1 id="analyze-dna-methylation-dataset">Analyze <span class="notranslate">DNA</span> methylation dataset</h1>
 
-<p>As a benchmark, we will use the <a href="https://www.sciencedirect.com/science/article/pii/S1872497317301643?via%3Dihub"><span class="notranslate">DNA</span> methylation dataset</a> to predict chronological age. One important reason to choose this dataset for an age prediction task is that <span class="notranslate">DNA</span> methylation changes with age and this change occurs at specific CpG sites in humans. 
-It has been recognized that <span class="notranslate">DNA</span> methylation analysis, which mostly occurs in a CpG sequence context, can give additional information beside the <span class="notranslate">DNA</span> profile.  It has been shown that <span class="notranslate">DNA</span> methylation changes with age within each individual. This alteration in <span class="notranslate">DNA</span> methylation occurs at specific CpG sites in all individuals, but with individual differences in “speed”, showing more <span class="notranslate">DNA</span> methylation differences in older twins compared to young ones.</p>
+<p>As a benchmark, we will use the <a href="https://www.sciencedirect.com/science/article/pii/S1872497317301643?via%3Dihub"><span class="notranslate">DNA</span> methylation dataset</a> to predict the chronological age. One important reason to choose this dataset for an age prediction task is that <span class="notranslate">DNA</span> methylation changes with age and this change occurs at specific CpG sites in humans. 
+It has been recognized that <span class="notranslate">DNA</span> methylation analysis, which mostly occurs in a CpG sequence context, can give additional information besides the <span class="notranslate">DNA</span> profile.  It has been shown that <span class="notranslate">DNA</span> methylation changes with age within each individual. This alteration in <span class="notranslate">DNA</span> methylation occurs at specific CpG sites in all individuals, but with individual differences in “speed”, showing more <span class="notranslate">DNA</span> methylation differences in older twins compared to young ones.</p>
 
-<p>Epigenomic and phenotypic changes which are age-dependent are also contained in these cells. This knowledge is used to select useful biomarkers from the <span class="notranslate">DNA</span> methylation dataset. The CpG sites with the highest correlation to age are selected as the biomarkers (features). In this study, specific biomarkers are analyzed by machine learning algorithms to create an age prediction model.</p>
+<p>Epigenomic and phenotypic changes which are age-dependent are also contained in these cells. This knowledge is used to select useful biomarkers from the <span class="notranslate">DNA</span> methylation dataset. The CpG sites with the highest correlation to age are selected as biomarkers (features). In this study, specific biomarkers are analyzed by machine learning algorithms to create an age prediction model.</p>
 
 <p>In this tutorial, we will apply a couple of (<a href="https://scikit-learn.org/stable/">scikit-learn</a>) machine learning tools to <span class="notranslate">DNA</span> methylation datasets to predict the chronological age of humans.</p>
 
@@ -868,11 +875,11 @@ Hint: Please find the above tool in “Graph/Display data” tool section in <sp
   </blockquote>
 </blockquote>
 
-<h2 id="using-ensemble-methods-for-regression">Using Ensemble Methods for Regression</h2>
+<h2 id="using-ensemble-methods-for-regression">Using ensemble methods for regression</h2>
 
 <p>Linear regression is a useful technique but isn’t always the right choice for our real problems. Linear regression is a good choice when there is a linear relationship between your independent and dependent variables and you are trying to predict continuous values.</p>
 
-<p>It is not a good choice when the relationship between independent and dependent variables is more complicated. For example, Figure 10 shows a data set that does not have a linear relationship so linear regression would not be a good choice.</p>
+<p>It is not a good choice when the relationship between independent and dependent variables is more complicated. For example, Figure 10 shows a dataset that does not have a linear relationship so linear regression would not be a good choice.</p>
 
 <figure id="figure-10"><img src="images/nonlinear_regression_generated_data.png" alt="regression" /><figcaption><span class="figcaption-prefix">Figure 10:</span> Data points with nonlinear relationship. </figcaption></figure>
 
@@ -884,9 +891,9 @@ Hint: Please find the above tool in “Graph/Display data” tool section in <sp
   <p>An <a href="https://scikit-learn.org/stable/modules/ensemble.html#ensemble"><em>ensemble</em></a> method uses multiple learning models inte<span class="notranslate">rna</span>lly for better predictions and boosting is a method of converting weak learners into strong learners.</p>
 </blockquote>
 
-<p><a href="https://www.sciencedirect.com/science/article/pii/S1872497317301643?via%3Dihub">Jana Naue et al. (2017)</a> used <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html#sklearn.ensemble.RandomForestRegressor">Random Forest</a> (another ensemble-based regressor) as the regressor and we can conclude from this study that an ensemble-based regressor works well on this <span class="notranslate">DNA</span> methylation dataset. Therefore, we will use gradient boosting to build a prediction model.</p>
+<p><a href="https://www.sciencedirect.com/science/article/pii/S1872497317301643?via%3Dihub">Jana Naue et al. (2017)</a> used <a href="https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestRegressor.html#sklearn.ensemble.RandomForestRegressor">Random Forest</a> (another ensemble-based regressor) as regressor and we can conclude from this study that an ensemble-based regressor works well on this <span class="notranslate">DNA</span> methylation dataset. Therefore, we will use gradient boosting to build a prediction model.</p>
 
-<p>Like the random forest method, gradient boosting is an ensemble-based regressor, because it uses multiple decision tree regressors inte<span class="notranslate">rna</span>lly and makes predictions by taking the collective performances of predictions made by multiple decision trees. It has a good predictive power and is robust to outliers. It creates an ensemble of weak learners (decision trees) and iteratively minimizes error. One disadvantage, which comes from its basic principle of boosting, is that it cannot be parallelized. <em>Hint:</em> Please find the following tool in “Machine learning” tool section in <span class="notranslate">Galaxy</span>.</p>
+<p>Like the random forest method, gradient boosting is an ensemble-based regressor, because it uses multiple decision tree regressors inte<span class="notranslate">rna</span>lly and makes predictions by taking the collective performances of predictions made by multiple decision trees. It has a good predictive power and is robust to outliers. It creates an ensemble of weak learners (decision trees) and iteratively minimizes errors. One disadvantage, which comes from its basic principle of boosting, is that it cannot be parallelized. <em>Hint:</em> Please find the following tool in “Machine learning” tool section in <span class="notranslate">Galaxy</span>.</p>
 
 <blockquote class="notranslate hands_on">
   <h3 id="hands_on-hands-on-train-a-model-1"><i class="fas fa-pencil-alt" aria-hidden="true"></i><span class="visually-hidden">hands_on</span> Hands-on: Train a model</h3>
@@ -1210,6 +1217,39 @@ The quality of predictions is visualized using multiple plots to ascertain the r
 
                     
 
+                    <h1>Feedback</h1>
+                    <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
+
+                    <div id="feedback-button">
+                        <img src="/training-material/shared/images/feedback.png" title="Click to activate" alt="Click here to load Google feedback frame" />
+                    </div>
+                    <div id="feedback-form">
+                    </div>
+                    <script type="text/javascript">
+                        (function (window, document) {
+                            function onDocumentReady(fn) {
+                                if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+                                    fn();
+                                } else {
+                                    document.addEventListener('DOMContentLoaded', fn);
+                                }
+                            }
+
+                            onDocumentReady(function () {
+                                $("#feedback-button").click(function(evt){
+                                    var e = $(evt.target)
+                                    e.hide();
+
+                                    $("#feedback-form").html(`
+                                        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Regression in Machine Learning (Statistics and machine learning)">Loading...</iframe>
+                                    `)
+                                })
+                            });
+                        })(window, document);
+                    </script>
+
+
+
                     <h1>Citing this Tutorial</h1>
                     <p>
                         <ol>
@@ -1231,8 +1271,8 @@ The quality of predictions is visualized using multiple plots to ascertain the r
     author = "Alireza Khanteymoori and Anup Kumar and Simon Bray",
     title = "Regression in Machine Learning (Galaxy Training Materials)",
     year = "2020",
-    month = "06",
-    day = "24"
+    month = "12",
+    day = "01"
     url = "\url{/training-material/topics/statistics/tutorials/regression_machinelearning/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
@@ -1270,18 +1310,6 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
         
 
         
-
-        <hr>
-        <br>
-
-        <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
-        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Regression in Machine Learning (Statistics and machine learning)">Loading...
-        </iframe>
-
-        <blockquote class="feedback">
-            <h3><i class="far fa-comments" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
-            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=Regression in Machine Learning (Statistics and machine learning)">Feedback Form</a>.</p>
-        </blockquote>
     </section>
 </div>
 
@@ -1325,4 +1353,17 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
     }});
     </script>
     
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
 </html>

@@ -11,7 +11,7 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-45719423-18' , 'auto');
+    ga('create', '' , 'auto');
     ga('send', 'pageview');
 </script>
         
@@ -94,12 +94,28 @@
                 <label data-value="rainbow" class="btn btn-secondary">
                     <input type="radio" name="options" id="rainbow" autocomplete="off"> Rainbow
                 </label>
+                <label data-value="halloween" class="btn btn-secondary">
+                    <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
+                </label>
             </div>
 
         </div>
     </div>
 </li>
 
+
+                    <!-- Search bar-->
+                    <li class="nav-item">
+                      <div id="navbarSupportedContent">
+                        <!-- Search form -->
+                        <form class="form-inline mr-auto" method="GET" action="/training-material/search">
+                          <i class="fas fa-search nav-link" aria-hidden="true"></i>
+                          <div class="md-form mb-2">
+                            <input name="query" class="form-control nicer" type="text" placeholder="Search Tutorials" aria-label="Search">
+                          </div>
+                        </form>
+                      </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -159,7 +175,7 @@
       
         <tr>
           <td class="tutorial_title">
-          Galaxy from an administrator point of view
+          Galaxy from an administrator's point of view
           <div class="">
           
           
@@ -201,13 +217,19 @@
     <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
 </a>
 
+
+/
+<a class="topic-icon" href="/training-material/videos/#video-admin-ansible">
+    <i class="fas fa-video" aria-hidden="true"></i><span class="visually-hidden">video</span>
+</a>
+
  </td>
             <td> 
     <span class="btn-group">
-        <a href="/training-material/topics/admin/tutorials/ansible/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+        <a href="/training-material/topics/admin/tutorials/ansible/tutorial.html" class="btn btn-default" title="Follow the tutorial">
             <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
         </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
@@ -301,7 +323,9 @@
           
           
             
-              <span class="label label-default tutorial_tag" id="deploying" style="background-color: hsl(22, 80.0%, 85%); color: #333; border: 1px solid hsl(22, 80.0%, 45%)" title="Click to show only tutorials with this tag">deploying</span>
+              <form method="GET" action="/training-material/search" style="display:inline"><input type="hidden" name="query" value="deploying">
+              <button class="label label-default tutorial_tag" id="deploying" style="background-color: hsl(22, 80.0%, 85%); color: #333; border: 1px solid hsl(22, 80.0%, 45%)" title="Click to show all tutorials with this tag">deploying</button>
+               </form>
             
           
           </div>
@@ -312,13 +336,14 @@
     <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
 </a>
 
+
  </td>
             <td> 
     <span class="btn-group">
-        <a href="/training-material/topics/admin/tutorials/ansible-galaxy/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+        <a href="/training-material/topics/admin/tutorials/ansible-galaxy/tutorial.html" class="btn btn-default" title="Follow the tutorial">
             <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
         </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
@@ -491,7 +516,9 @@
           
           
             
-              <span class="label label-default tutorial_tag" id="jobs" style="background-color: hsl(134, 80.0%, 85%); color: #333; border: 1px solid hsl(134, 80.0%, 45%)" title="Click to show only tutorials with this tag">jobs</span>
+              <form method="GET" action="/training-material/search" style="display:inline"><input type="hidden" name="query" value="jobs">
+              <button class="label label-default tutorial_tag" id="jobs" style="background-color: hsl(134, 80.0%, 85%); color: #333; border: 1px solid hsl(134, 80.0%, 45%)" title="Click to show all tutorials with this tag">jobs</button>
+               </form>
             
           
           </div>
@@ -502,13 +529,14 @@
     <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
 </a>
 
+
  </td>
             <td> 
     <span class="btn-group">
-        <a href="/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+        <a href="/training-material/topics/admin/tutorials/connect-to-compute-cluster/tutorial.html" class="btn btn-default" title="Follow the tutorial">
             <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
         </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
@@ -566,7 +594,9 @@
           
           
             
-              <span class="label label-default tutorial_tag" id="storage" style="background-color: hsl(325, 80.0%, 85%); color: #333; border: 1px solid hsl(325, 80.0%, 45%)" title="Click to show only tutorials with this tag">storage</span>
+              <form method="GET" action="/training-material/search" style="display:inline"><input type="hidden" name="query" value="storage">
+              <button class="label label-default tutorial_tag" id="storage" style="background-color: hsl(325, 80.0%, 85%); color: #333; border: 1px solid hsl(325, 80.0%, 45%)" title="Click to show all tutorials with this tag">storage</button>
+               </form>
             
           
           </div>
@@ -577,13 +607,14 @@
     <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
 </a>
 
+
  </td>
             <td> 
     <span class="btn-group">
-        <a href="/training-material/topics/admin/tutorials/object-store/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+        <a href="/training-material/topics/admin/tutorials/object-store/tutorial.html" class="btn btn-default" title="Follow the tutorial">
             <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
         </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
@@ -641,7 +672,9 @@
           
           
             
-              <span class="label label-default tutorial_tag" id="authentication" style="background-color: hsl(291, 80.0%, 85%); color: #333; border: 1px solid hsl(291, 80.0%, 45%)" title="Click to show only tutorials with this tag">authentication</span>
+              <form method="GET" action="/training-material/search" style="display:inline"><input type="hidden" name="query" value="authentication">
+              <button class="label label-default tutorial_tag" id="authentication" style="background-color: hsl(291, 80.0%, 85%); color: #333; border: 1px solid hsl(291, 80.0%, 45%)" title="Click to show all tutorials with this tag">authentication</button>
+               </form>
             
           
           </div>
@@ -652,13 +685,14 @@
     <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
 </a>
 
+
  </td>
             <td> 
     <span class="btn-group">
-        <a href="/training-material/topics/admin/tutorials/external-auth/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+        <a href="/training-material/topics/admin/tutorials/external-auth/tutorial.html" class="btn btn-default" title="Follow the tutorial">
             <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
         </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
@@ -727,25 +761,98 @@
       
         <tr>
           <td class="tutorial_title">
-          Galaxy Monitoring with Reports
+          Galaxy Monitoring with gxadmin
           <div class="">
           
           
             
-              <span class="label label-default tutorial_tag" id="monitoring" style="background-color: hsl(30, 80.0%, 85%); color: #333; border: 1px solid hsl(30, 80.0%, 45%)" title="Click to show only tutorials with this tag">monitoring</span>
+              <form method="GET" action="/training-material/search" style="display:inline"><input type="hidden" name="query" value="monitoring">
+              <button class="label label-default tutorial_tag" id="monitoring" style="background-color: hsl(30, 80.0%, 85%); color: #333; border: 1px solid hsl(30, 80.0%, 45%)" title="Click to show all tutorials with this tag">monitoring</button>
+               </form>
             
           
           </div>
           </td>
           
             <td> 
+    <a class="topic-icon" href="/training-material/topics/admin/tutorials/gxadmin/slides.html">
+    <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
+</a>
+
+
  </td>
             <td> 
     <span class="btn-group">
-        <a href="/training-material/topics/admin/tutorials/reports/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+        <a href="/training-material/topics/admin/tutorials/gxadmin/tutorial.html" class="btn btn-default" title="Follow the tutorial">
             <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
         </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
+            <span class="sr-only">Toggle Dropdown</span>
+        </a>
+        <ul class="dropdown-menu">
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fadmin%2Ftutorials%2Fgxadmin%2Ftutorial.html&edit-text=&act=url" title="">
+                Français
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fadmin%2Ftutorials%2Fgxadmin%2Ftutorial.html&edit-text=&act=url" title="">
+                日本語
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fadmin%2Ftutorials%2Fgxadmin%2Ftutorial.html&edit-text=&act=url" title="">
+                Español
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fadmin%2Ftutorials%2Fgxadmin%2Ftutorial.html&edit-text=&act=url" title="">
+                Português
+            </a>
+        
+            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fadmin%2Ftutorials%2Fgxadmin%2Ftutorial.html&edit-text=&act=url" title="">
+                العربية
+            </a>
+        
+        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fadmin%2Ftutorials%2Fgxadmin%2Ftutorial.html&edit-text=&act=url" title="">
+            And more!
+        </a>
+    </span>
+
+ </td>
+
+            
+            
+          
+         </tr>
+         
+       
+    
+    
+
+    
+      
+        <tr>
+          <td class="tutorial_title">
+          Galaxy Monitoring with Reports
+          <div class="">
+          
+          
+            
+              <form method="GET" action="/training-material/search" style="display:inline"><input type="hidden" name="query" value="monitoring">
+              <button class="label label-default tutorial_tag" id="monitoring" style="background-color: hsl(30, 80.0%, 85%); color: #333; border: 1px solid hsl(30, 80.0%, 45%)" title="Click to show all tutorials with this tag">monitoring</button>
+               </form>
+            
+          
+          </div>
+          </td>
+          
+            <td> 
+
+ </td>
+            <td> 
+    <span class="btn-group">
+        <a href="/training-material/topics/admin/tutorials/reports/tutorial.html" class="btn btn-default" title="Follow the tutorial">
+            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
+        </a>
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
@@ -795,7 +902,9 @@
           
           
             
-              <span class="label label-default tutorial_tag" id="monitoring" style="background-color: hsl(30, 80.0%, 85%); color: #333; border: 1px solid hsl(30, 80.0%, 45%)" title="Click to show only tutorials with this tag">monitoring</span>
+              <form method="GET" action="/training-material/search" style="display:inline"><input type="hidden" name="query" value="monitoring">
+              <button class="label label-default tutorial_tag" id="monitoring" style="background-color: hsl(30, 80.0%, 85%); color: #333; border: 1px solid hsl(30, 80.0%, 45%)" title="Click to show all tutorials with this tag">monitoring</button>
+               </form>
             
           
           </div>
@@ -806,13 +915,14 @@
     <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
 </a>
 
+
  </td>
             <td> 
     <span class="btn-group">
-        <a href="/training-material/topics/admin/tutorials/monitoring/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+        <a href="/training-material/topics/admin/tutorials/monitoring/tutorial.html" class="btn btn-default" title="Follow the tutorial">
             <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
         </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
@@ -854,69 +964,6 @@
     
 
     
-      
-        <tr>
-          <td class="tutorial_title">
-          Galaxy Monitoring with gxadmin
-          <div class="">
-          
-          
-            
-              <span class="label label-default tutorial_tag" id="monitoring" style="background-color: hsl(30, 80.0%, 85%); color: #333; border: 1px solid hsl(30, 80.0%, 45%)" title="Click to show only tutorials with this tag">monitoring</span>
-            
-          
-          </div>
-          </td>
-          
-            <td> 
-    <a class="topic-icon" href="/training-material/topics/admin/tutorials/gxadmin/slides.html">
-    <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
-</a>
-
- </td>
-            <td> 
-    <span class="btn-group">
-        <a href="/training-material/topics/admin/tutorials/gxadmin/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
-            <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
-        </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="sr-only">Toggle Dropdown</span>
-        </a>
-        <ul class="dropdown-menu">
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=fr&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fadmin%2Ftutorials%2Fgxadmin%2Ftutorial.html&edit-text=&act=url" title="">
-                Français
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ja&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fadmin%2Ftutorials%2Fgxadmin%2Ftutorial.html&edit-text=&act=url" title="">
-                日本語
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=es&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fadmin%2Ftutorials%2Fgxadmin%2Ftutorial.html&edit-text=&act=url" title="">
-                Español
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=pt&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fadmin%2Ftutorials%2Fgxadmin%2Ftutorial.html&edit-text=&act=url" title="">
-                Português
-            </a>
-        
-            <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=ar&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fadmin%2Ftutorials%2Fgxadmin%2Ftutorial.html&edit-text=&act=url" title="">
-                العربية
-            </a>
-        
-        <a class="dropdown-item" href="https://translate.google.com/translate?hl=jp&sl=en&tl=&u=https%3A%2F%2Ftraining.galaxyproject.org%2Ftopics%2Fadmin%2Ftutorials%2Fgxadmin%2Ftutorial.html&edit-text=&act=url" title="">
-            And more!
-        </a>
-    </span>
-
- </td>
-
-            
-            
-          
-         </tr>
-         
-       
     
     
 
@@ -929,7 +976,9 @@
           
           
             
-              <span class="label label-default tutorial_tag" id="tools" style="background-color: hsl(344, 80.0%, 85%); color: #333; border: 1px solid hsl(344, 80.0%, 45%)" title="Click to show only tutorials with this tag">tools</span>
+              <form method="GET" action="/training-material/search" style="display:inline"><input type="hidden" name="query" value="tools">
+              <button class="label label-default tutorial_tag" id="tools" style="background-color: hsl(344, 80.0%, 85%); color: #333; border: 1px solid hsl(344, 80.0%, 45%)" title="Click to show all tutorials with this tag">tools</button>
+               </form>
             
           
           </div>
@@ -940,13 +989,14 @@
     <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
 </a>
 
+
  </td>
             <td> 
     <span class="btn-group">
-        <a href="/training-material/topics/admin/tutorials/tool-management/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+        <a href="/training-material/topics/admin/tutorials/tool-management/tutorial.html" class="btn btn-default" title="Follow the tutorial">
             <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
         </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
@@ -1004,10 +1054,6 @@
     
 
     
-    
-    
-
-    
       
         <tr>
           <td class="tutorial_title">
@@ -1023,13 +1069,14 @@
     <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
 </a>
 
+
  </td>
             <td> 
     <span class="btn-group">
-        <a href="/training-material/topics/admin/tutorials/cvmfs/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+        <a href="/training-material/topics/admin/tutorials/cvmfs/tutorial.html" class="btn btn-default" title="Follow the tutorial">
             <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
         </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
@@ -1087,7 +1134,9 @@
           
           
             
-              <span class="label label-default tutorial_tag" id="jobs" style="background-color: hsl(134, 80.0%, 85%); color: #333; border: 1px solid hsl(134, 80.0%, 45%)" title="Click to show only tutorials with this tag">jobs</span>
+              <form method="GET" action="/training-material/search" style="display:inline"><input type="hidden" name="query" value="jobs">
+              <button class="label label-default tutorial_tag" id="jobs" style="background-color: hsl(134, 80.0%, 85%); color: #333; border: 1px solid hsl(134, 80.0%, 45%)" title="Click to show all tutorials with this tag">jobs</button>
+               </form>
             
           
           </div>
@@ -1098,13 +1147,14 @@
     <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
 </a>
 
+
  </td>
             <td> 
     <span class="btn-group">
-        <a href="/training-material/topics/admin/tutorials/pulsar/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+        <a href="/training-material/topics/admin/tutorials/pulsar/tutorial.html" class="btn btn-default" title="Follow the tutorial">
             <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
         </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
@@ -1162,22 +1212,27 @@
           
           
             
-              <span class="label label-default tutorial_tag" id="training" style="background-color: hsl(315, 80.0%, 85%); color: #333; border: 1px solid hsl(315, 80.0%, 45%)" title="Click to show only tutorials with this tag">training</span>
+              <form method="GET" action="/training-material/search" style="display:inline"><input type="hidden" name="query" value="training">
+              <button class="label label-default tutorial_tag" id="training" style="background-color: hsl(315, 80.0%, 85%); color: #333; border: 1px solid hsl(315, 80.0%, 45%)" title="Click to show all tutorials with this tag">training</button>
+               </form>
             
-              <span class="label label-default tutorial_tag" id="jobs" style="background-color: hsl(134, 80.0%, 85%); color: #333; border: 1px solid hsl(134, 80.0%, 45%)" title="Click to show only tutorials with this tag">jobs</span>
+              <form method="GET" action="/training-material/search" style="display:inline"><input type="hidden" name="query" value="jobs">
+              <button class="label label-default tutorial_tag" id="jobs" style="background-color: hsl(134, 80.0%, 85%); color: #333; border: 1px solid hsl(134, 80.0%, 45%)" title="Click to show all tutorials with this tag">jobs</button>
+               </form>
             
           
           </div>
           </td>
           
             <td> 
+
  </td>
             <td> 
     <span class="btn-group">
-        <a href="/training-material/topics/admin/tutorials/tiaas/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+        <a href="/training-material/topics/admin/tutorials/tiaas/tutorial.html" class="btn btn-default" title="Follow the tutorial">
             <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
         </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
@@ -1279,6 +1334,7 @@
     <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
 </a>
 
+
  </td>
             <td> 
  </td>
@@ -1305,20 +1361,23 @@
           
           
             
-              <span class="label label-default tutorial_tag" id="automation" style="background-color: hsl(278, 80.0%, 85%); color: #333; border: 1px solid hsl(278, 80.0%, 45%)" title="Click to show only tutorials with this tag">automation</span>
+              <form method="GET" action="/training-material/search" style="display:inline"><input type="hidden" name="query" value="automation">
+              <button class="label label-default tutorial_tag" id="automation" style="background-color: hsl(278, 80.0%, 85%); color: #333; border: 1px solid hsl(278, 80.0%, 45%)" title="Click to show all tutorials with this tag">automation</button>
+               </form>
             
           
           </div>
           </td>
           
             <td> 
+
  </td>
             <td> 
     <span class="btn-group">
-        <a href="/training-material/topics/admin/tutorials/jenkins/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+        <a href="/training-material/topics/admin/tutorials/jenkins/tutorial.html" class="btn btn-default" title="Follow the tutorial">
             <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
         </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
@@ -1379,6 +1438,7 @@
     <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
 </a>
 
+
  </td>
             <td> 
  </td>
@@ -1401,11 +1461,17 @@
           
           
             
-              <span class="label label-default tutorial_tag" id="terraform" style="background-color: hsl(6, 80.0%, 85%); color: #333; border: 1px solid hsl(6, 80.0%, 45%)" title="Click to show only tutorials with this tag">terraform</span>
+              <form method="GET" action="/training-material/search" style="display:inline"><input type="hidden" name="query" value="terraform">
+              <button class="label label-default tutorial_tag" id="terraform" style="background-color: hsl(6, 80.0%, 85%); color: #333; border: 1px solid hsl(6, 80.0%, 45%)" title="Click to show all tutorials with this tag">terraform</button>
+               </form>
             
-              <span class="label label-default tutorial_tag" id="deploying" style="background-color: hsl(22, 80.0%, 85%); color: #333; border: 1px solid hsl(22, 80.0%, 45%)" title="Click to show only tutorials with this tag">deploying</span>
+              <form method="GET" action="/training-material/search" style="display:inline"><input type="hidden" name="query" value="deploying">
+              <button class="label label-default tutorial_tag" id="deploying" style="background-color: hsl(22, 80.0%, 85%); color: #333; border: 1px solid hsl(22, 80.0%, 45%)" title="Click to show all tutorials with this tag">deploying</button>
+               </form>
             
-              <span class="label label-default tutorial_tag" id="cloud" style="background-color: hsl(11, 80.0%, 85%); color: #333; border: 1px solid hsl(11, 80.0%, 45%)" title="Click to show only tutorials with this tag">cloud</span>
+              <form method="GET" action="/training-material/search" style="display:inline"><input type="hidden" name="query" value="cloud">
+              <button class="label label-default tutorial_tag" id="cloud" style="background-color: hsl(11, 80.0%, 85%); color: #333; border: 1px solid hsl(11, 80.0%, 45%)" title="Click to show all tutorials with this tag">cloud</button>
+               </form>
             
           
           </div>
@@ -1416,13 +1482,14 @@
     <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
 </a>
 
+
  </td>
             <td> 
     <span class="btn-group">
-        <a href="/training-material/topics/admin/tutorials/terraform/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+        <a href="/training-material/topics/admin/tutorials/terraform/tutorial.html" class="btn btn-default" title="Follow the tutorial">
             <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
         </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
@@ -1483,6 +1550,7 @@
     <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
 </a>
 
+
  </td>
             <td> 
  </td>
@@ -1511,6 +1579,7 @@
     <a class="topic-icon" href="/training-material/topics/admin/tutorials/empathy/slides.html">
     <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
 </a>
+
 
  </td>
             <td> 
@@ -1545,6 +1614,7 @@
     <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
 </a>
 
+
  </td>
             <td> 
  </td>
@@ -1570,13 +1640,14 @@
           </td>
           
             <td> 
+
  </td>
             <td> 
     <span class="btn-group">
-        <a href="/training-material/topics/admin/tutorials/database-schema/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+        <a href="/training-material/topics/admin/tutorials/database-schema/tutorial.html" class="btn btn-default" title="Follow the tutorial">
             <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
         </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
@@ -1633,20 +1704,23 @@
           
           
             
-              <span class="label label-default tutorial_tag" id="kubernetes" style="background-color: hsl(354, 80.0%, 85%); color: #333; border: 1px solid hsl(354, 80.0%, 45%)" title="Click to show only tutorials with this tag">kubernetes</span>
+              <form method="GET" action="/training-material/search" style="display:inline"><input type="hidden" name="query" value="kubernetes">
+              <button class="label label-default tutorial_tag" id="kubernetes" style="background-color: hsl(354, 80.0%, 85%); color: #333; border: 1px solid hsl(354, 80.0%, 45%)" title="Click to show all tutorials with this tag">kubernetes</button>
+               </form>
             
           
           </div>
           </td>
           
             <td> 
+
  </td>
             <td> 
     <span class="btn-group">
-        <a href="/training-material/topics/admin/tutorials/k8s-deploying-galaxy/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+        <a href="/training-material/topics/admin/tutorials/k8s-deploying-galaxy/tutorial.html" class="btn btn-default" title="Follow the tutorial">
             <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
         </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
@@ -1700,7 +1774,9 @@
           
           
             
-              <span class="label label-default tutorial_tag" id="ansible" style="background-color: hsl(331, 80.0%, 85%); color: #333; border: 1px solid hsl(331, 80.0%, 45%)" title="Click to show only tutorials with this tag">ansible</span>
+              <form method="GET" action="/training-material/search" style="display:inline"><input type="hidden" name="query" value="ansible">
+              <button class="label label-default tutorial_tag" id="ansible" style="background-color: hsl(331, 80.0%, 85%); color: #333; border: 1px solid hsl(331, 80.0%, 45%)" title="Click to show all tutorials with this tag">ansible</button>
+               </form>
             
           
           </div>
@@ -1711,13 +1787,14 @@
     <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
 </a>
 
+
  </td>
             <td> 
     <span class="btn-group">
-        <a href="/training-material/topics/admin/tutorials/interactive-tools/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+        <a href="/training-material/topics/admin/tutorials/interactive-tools/tutorial.html" class="btn btn-default" title="Follow the tutorial">
             <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
         </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
@@ -1774,6 +1851,7 @@
     <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
 </a>
 
+
  </td>
             <td> 
  </td>
@@ -1796,6 +1874,36 @@
     
 
     
+    
+    
+
+    
+      
+        <tr>
+          <td class="tutorial_title">
+          Galaxy on the Cloud
+          <div class="">
+          
+          
+          </div>
+          </td>
+          
+            <td> 
+    <a class="topic-icon" href="/training-material/topics/admin/tutorials/cloudbursting/slides.html">
+    <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
+</a>
+
+
+ </td>
+            <td> 
+ </td>
+
+            
+            
+          
+         </tr>
+         
+       
     
     
 
@@ -1819,34 +1927,6 @@
     <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
 </a>
 
- </td>
-            <td> 
- </td>
-
-            
-            
-          
-         </tr>
-         
-       
-    
-    
-
-    
-      
-        <tr>
-          <td class="tutorial_title">
-          Galaxy on the Cloud
-          <div class="">
-          
-          
-          </div>
-          </td>
-          
-            <td> 
-    <a class="topic-icon" href="/training-material/topics/admin/tutorials/cloudbursting/slides.html">
-    <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
-</a>
 
  </td>
             <td> 
@@ -1877,6 +1957,7 @@
     <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
 </a>
 
+
  </td>
             <td> 
  </td>
@@ -1906,20 +1987,23 @@
           
           
             
-              <span class="label label-default tutorial_tag" id="kubernetes" style="background-color: hsl(354, 80.0%, 85%); color: #333; border: 1px solid hsl(354, 80.0%, 45%)" title="Click to show only tutorials with this tag">kubernetes</span>
+              <form method="GET" action="/training-material/search" style="display:inline"><input type="hidden" name="query" value="kubernetes">
+              <button class="label label-default tutorial_tag" id="kubernetes" style="background-color: hsl(354, 80.0%, 85%); color: #333; border: 1px solid hsl(354, 80.0%, 45%)" title="Click to show all tutorials with this tag">kubernetes</button>
+               </form>
             
           
           </div>
           </td>
           
             <td> 
+
  </td>
             <td> 
     <span class="btn-group">
-        <a href="/training-material/topics/admin/tutorials/k8s-managing-galaxy/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+        <a href="/training-material/topics/admin/tutorials/k8s-managing-galaxy/tutorial.html" class="btn btn-default" title="Follow the tutorial">
             <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
         </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
@@ -1972,13 +2056,14 @@
           </td>
           
             <td> 
+
  </td>
             <td> 
     <span class="btn-group">
-        <a href="/training-material/topics/admin/tutorials/job-metrics/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+        <a href="/training-material/topics/admin/tutorials/job-metrics/tutorial.html" class="btn btn-default" title="Follow the tutorial">
             <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
         </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
@@ -2035,13 +2120,14 @@
           </td>
           
             <td> 
+
  </td>
             <td> 
     <span class="btn-group">
-        <a href="/training-material/topics/admin/tutorials/cvmfs-manual/tutorial.html" class="btn btn-default" title="Where to run the tutorial">
+        <a href="/training-material/topics/admin/tutorials/cvmfs-manual/tutorial.html" class="btn btn-default" title="Follow the tutorial">
             <i class="fas fa-laptop" aria-hidden="true"></i><span class="visually-hidden">tutorial</span>
         </a>
-        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a href="#" class="btn btn-default dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Follow the tutorial in a different language">
             <span class="sr-only">Toggle Dropdown</span>
         </a>
         <ul class="dropdown-menu">
@@ -2098,6 +2184,7 @@
     <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
 </a>
 
+
  </td>
             <td> 
  </td>
@@ -2131,6 +2218,7 @@
     <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
 </a>
 
+
  </td>
             <td> 
  </td>
@@ -2159,6 +2247,7 @@
     <a class="topic-icon" href="/training-material/topics/admin/tutorials/toolshed/slides.html">
     <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
 </a>
+
 
  </td>
             <td> 
@@ -2193,6 +2282,7 @@
     <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
 </a>
 
+
  </td>
             <td> 
  </td>
@@ -2221,6 +2311,7 @@
     <a class="topic-icon" href="/training-material/topics/admin/tutorials/users-groups-quotas/slides.html">
     <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
 </a>
+
 
  </td>
             <td> 
@@ -2251,6 +2342,7 @@
     <i class="fab fa-slideshare" aria-hidden="true"></i><span class="visually-hidden">slides</span>
 </a>
 
+
  </td>
             <td> 
  </td>
@@ -2277,7 +2369,7 @@
         
         
 
-<a href="/training-material/hall-of-fame#bgruening" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bgruening" alt="Björn Grüning">Björn Grüning</a>, <a href="/training-material/hall-of-fame#martenson" class="contributor-badge"><img src="https://avatars.githubusercontent.com/martenson" alt="Martin Čech">Martin Čech</a>, <a href="/training-material/hall-of-fame#hexylena" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>, <a href="/training-material/hall-of-fame#slugger70" class="contributor-badge"><img src="https://avatars.githubusercontent.com/slugger70" alt="Simon Gladman">Simon Gladman</a>
+<a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bgruening" alt="Björn Grüning">Björn Grüning</a>, <a href="/training-material/hall-of-fame/martenson/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/martenson" alt="Martin Čech">Martin Čech</a>, <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>, <a href="/training-material/hall-of-fame/slugger70/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/slugger70" alt="Simon Gladman">Simon Gladman</a>
 
 
 
@@ -2292,7 +2384,7 @@
         
         
 
-<a href="/training-material/hall-of-fame#valentinmarcon" class="contributor-badge"><img src="https://avatars.githubusercontent.com/valentinmarcon" alt="Valentin Marcon">Valentin Marcon</a>, <a href="/training-material/hall-of-fame#natefoo" class="contributor-badge"><img src="https://avatars.githubusercontent.com/natefoo" alt="Nate Coraor">Nate Coraor</a>, <a href="/training-material/hall-of-fame#bgruening" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bgruening" alt="Björn Grüning">Björn Grüning</a>, <a href="/training-material/hall-of-fame#hexylena" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>, <a href="/training-material/hall-of-fame#martenson" class="contributor-badge"><img src="https://avatars.githubusercontent.com/martenson" alt="Martin Čech">Martin Čech</a>, <a href="/training-material/hall-of-fame#shiltemann" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Saskia Hiltemann">Saskia Hiltemann</a>, <a href="/training-material/hall-of-fame#bebatut" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Bérénice Batut">Bérénice Batut</a>, <a href="/training-material/hall-of-fame#nsoranzo" class="contributor-badge"><img src="https://avatars.githubusercontent.com/nsoranzo" alt="Nicola Soranzo">Nicola Soranzo</a>, <a href="/training-material/hall-of-fame#hrhotz" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hrhotz" alt="Hans-Rudolf Hotz">Hans-Rudolf Hotz</a>, <a href="/training-material/hall-of-fame#pcm32" class="contributor-badge"><img src="https://avatars.githubusercontent.com/pcm32" alt="Pablo Moreno">Pablo Moreno</a>, <a href="/training-material/hall-of-fame#afgane" class="contributor-badge"><img src="https://avatars.githubusercontent.com/afgane" alt="Enis Afgan">Enis Afgan</a>, <a href="/training-material/hall-of-fame#nuwang" class="contributor-badge"><img src="https://avatars.githubusercontent.com/nuwang" alt="Nuwan Goonasekera">Nuwan Goonasekera</a>, <a href="/training-material/hall-of-fame#almahmoud" class="contributor-badge"><img src="https://avatars.githubusercontent.com/almahmoud" alt="Alex Mahmoud">Alex Mahmoud</a>, <a href="/training-material/hall-of-fame#ic4f" class="contributor-badge"><img src="https://avatars.githubusercontent.com/ic4f" alt="Sergey Golitsynskiy">Sergey Golitsynskiy</a>, <a href="/training-material/hall-of-fame#slugger70" class="contributor-badge"><img src="https://avatars.githubusercontent.com/slugger70" alt="Simon Gladman">Simon Gladman</a>, <a href="/training-material/hall-of-fame#blankenberg" class="contributor-badge"><img src="https://avatars.githubusercontent.com/blankenberg" alt="Daniel Blankenberg">Daniel Blankenberg</a>, <a href="/training-material/hall-of-fame#abdulrahmanazab" class="contributor-badge"><img src="https://avatars.githubusercontent.com/abdulrahmanazab" alt="Abdulrahman Azab">Abdulrahman Azab</a>, <a href="/training-material/hall-of-fame#mvdbeek" class="contributor-badge"><img src="https://avatars.githubusercontent.com/mvdbeek" alt="Marius van den Beek">Marius van den Beek</a>
+<a href="/training-material/hall-of-fame/valentinmarcon/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/valentinmarcon" alt="Valentin Marcon">Valentin Marcon</a>, <a href="/training-material/hall-of-fame/natefoo/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/natefoo" alt="Nate Coraor">Nate Coraor</a>, <a href="/training-material/hall-of-fame/bgruening/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bgruening" alt="Björn Grüning">Björn Grüning</a>, <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>, <a href="/training-material/hall-of-fame/martenson/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/martenson" alt="Martin Čech">Martin Čech</a>, <a href="/training-material/hall-of-fame/shiltemann/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/shiltemann" alt="Saskia Hiltemann">Saskia Hiltemann</a>, <a href="/training-material/hall-of-fame/bebatut/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/bebatut" alt="Bérénice Batut">Bérénice Batut</a>, <a href="/training-material/hall-of-fame/nsoranzo/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/nsoranzo" alt="Nicola Soranzo">Nicola Soranzo</a>, <a href="/training-material/hall-of-fame/hrhotz/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hrhotz" alt="Hans-Rudolf Hotz">Hans-Rudolf Hotz</a>, <a href="/training-material/hall-of-fame/pcm32/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/pcm32" alt="Pablo Moreno">Pablo Moreno</a>, <a href="/training-material/hall-of-fame/afgane/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/afgane" alt="Enis Afgan">Enis Afgan</a>, <a href="/training-material/hall-of-fame/nuwang/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/nuwang" alt="Nuwan Goonasekera">Nuwan Goonasekera</a>, <a href="/training-material/hall-of-fame/almahmoud/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/almahmoud" alt="Alex Mahmoud">Alex Mahmoud</a>, <a href="/training-material/hall-of-fame/ic4f/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/ic4f" alt="Sergey Golitsynskiy">Sergey Golitsynskiy</a>, <a href="/training-material/hall-of-fame/slugger70/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/slugger70" alt="Simon Gladman">Simon Gladman</a>, <a href="/training-material/hall-of-fame/abretaud/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/abretaud" alt="Anthony Bretaudeau">Anthony Bretaudeau</a>, <a href="/training-material/hall-of-fame/blankenberg/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/blankenberg" alt="Daniel Blankenberg">Daniel Blankenberg</a>, <a href="/training-material/hall-of-fame/abdulrahmanazab/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/abdulrahmanazab" alt="Abdulrahman Azab">Abdulrahman Azab</a>, <a href="/training-material/hall-of-fame/mvdbeek/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/mvdbeek" alt="Marius van den Beek">Marius van den Beek</a>
 
 
 
@@ -2341,4 +2433,17 @@
     <script type="text/javascript" src="/training-material/assets/js/list.min.js"></script>
     <script type="text/javascript" src="/training-material/assets/js/topic.js"></script>
     
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
 </html>

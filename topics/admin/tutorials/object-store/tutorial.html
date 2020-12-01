@@ -11,7 +11,7 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-45719423-18' , 'auto');
+    ga('create', '' , 'auto');
     ga('send', 'pageview');
 </script>
         
@@ -143,6 +143,9 @@
                 </label>
                 <label data-value="rainbow" class="btn btn-secondary">
                     <input type="radio" name="options" id="rainbow" autocomplete="off"> Rainbow
+                </label>
+                <label data-value="halloween" class="btn btn-secondary">
+                    <input type="radio" name="options" id="halloween" autocomplete="off"> 🎃
                 </label>
             </div>
 
@@ -341,7 +344,7 @@
 
         <div class="contributors-line">By: 
 
-<a href="/training-material/hall-of-fame#natefoo" class="contributor-badge"><img src="https://avatars.githubusercontent.com/natefoo" alt="Nate Coraor">Nate Coraor</a>, <a href="/training-material/hall-of-fame#hexylena" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>
+<a href="/training-material/hall-of-fame/natefoo/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/natefoo" alt="Nate Coraor">Nate Coraor</a>, <a href="/training-material/hall-of-fame/hexylena/" class="contributor-badge"><img src="https://avatars.githubusercontent.com/hexylena" alt="Helena Rasche">Helena Rasche</a>
 
 </div>
 
@@ -591,7 +594,7 @@
             </ul>
             
 
-            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Mar 4, 2020 </p>
+            <p><strong> <i class="far fa-calendar" aria-hidden="true"></i><span class="visually-hidden">last_modification</span> Last modification:</strong> Dec 1, 2020 </p>
         </blockquote>
 
         <div class="container">
@@ -664,7 +667,7 @@
 </code></pre></div>      </div>
     </li>
     <li>
-      <p>Add a <code class="language-plaintext highlighter-rouge">pre_task</code> to create the <code class="language-plaintext highlighter-rouge">/data2</code> folder <a href="https://docs.ansible.com/ansible/latest/modules/file_module.html">using the file module</a>.</p>
+      <p>Add a <code class="language-plaintext highlighter-rouge">pre_task</code> to create the <code class="language-plaintext highlighter-rouge">/data2</code> folder <a href="https://docs.ansible.com/ansible/2.9/modules/file_module.html">using the file module</a>.</p>
 
       <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    - name: Create the second storage directory
       file:
@@ -743,6 +746,18 @@
   <h3 id="details-more-documentation"><i class="fas fa-info-circle" aria-hidden="true"></i><span class="visually-hidden">details</span> More documentation</h3>
 
   <p>More information can be found in the <a href="https://github.com/galaxyproject/galaxy/blob/dev/lib/galaxy/config/sample/object_store_conf.xml.sample">sample file</a>.</p>
+
+</blockquote>
+
+<blockquote class="details">
+  <h3 id="tip-can-i-distribute-objects-based-on-the-user"><i class="far fa-lightbulb" aria-hidden="true"></i><span class="visually-hidden">tip</span> Can I distribute objects based on the user?</h3>
+
+  <p>Yes! You must write your own dynamic job handler code to handle this.
+See <a href="https://github.com/galaxyproject/galaxy/pull/6552">PR#6552</a> and <a href="https://github.com/galaxyproject/galaxy/pull/10233">PR#10233</a></p>
+
+  <p>If you implement something like this, please <a href="https://github.com/galaxyproject/training-material/issues/new">let the GTN
+know</a> with
+some example code, and we can include this as a training module for everyone.</p>
 
 </blockquote>
 
@@ -867,6 +882,39 @@ dataset_24.dat
 
                     
 
+                    <h1>Feedback</h1>
+                    <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
+
+                    <div id="feedback-button">
+                        <img src="/training-material/shared/images/feedback.png" title="Click to activate" alt="Click here to load Google feedback frame" />
+                    </div>
+                    <div id="feedback-form">
+                    </div>
+                    <script type="text/javascript">
+                        (function (window, document) {
+                            function onDocumentReady(fn) {
+                                if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+                                    fn();
+                                } else {
+                                    document.addEventListener('DOMContentLoaded', fn);
+                                }
+                            }
+
+                            onDocumentReady(function () {
+                                $("#feedback-button").click(function(evt){
+                                    var e = $(evt.target)
+                                    e.hide();
+
+                                    $("#feedback-form").html(`
+                                        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Distributed Object Storage (Galaxy Server administration)">Loading...</iframe>
+                                    `)
+                                })
+                            });
+                        })(window, document);
+                    </script>
+
+
+
                     <h1>Citing this Tutorial</h1>
                     <p>
                         <ol>
@@ -888,8 +936,8 @@ dataset_24.dat
     author = "Nate Coraor and Helena Rasche",
     title = "Distributed Object Storage (Galaxy Training Materials)",
     year = "2020",
-    month = "03",
-    day = "04"
+    month = "12",
+    day = "01"
     url = "\url{/training-material/topics/admin/tutorials/object-store/tutorial.html}",
     note = "[Online; accessed TODAY]"
 }
@@ -927,18 +975,6 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
         
 
         
-
-        <hr>
-        <br>
-
-        <p class="text-muted">Did you use this material as an instructor? Feel free to give us feedback on <a href="https://github.com/galaxyproject/training-material/issues/1452" target="_blank">how it went</a>.</p>
-        <iframe id="feedback-google" class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSd4VZptFTQ03kHkMz0JyW9b6_S8geU5KjNE_tLM0dixT3ZQmA/viewform?embedded=true&entry.1235803833=Distributed Object Storage (Galaxy Server administration)">Loading...
-        </iframe>
-
-        <blockquote class="feedback">
-            <h3><i class="far fa-comments" aria-hidden="true"></i><span class="visually-hidden">feedback</span> Give us even more feedback on this content!</h3>
-            <p>To give us more detailed feedback about these materials, please take a moment to fill in the extended <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_GLZRpxZGAL9tN6DA1bE6WkNhmQdXT7B16TpOb-X4YwKUsQ/viewform?entry.1548889262=Distributed Object Storage (Galaxy Server administration)">Feedback Form</a>.</p>
-        </blockquote>
     </section>
 </div>
 
@@ -982,4 +1018,17 @@ document.getElementById("citation-text").innerHTML = document.getElementById("ci
     }});
     </script>
     
+
+    <script type="text/javascript">
+        if(window.location.hostname === "galaxyproject.github.io") {
+            // Redirect
+            var redirect = "https://training.galaxyproject.org" + window.location.pathname + window.location.search;
+            $('div.container.main-content').prepend("<div class='alert alert-warning'><strong>Note: </strong>This content has a new home at <a href=\"" + redirect + "\">" + redirect + "</a>, which you will be redirected to in 5 seconds.</div>");
+
+            window.setTimeout(function(){
+                window.location.href = redirect;
+            }, 5000)
+
+        }
+    </script>
 </html>
